@@ -1,1 +1,204 @@
+@startuml
+' Архитектура SAP HANA+ с русскими названиями и нумерацией
+' Генерируется автоматически
+
+title Архитектура In-Memory РСУБД уровня SAP HANA+
+
+skinparam rectangle {
+  StereotypeFontColor black
+  StereotypeFontSize 11
+}
+skinparam shadowing false
+skinparam linetype ortho
+hide empty members
+
+package "0. Инициализация и системный старт" {
+  [0.1 Точка входа] as main <<entrypoint>>
+  [0.2 Загрузчик конфигурации] as config_loader
+  [0.3 Логгер (stderr/syslog/binary)] as logger
+  [0.4 Инициализация платформы] as platform_init
+  [0.5 Контроллер запуска] as bootstrap_controller
+}
+
+package "1. Архитектура и Хранилище" {
+  [1.1 Распределение памяти] as memory_allocator <<NUMA-aware>>
+  [1.2 Кэш страниц] as page_cache <<LRU/ARC>>
+  [1.3 Колонковое хранилище] as column_store
+  [1.4 Строковое хранилище] as row_store
+  [1.5 Хранилище JSON] as json_store
+  [1.6 Управление шардами] as sharding_manager
+  [1.7 Управление партициями] as partition_manager
+  [1.8 Авто-ребалансировка] as auto_rebalancer
+  [1.9 Компрессия данных] as compression_engine
+  [1.10 Индексы] as index_manager <<B+Tree, Bitmap, Hash>>
+  [1.11 TTL и вытеснение] as ttl_eviction
+  [1.12 Холодное хранилище (SSD)] as cold_storage_fallback
+  [1.13 Буферный пул] as buffer_pool
+  [1.14 Arrow-слой] as arrow_layout
+  [1.15 FOR-кодирование] as for_encoding
+  [1.16 Ограничения multi-tenant] as multi_tenant_limiter
+  [1.17 Версионированные таблицы] as versioned_tables
+}
+
+package "2. Транзакционность и Надёжность" {
+  [2.1 Движок MVCC] as mvcc_engine
+  [2.2 Менеджер снимков] as snapshot_manager
+  [2.3 WAL-журнал] as wal_manager
+  [2.4 Менеджер транзакций] as txn_manager
+  [2.5 Очистка (vacuum)] as gc_vacuum
+  [2.6 Уровни изоляции] as isolation_levels
+  [2.7 Механизм failover] as failover_engine
+  [2.8 Репликация (Raft/Paxos)] as replication
+  [2.9 Восстановление после сбоя] as crash_recovery
+}
+
+package "3. SQL и Языки" {
+  [3.1 SQL-парсер] as sql_parser
+  [3.2 Планировщик SQL] as sql_planner
+  [3.3 Оптимизатор SQL] as sql_optimizer
+  [3.4 Исполнитель SQL] as sql_executor
+  [3.5 Движок UDF] as udf_engine
+  [3.6 PL/SQL рантайм] as pl_lang_runtime
+  [3.7 DSL-движок] as dsl_engine
+  [3.8 Аналитический движок] as analytic_engine
+}
+
+package "4. Интерфейсы и Интеграции" {
+  [4.1 JDBC-сервер] as jdbc_server
+  [4.2 ODBC-шлюз] as odbc_gateway
+  [4.3 REST API] as rest_api
+  [4.4 GraphQL API] as graphql_api
+  [4.5 gRPC-интерфейс] as grpc_interface
+  [4.6 CLI-оболочка] as cli_shell
+  [4.7 Документация OpenAPI] as openapi_doc
+  [4.8 CDC и стриминг] as cdc_streaming
+  [4.9 Загрузчик S3/CSV/Parquet] as s3_batch_loader
+  [4.10 Внешние хуки] as external_hooks
+}
+
+package "5. BI, ML, OLAP" {
+  [5.1 Материализованные представления] as materialized_views
+  [5.2 Адаптивные агрегаты] as adaptive_aggregates
+  [5.3 Обработка временных рядов] as time_series_engine
+  [5.4 ML-движок (ONNX/Tensorflow)] as ml_runtime
+  [5.5 Аналитические функции] as analytics_functions
+  [5.6 HTAP-модуль] as htap_manager
+  [5.7 Адаптер ML] as ml_adapter
+}
+
+package "6. Безопасность" {
+  [6.1 RBAC/ABAC движок] as rbac_abac_engine
+  [6.2 Безопасность строк/колонок] as row_col_security
+  [6.3 TLS/mTLS/JWT] as tls_mtls_jwt
+  [6.4 Аудит логов] as audit_logger
+  [6.5 Политики доступа] as access_policies
+  [6.6 Защита от SQL-инъекций] as sql_injection_guard
+}
+
+package "7. Observability и DevOps" {
+  [7.1 Prometheus-экспортер] as prometheus_exporter
+  [7.2 Трейсинг (OpenTelemetry)] as opentelemetry_tracer
+  [7.3 Профилировщик (Flamegraph)] as flamegraph_profiler
+  [7.4 Структурированное логирование] as structured_logger
+  [7.5 Fuzzer-движок] as fuzzer_engine
+  [7.6 CI/CD раннер] as ci_cd_runner
+  [7.7 Эволюция схемы] as schema_evolver
+}
+
+package "8. Производительность" {
+  [8.1 Векторный исполнитель] as vectorized_executor
+  [8.2 Адаптивные соединения] as adaptive_joins
+  [8.3 Кэш планов] as plan_cache
+  [8.4 Адаптивный оптимизатор] as runtime_optimizer
+  [8.5 Стриминговый агрегатор] as streaming_aggregator
+  [8.6 Arrow-исполнитель] as arrow_executor
+  [8.7 Мгновенный snapshot] as instant_snapshot
+}
+
+package "9. Расширяемость" {
+  [9.1 Песочница UDF] as udf_sandbox
+  [9.2 Загрузчик плагинов] as plugin_loader
+  [9.3 SQL wire-протокол] as sql_wire_protocol
+  [9.4 JSON API] as json_api
+  [9.5 Планировщик DSL-задач] as dsl_task_scheduler
+}
+
+package "10. Тестируемость" {
+  [10.1 Unit-тесты] as unit_test_engine
+  [10.2 Интеграционные тесты] as integration_test_harness
+  [10.3 Стресс-тесты] as stress_test_runner
+  [10.4 Мутационное покрытие] as mutation_coverage
+}
+
+[0.1 Точка входа] --> [0.2 Загрузчик конфигурации]
+[0.1 Точка входа] --> [0.3 Логгер (stderr/syslog/binary)]
+[0.1 Точка входа] --> [0.4 Инициализация платформы]
+[0.1 Точка входа] --> [1.1 Распределение памяти]
+[0.1 Точка входа] --> [2.4 Менеджер транзакций]
+[0.1 Точка входа] --> [3.1 SQL-парсер]
+[0.1 Точка входа] --> [0.5 Контроллер запуска]
+[0.5 Контроллер запуска] --> [4.3 REST API]
+
+[3.4 Исполнитель SQL] --> [2.1 Движок MVCC]
+[3.4 Исполнитель SQL] --> [1.4 Строковое хранилище]
+[3.4 Исполнитель SQL] --> [1.3 Колонковое хранилище]
+[3.4 Исполнитель SQL] --> [1.10 Индексы]
+[3.4 Исполнитель SQL] --> [3.8 Аналитический движок]
+[3.8 Аналитический движок] --> [5.5 Аналитические функции]
+[3.8 Аналитический движок] --> [5.1 Материализованные представления]
+[3.8 Аналитический движок] --> [8.1 Векторный исполнитель]
+
+[3.3 Оптимизатор SQL] --> [5.2 Адаптивные агрегаты]
+
+[2.1 Движок MVCC] --> [2.2 Менеджер снимков]
+[2.1 Движок MVCC] --> [2.3 WAL-журнал]
+[2.1 Движок MVCC] --> [1.17 Версионированные таблицы]
+
+[2.4 Менеджер транзакций] --> [2.6 Уровни изоляции]
+[2.4 Менеджер транзакций] --> [2.1 Движок MVCC]
+[2.4 Менеджер транзакций] --> [2.5 Очистка (vacuum)]
+[2.4 Менеджер транзакций] --> [2.8 Репликация (Raft/Paxos)]
+
+[1.4 Строковое хранилище] --> [1.13 Буферный пул]
+[1.4 Строковое хранилище] --> [1.10 Индексы]
+
+[1.3 Колонковое хранилище] --> [1.9 Компрессия данных]
+[1.3 Колонковое хранилище] --> [1.15 FOR-кодирование]
+[1.3 Колонковое хранилище] --> [1.14 Arrow-слой]
+[1.3 Колонковое хранилище] --> [1.10 Индексы]
+
+[1.2 Кэш страниц] --> [1.12 Холодное хранилище (SSD)]
+[1.11 TTL и вытеснение] --> [1.12 Холодное хранилище (SSD)]
+
+[2.8 Репликация (Raft/Paxos)] --> [2.7 Механизм failover]
+[2.9 Восстановление после сбоя] --> [2.3 WAL-журнал]
+
+[4.3 REST API] --> [3.4 Исполнитель SQL]
+[4.4 GraphQL API] --> [3.4 Исполнитель SQL]
+[4.5 gRPC-интерфейс] --> [3.4 Исполнитель SQL]
+
+[4.9 Загрузчик S3/CSV/Parquet] --> [1.4 Строковое хранилище]
+[4.9 Загрузчик S3/CSV/Parquet] --> [1.3 Колонковое хранилище]
+[4.8 CDC и стриминг] --> [2.3 WAL-журнал]
+
+[5.4 ML-движок (ONNX/Tensorflow)] --> [5.7 Адаптер ML]
+[5.7 Адаптер ML] --> [8.1 Векторный исполнитель]
+
+[3.5 Движок UDF] --> [9.2 Загрузчик плагинов]
+[9.2 Загрузчик плагинов] --> [9.1 Песочница UDF]
+
+[7.2 Трейсинг (OpenTelemetry)] --> [3.4 Исполнитель SQL]
+[7.3 Профилировщик (Flamegraph)] --> [8.1 Векторный исполнитель]
+[7.4 Структурированное логирование] --> [0.3 Логгер (stderr/syslog/binary)]
+
+[10.2 Интеграционные тесты] --> [1.4 Строковое хранилище]
+[10.2 Интеграционные тесты] --> [1.3 Колонковое хранилище]
+
+[10.3 Стресс-тесты] --> [2.4 Менеджер транзакций]
+[10.3 Стресс-тесты] --> [3.4 Исполнитель SQL]
+
+[10.4 Мутационное покрытие] --> [3.1 SQL-парсер]
+[10.4 Мутационное покрытие] --> [3.4 Исполнитель SQL]
+
+@enduml
 
