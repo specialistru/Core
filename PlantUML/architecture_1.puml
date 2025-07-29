@@ -1,0 +1,201 @@
+@startuml
+title Архитектура In-Memory РСУБД уровня SAP HANA+
+
+skinparam rectangle {
+  StereotypeFontColor black
+  StereotypeFontSize 11
+}
+skinparam shadowing false
+skinparam linetype ortho
+hide empty members
+
+package "0. Инициализация и системный старт" {
+  [main] <<entrypoint>>
+  [config_loader]
+  [logger (stderr/syslog/binary)]
+  [platform_init]
+  [bootstrap_controller]
+}
+
+package "1. Архитектура и Хранилище" {
+  [memory_allocator] <<NUMA-aware>>
+  [page_cache] <<LRU/ARC>>
+  [column_store]
+  [row_store]
+  [json_store]
+  [sharding_manager]
+  [partition_manager]
+  [auto_rebalancer]
+  [compression_engine]
+  [index_manager] <<B+Tree, bitmap, hash>>
+  [ttl_eviction]
+  [cold_storage_fallback]
+  [buffer_pool]
+  [arrow_layout]
+  [for_encoding]
+  [multi_tenant_limiter]
+  [versioned_tables]
+}
+
+package "2. Транзакционность и Надёжность" {
+  [mvcc_engine]
+  [snapshot_manager]
+  [wal_manager]
+  [txn_manager]
+  [gc_vacuum]
+  [isolation_levels]
+  [failover_engine]
+  [replication (raft/paxos)]
+  [crash_recovery]
+}
+
+package "3. SQL и Языки" {
+  [sql_parser]
+  [sql_planner]
+  [sql_optimizer]
+  [sql_executor]
+  [udf_engine]
+  [pl_lang_runtime]
+  [dsl_engine]
+  [analytic_engine]
+}
+
+package "4. Интерфейсы и Интеграции" {
+  [jdbc_server]
+  [odbc_gateway]
+  [rest_api]
+  [graphql_api]
+  [grpc_interface]
+  [cli_shell]
+  [openapi_doc]
+  [cdc_streaming]
+  [s3_batch_loader]
+  [external_hooks]
+}
+
+package "5. BI, ML, OLAP" {
+  [materialized_views]
+  [adaptive_aggregates]
+  [time_series_engine]
+  [ml_runtime (ONNX/Tensorflow)]
+  [analytics_functions]
+  [htap_manager]
+  [ml_adapter]
+}
+
+package "6. Безопасность" {
+  [rbac_abac_engine]
+  [row_col_security]
+  [tls_mtls_jwt]
+  [audit_logger]
+  [access_policies]
+  [sql_injection_guard]
+}
+
+package "7. Observability и DevOps" {
+  [prometheus_exporter]
+  [opentelemetry_tracer]
+  [flamegraph_profiler]
+  [structured_logger]
+  [fuzzer_engine]
+  [ci_cd_runner]
+  [schema_evolver]
+}
+
+package "8. Производительность" {
+  [vectorized_executor]
+  [adaptive_joins]
+  [plan_cache]
+  [runtime_optimizer]
+  [streaming_aggregator]
+  [arrow_executor]
+  [instant_snapshot]
+}
+
+package "9. Расширяемость" {
+  [udf_sandbox]
+  [plugin_loader]
+  [sql_wire_protocol]
+  [json_api]
+  [dsl_task_scheduler]
+}
+
+package "10. Тестируемость" {
+  [unit_test_engine]
+  [integration_test_harness]
+  [stress_test_runner]
+  [mutation_coverage]
+}
+
+[main] --> [config_loader]
+[main] --> [logger (stderr/syslog/binary)]
+[main] --> [platform_init]
+[main] --> [memory_allocator]
+[main] --> [txn_manager]
+[main] --> [sql_parser]
+[main] --> [bootstrap_controller]
+[bootstrap_controller] --> [rest_api]
+
+[sql_executor] --> [mvcc_engine]
+[sql_executor] --> [row_store]
+[sql_executor] --> [column_store]
+[sql_executor] --> [index_manager]
+[sql_executor] --> [analytic_engine]
+[analytic_engine] --> [analytics_functions]
+[analytic_engine] --> [materialized_views]
+[analytic_engine] --> [vectorized_executor]
+
+[sql_optimizer] --> [stats_engine]
+[sql_optimizer] --> [adaptive_aggregates]
+
+[mvcc_engine] --> [snapshot_manager]
+[mvcc_engine] --> [wal_manager]
+[mvcc_engine] --> [versioned_tables]
+
+[txn_manager] --> [isolation_levels]
+[txn_manager] --> [mvcc_engine]
+[txn_manager] --> [gc_vacuum]
+[txn_manager] --> [replication (raft/paxos)]
+
+[row_store] --> [buffer_pool]
+[row_store] --> [index_manager]
+
+[column_store] --> [compression_engine]
+[column_store] --> [for_encoding]
+[column_store] --> [arrow_layout]
+[column_store] --> [index_manager]
+
+[page_cache] --> [cold_storage_fallback]
+[ttl_eviction] --> [cold_storage_fallback]
+
+[replication (raft/paxos)] --> [failover_engine]
+[crash_recovery] --> [wal_manager]
+
+[rest_api] --> [sql_executor]
+[graphql_api] --> [sql_executor]
+[grpc_interface] --> [sql_executor]
+
+[s3_batch_loader] --> [row_store]
+[s3_batch_loader] --> [column_store]
+[cdc_streaming] --> [wal_manager]
+
+[ml_runtime (ONNX/Tensorflow)] --> [ml_adapter]
+[ml_adapter] --> [vectorized_executor]
+
+[udf_engine] --> [plugin_loader]
+[plugin_loader] --> [udf_sandbox]
+
+[opentelemetry_tracer] --> [sql_executor]
+[flamegraph_profiler] --> [vectorized_executor]
+[structured_logger] --> [logger (stderr/syslog/binary)]
+
+[integration_test_harness] --> [row_store]
+[integration_test_harness] --> [column_store]
+
+[stress_test_runner] --> [txn_manager]
+[stress_test_runner] --> [sql_executor]
+
+[mutation_coverage] --> [sql_parser]
+[mutation_coverage] --> [sql_executor]
+
+@enduml
