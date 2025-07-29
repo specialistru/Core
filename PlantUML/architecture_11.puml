@@ -259,7 +259,6 @@ audit_logger --> sql_executor
 rbac_abac_engine --> sql_executor
 tls_mtls_jwt --> rest_api
 tls_mtls_jwt --> grpc_interface
-
 sql_executor --> udf_engine
 dsl_task_scheduler --> dsl_engine
 sql_executor --> jdbc_server
@@ -288,4 +287,3 @@ sql_wire_protocol --> jdbc_server
 sql_wire_protocol --> odbc_gateway
 json_api --> sql_executor
 @enduml
-
