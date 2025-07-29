@@ -247,7 +247,6 @@ cold_storage_fallback --> ttl_eviction
 udf_engine --> sql_executor
 cdc_streaming --> txn_manager
 integration_test_harness --> sql_executor
-graphQL_api --> sql_executor
 sql_executor --> udf_engine
 dsl_task_scheduler --> dsl_engine
 sql_executor --> jdbc_server
