@@ -1,1 +1,291 @@
+@startuml
+' Архитектура SAP HANA+ с русскими названиями и нумерацией
+' Генерируется автоматически
+
+title Архитектура In-Memory РСУБД уровня SAP HANA+
+
+skinparam rectangle {
+  StereotypeFontColor black
+  StereotypeFontSize 11
+}
+skinparam shadowing false
+skinparam linetype ortho
+hide empty members
+
+package "0. Инициализация и системный старт" {
+  [0.1 Точка входа] as main <<entrypoint>>
+  [0.2 Загрузчик конфигурации] as config_loader
+  [0.3 Логгер (stderr/syslog/binary)] as logger
+  [0.4 Инициализация платформы] as platform_init
+  [0.5 Контроллер запуска] as bootstrap_controller
+}
+
+package "1. Архитектура и Хранилище" {
+  [1.1 Распределение памяти] as memory_allocator <<NUMA-aware>>
+  [1.2 Кэш страниц] as page_cache <<LRU/ARC>>
+  [1.3 Колонковое хранилище] as column_store
+  [1.4 Строковое хранилище] as row_store
+  [1.5 Хранилище JSON] as json_store
+  [1.6 Управление шардами] as sharding_manager
+  [1.7 Управление партициями] as partition_manager
+  [1.8 Авто-ребалансировка] as auto_rebalancer
+  [1.9 Компрессия данных] as compression_engine
+  [1.10 Индексы] as index_manager <<B+Tree, Bitmap, Hash>>
+  [1.11 TTL и вытеснение] as ttl_eviction
+  [1.12 Холодное хранилище (SSD)] as cold_storage_fallback
+  [1.13 Буферный пул] as buffer_pool
+  [1.14 Arrow-слой] as arrow_layout
+  [1.15 FOR-кодирование] as for_encoding
+  [1.16 Ограничения multi-tenant] as multi_tenant_limiter
+  [1.17 Версионированные таблицы] as versioned_tables
+}
+
+package "2. Транзакционность и Надёжность" {
+  [2.1 Движок MVCC] as mvcc_engine
+  [2.2 Менеджер снимков] as snapshot_manager
+  [2.3 WAL-журнал] as wal_manager
+  [2.4 Менеджер транзакций] as txn_manager
+  [2.5 Очистка (vacuum)] as gc_vacuum
+  [2.6 Уровни изоляции] as isolation_levels
+  [2.7 Механизм failover] as failover_engine
+  [2.8 Репликация (Raft/Paxos)] as replication
+  [2.9 Восстановление после сбоя] as crash_recovery
+}
+
+package "3. SQL и Языки" {
+  [3.1 SQL-парсер] as sql_parser
+  [3.2 Планировщик SQL] as sql_planner
+  [3.3 Оптимизатор SQL] as sql_optimizer
+  [3.4 Исполнитель SQL] as sql_executor
+  [3.5 Движок UDF] as udf_engine
+  [3.6 PL/SQL рантайм] as pl_lang_runtime
+  [3.7 DSL-движок] as dsl_engine
+  [3.8 Аналитический движок] as analytic_engine
+}
+
+package "4. Интерфейсы и Интеграции" {
+  [4.1 JDBC-сервер] as jdbc_server
+  [4.2 ODBC-шлюз] as odbc_gateway
+  [4.3 REST API] as rest_api
+  [4.4 GraphQL API] as graphql_api
+  [4.5 gRPC-интерфейс] as grpc_interface
+  [4.6 CLI-оболочка] as cli_shell
+  [4.7 Документация OpenAPI] as openapi_doc
+  [4.8 CDC и стриминг] as cdc_streaming
+  [4.9 Загрузчик S3/CSV/Parquet] as s3_batch_loader
+  [4.10 Внешние хуки] as external_hooks
+}
+
+package "5. BI, ML, OLAP" {
+  [5.1 Материализованные представления] as materialized_views
+  [5.2 Адаптивные агрегаты] as adaptive_aggregates
+  [5.3 Обработка временных рядов] as time_series_engine
+  [5.4 ML-движок (ONNX/Tensorflow)] as ml_runtime
+  [5.5 Аналитические функции] as analytics_functions
+  [5.6 HTAP-модуль] as htap_manager
+  [5.7 Адаптер ML] as ml_adapter
+}
+
+package "6. Безопасность" {
+  [6.1 RBAC/ABAC движок] as rbac_abac_engine
+  [6.2 Безопасность строк/колонок] as row_col_security
+  [6.3 TLS/mTLS/JWT] as tls_mtls_jwt
+  [6.4 Аудит логов] as audit_logger
+  [6.5 Политики доступа] as access_policies
+  [6.6 Защита от SQL-инъекций] as sql_injection_guard
+}
+
+package "7. Observability и DevOps" {
+  [7.1 Prometheus-экспортер] as prometheus_exporter
+  [7.2 Трейсинг (OpenTelemetry)] as opentelemetry_tracer
+  [7.3 Профилировщик (Flamegraph)] as flamegraph_profiler
+  [7.4 Структурированное логирование] as structured_logger
+  [7.5 Fuzzer-движок] as fuzzer_engine
+  [7.6 CI/CD раннер] as ci_cd_runner
+  [7.7 Эволюция схемы] as schema_evolver
+}
+
+package "8. Производительность" {
+  [8.1 Векторный исполнитель] as vectorized_executor
+  [8.2 Адаптивные соединения] as adaptive_joins
+  [8.3 Кэш планов] as plan_cache
+  [8.4 Адаптивный оптимизатор] as runtime_optimizer
+  [8.5 Стриминговый агрегатор] as streaming_aggregator
+  [8.6 Arrow-исполнитель] as arrow_executor
+  [8.7 Мгновенный snapshot] as instant_snapshot
+}
+
+package "9. Расширяемость" {
+  [9.1 Песочница UDF] as udf_sandbox
+  [9.2 Загрузчик плагинов] as plugin_loader
+  [9.3 SQL wire-протокол] as sql_wire_protocol
+  [9.4 JSON API] as json_api
+  [9.5 Планировщик DSL-задач] as dsl_task_scheduler
+}
+
+package "10. Тестируемость" {
+  [10.1 Unit-тесты] as unit_test_engine
+  [10.2 Интеграционные тесты] as integration_test_harness
+  [10.3 Стресс-тесты] as stress_test_runner
+  [10.4 Мутационное покрытие] as mutation_coverage
+}
+
+main --> config_loader
+main --> logger
+main --> platform_init
+main --> bootstrap_controller
+main --> memory_allocator
+main --> txn_manager
+main --> sql_parser
+bootstrap_controller --> rest_api
+sql_parser --> sql_planner
+sql_planner --> sql_optimizer
+sql_optimizer --> sql_executor
+sql_optimizer --> adaptive_aggregates
+sql_optimizer --> plan_cache
+sql_optimizer --> runtime_optimizer
+sql_executor --> index_manager
+sql_executor --> column_store
+sql_executor --> row_store
+sql_executor --> mvcc_engine
+sql_executor --> pl_lang_runtime
+sql_executor --> analytic_engine
+sql_executor --> adaptive_joins
+sql_executor --> streaming_aggregator
+sql_executor --> arrow_executor
+analytic_engine --> materialized_views
+analytic_engine --> analytics_functions
+analytic_engine --> vectorized_executor
+mvcc_engine --> versioned_tables
+mvcc_engine --> snapshot_manager
+mvcc_engine --> wal_manager
+txn_manager --> mvcc_engine
+txn_manager --> gc_vacuum
+txn_manager --> isolation_levels
+txn_manager --> replication
+replication --> failover_engine
+crash_recovery --> wal_manager
+row_store --> buffer_pool
+row_store --> index_manager
+column_store --> compression_engine
+column_store --> for_encoding
+column_store --> arrow_layout
+column_store --> index_manager
+page_cache --> cold_storage_fallback
+ttl_eviction --> cold_storage_fallback
+rest_api --> sql_executor
+graphql_api --> sql_executor
+grpc_interface --> sql_executor
+s3_batch_loader --> row_store
+s3_batch_loader --> column_store
+cdc_streaming --> wal_manager
+ml_runtime --> ml_adapter
+ml_adapter --> vectorized_executor
+udf_engine --> plugin_loader
+plugin_loader --> udf_sandbox
+opentelemetry_tracer --> sql_executor
+flamegraph_profiler --> vectorized_executor
+structured_logger --> logger
+integration_test_harness --> row_store
+integration_test_harness --> column_store
+stress_test_runner --> txn_manager
+stress_test_runner --> sql_executor
+mutation_coverage --> sql_parser
+mutation_coverage --> sql_executor
+json_store --> sql_executor
+sharding_manager --> partition_manager
+partition_manager --> row_store
+auto_rebalancer --> sharding_manager
+multi_tenant_limiter --> buffer_pool
+multi_tenant_limiter --> memory_allocator
+dsl_engine --> dsl_task_scheduler
+jdbc_server --> sql_executor
+odbc_gateway --> sql_executor
+cli_shell --> sql_parser
+openapi_doc --> rest_api
+external_hooks --> txn_manager
+time_series_engine --> column_store
+time_series_engine --> analytics_functions
+rbac_abac_engine --> sql_executor
+tls_mtls_jwt --> rest_api
+tls_mtls_jwt --> grpc_interface
+access_policies --> row_col_security
+sql_injection_guard --> sql_parser
+fuzzer_engine --> sql_executor
+fuzzer_engine --> txn_manager
+schema_evolver --> row_store
+schema_evolver --> column_store
+instant_snapshot --> buffer_pool
+instant_snapshot --> snapshot_manager
+instant_snapshot --> mvcc_engine
+ci_cd_runner --> unit_test_engine
+ci_cd_runner --> schema_evolver
+prometheus_exporter --> buffer_pool
+prometheus_exporter --> sql_executor
+prometheus_exporter --> opentelemetry_tracer
+audit_logger --> sql_executor
+audit_logger --> txn_manager
+audit_logger --> structured_logger
+htap_manager --> analytic_engine
+htap_manager --> column_store
+htap_manager --> sql_executor
+config_loader --> logger
+config_loader --> memory_allocator
+logger --> structured_logger
+platform_init --> memory_allocator
+memory_allocator --> buffer_pool
+memory_allocator --> multi_tenant_limiter
+json_api --> sql_executor
+json_api --> rest_api
+sql_wire_protocol --> sql_parser
+sql_wire_protocol --> sql_executor
+buffer_pool --> page_cache
+sql_executor --> json_store
+sharding_manager --> auto_rebalancer
+cold_storage_fallback --> ttl_eviction
+wal_manager --> crash_recovery
+udf_engine --> sql_executor
+cli_shell --> sql_parser
+cdc_streaming --> txn_manager
+cdc_streaming --> wal_manager
+mutation_coverage --> sql_parser
+mutation_coverage --> sql_executor
+integration_test_harness --> sql_executor
+integration_test_harness --> row_store
+integration_test_harness --> column_store
+graphQL_api --> sql_executor
+audit_logger --> txn_manager
+audit_logger --> sql_executor
+rbac_abac_engine --> sql_executor
+tls_mtls_jwt --> rest_api
+tls_mtls_jwt --> grpc_interface
+
+sql_executor --> udf_engine
+dsl_task_scheduler --> dsl_engine
+sql_executor --> jdbc_server
+sql_executor --> odbc_gateway
+sql_executor --> graphql_api
+cli_shell --> sql_parser
+rest_api --> openapi_doc
+wal_manager --> cdc_streaming
+etl_engine --> s3_batch_loader
+txn_manager --> external_hooks
+analytic_engine --> time_series_engine
+ml_adapter --> ml_runtime
+sql_executor --> htap_manager
+sql_executor --> rbac_abac_engine
+rest_api --> tls_mtls_jwt
+txn_manager --> audit_logger
+row_col_security --> access_policies
+sql_parser --> sql_injection_guard
+vectorized_executor --> flamegraph_profiler
+sql_executor --> fuzzer_engine
+ci_cd_runner --> integration_test_harness
+ci_cd_runner --> stress_test_runner
+ci_cd_runner --> mutation_coverage
+snapshot_manager --> instant_snapshot
+sql_wire_protocol --> jdbc_server
+sql_wire_protocol --> odbc_gateway
+json_api --> sql_executor
+@enduml
 
