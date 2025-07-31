@@ -13,16 +13,105 @@ skinparam linetype ortho
 hide empty members
 
 package "0. Инициализация и системный старт" {
-  [0.1 Точка входа] as main <<entrypoint>>
+  [0.1 Точка входа] as main
+  note right of main
+    Корневой блок СУБД
+    вызывается операционной системой
+  end note
+
   [0.2 Загрузчик конфигурации] as config_loader
-  [0.3 Логгер (stderr/syslog/binary)] as logger
-  [0.4 Инициализация платформы] as platform_init
-  [0.5 Контроллер запуска] as bootstrap_controller
-  [0.6 Безопасность при старте] as security_bootstrap
-  [0.7 Инициализация метрик] as metrics_initializer
-  [0.8 Watchdog и контроль запуска] as watchdog_init
-  [0.9 Инициализация мониторинга] as monitoring_initializer
-  [0.10 Менеджер путей логов] as log_path_manager
+  note right of config_loader
+    main инициализирует
+    конфигурацию
+  end note
+
+  [0.3 Логирование (stderr/syslog/binary)] as logger
+  note right of logger
+    логгирование 
+    необходимо до старта
+    подсистем
+  end note
+
+  [0.4 Инициализация метрик] as metrics_initializer
+  note right of metrics_initializer
+  end note
+
+  [0.5 Инициализация платформы] as platform_init
+  note right of platform_init
+  end note
+
+  [0.6 Инициализация хранилища] as storage_init
+  note right of storage_init
+    выделение памяти и
+    подключение хранилища
+  end note
+
+  [0.7 Инициализация транзакций] as txn_init
+  note right of txn_init
+    транзакционный движок
+    запускается одним из
+    первых
+  end note
+
+  [0.8 Инициализация MVCC] as mvcc_init
+  note right of mvcc_init
+    MVCC строится поверх
+    транзакций и хранения
+  end note
+
+  [0.9 Инициализация WAL / Snapshot] as wal_snapshot_init
+  note right of wal_snapshot_init
+    WAL и snapshot
+    обязательны для
+    надёжности
+  end note
+
+  [0.10 Инициализация мониторинга] as monitoring_initializer
+  note right of monitoring_initializer
+  end note
+
+  [0.11 Инициализация API] as api_init
+  note right of platform_init
+    запуск
+    REST/gRPC/WebSocket
+    интерфейсов
+  end note
+
+  [0.12 Планировщик фоновых задач] as bg_tasks_init
+  note right of bg_tasks_init
+    запуск фоновых задач:
+    GC, вакуум, flush
+  end note
+
+  [0.13 Менеджер путей логов] as log_path_manager
+  note right of
+  end note
+
+  [0.14 Мониторинг и трассировка] as observability_init
+  note right of platform_init
+    экспорт метрик,
+    трассировка,
+    логгирование
+  end note
+  
+  [0.15 Контроллер запуска] as bootstrap_controller
+  note right of bootstrap_controller
+  end note
+
+  [0.16 Безопасность при старте] as security_bootstrap
+  note right of security_bootstrap
+  end note
+
+  [0.17 Watchdog и контроль запуска] as watchdog_init
+  note right of watchdog_init
+  end note  
+
+  [0.18 Завершение работы] as graceful_shutdown
+  note right of
+    регистрация
+    обработчиков
+    завершения работы
+  end note
 }
 
 package "1. Архитектура и Хранилище" {
