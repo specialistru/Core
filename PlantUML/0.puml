@@ -1,1 +1,175 @@
+@startuml
+title Архитектура In-Memory РСУБД уровня SAP HANA+
+
+skinparam rectangle {
+  StereotypeFontColor black
+  StereotypeFontSize 11
+}
+skinparam shadowing false
+skinparam linetype ortho
+hide empty members
+
+package "0. Инициализация и системный старт" {
+  [0.1 Точка входа: main()] <<entrypoint>>
+  [0.2 Загрузка конфигурации]
+  [0.3 Аргументы запуска]
+  [0.4 Сигналы ОС]
+  [0.5 Инициализация подсистем]
+  [0.6 Логгер (stderr/syslog/bin)]
+  [0.7 Контроль запуска и блокировки]
+  [0.8 Метрики старта]
+  [0.9 Инициализация профилировщика]
+  [0.10 Watchdog]
+  [0.11 Завершение работы]
+  [0.12 Версия ядра и компонент]
+}
+
+package "1. Архитектура и Хранилище" {
+  [1.1 NUMA-аллокатор] <<NUMA-aware>>
+  [1.2 Prefetch & cache coloring]
+  [1.3 Row-store]
+  [1.4 Column-store]
+  [1.5 JSON-store]
+  [1.6 Абстракция таблиц]
+  [1.7 Форматы: строки и колонки]
+  [1.8 Индексы: B+]
+  [1.9 Индексы: Hash]
+  [1.10 Индексы: Bitmap]
+  [1.11 Индексы: Inverted]
+  [1.12 Адаптивные индексы]
+  [1.13 Сжатие: Dictionary]
+  [1.14 Сжатие: RLE]
+  [1.15 Сжатие: Delta]
+  [1.16 Сжатие: FoR]
+  [1.17 Векторная декомпрессия]
+  [1.18 Apache Arrow / PAX]
+  [1.19 Горячие/Холодные данные]
+  [1.20 TTL / Auto-tiering]
+  [1.21 Tiered Storage (SSD)]
+  [1.22 Page Cache (LRU/ARC)]
+  [1.23 Dirty tracking]
+  [1.24 Snapshot Manager]
+  [1.25 System Versioned / AS OF]
+  [1.26 Multi-tenant лимиты]
+  [1.27 Шардирование]
+  [1.28 Авто-ребалансировка]
+  [1.29 Партиционирование]
+  [1.30 Таблицы > 1 ТБ]
+  [1.31 Буферный пул]
+  [1.32 Планировщик переходов слоёв]
+}
+
+package "2. Транзакционность и Надёжность" {
+  [2.1 Движок MVCC]
+  [2.2 WAL-журнал]
+  [2.3 Менеджер транзакций]
+  [2.4 Snapshot Isolation]
+  [2.5 Уровни изоляции: RC, RR, SI, Serializable]
+  [2.6 Garbage Collection (Vacuum)]
+  [2.7 Undo-chains]
+  [2.8 Crash Recovery]
+  [2.9 WAL Writer]
+  [2.10 Служба восстановления]
+  [2.11 Менеджер блокировок]
+  [2.12 Failover и HA/DR]
+  [2.13 Репликация: Raft / Paxos]
+  [2.14 System Versioned восстановление]
+  [2.15 Online backup/restore]
+  [2.16 TTL-эвикшн и snapshot cleanups]
+}
+
+package "3. SQL и Языки" {
+  [3.1 ANSI SQL:2011+ ядро]
+  [3.2 JSON и аналитические расширения]
+  [3.3 Парсер SQL и CTE]
+  [3.4 DSL транзакций (PL/SQL)]
+  [3.5 Встроенные процедуры и UDF]
+  [3.6 Оконные функции]
+  [3.7 Оптимизатор: cost-based]
+  [3.8 Оптимизатор: rule-based]
+  [3.9 Оптимизатор: adaptive feedback]
+  [3.10 Реоптимизация и кэширование]
+  [3.11 Расширения: MATCH_RECOGNIZE, FILTER]
+  [3.12 Интерпретатор + JIT]
+}
+
+package "4. Интерфейсы и Интеграции" {
+  [4.1 JDBC / ODBC / CLI]
+  [4.2 REST / GraphQL / gRPC]
+  [4.3 WebSocket / OpenAPI]
+  [4.4 CSV / Parquet / JSON импортер]
+  [4.5 Kafka / Pulsar / CDC / Changefeed]
+  [4.6 Вебхуки и внешние процедуры]
+  [4.7 Интеграция с ERP / BI]
+  [4.8 Планировщик ETL / DSL]
+}
+
+package "5. BI, ML и OLAP" {
+  [5.1 HTAP-движок (mixed workload)]
+  [5.2 Views и Materialized Views]
+  [5.3 Time Series функции]
+  [5.4 Кластеризация и агрегации]
+  [5.5 ROLLUP / CUBE / Adaptive Aggregates]
+  [5.6 SQL-инференс: ONNX / TF / Torch]
+  [5.7 Gap-fill / Retention]
+}
+
+package "6. Безопасность" {
+  [6.1 RBAC / ABAC]
+  [6.2 TLS / JWT / mTLS]
+  [6.3 Шифрование TDE]
+  [6.4 Защита от SQL-инъекций]
+  [6.5 Row/Column-level security]
+  [6.6 Access Policy Engine]
+  [6.7 Аудит DML/DDL]
+  [6.8 Политики предикатов]
+  [6.9 Иммутабельные лог-цепочки]
+}
+
+package "7. Observability и DevOps" {
+  [7.1 Метрики: Prometheus / OpenMetrics]
+  [7.2 Трейсинг: OpenTelemetry / Jaeger]
+  [7.3 Логирование: syslog, stderr, binary]
+  [7.4 Профилировка: flamegraph, timeline]
+  [7.5 Fuzzing: libFuzzer, AFL++]
+  [7.6 Fault injection и chaos testing]
+  [7.7 CI/CD: GitHub Actions, Ninja]
+  [7.8 Schema evolution / live reload]
+  [7.9 Instant rollback и версионирование]
+}
+
+package "8. Производительность" {
+  [8.1 Latency <1ms, <500ns]
+  [8.2 Vectorized execution]
+  [8.3 Parallel pipelines]
+  [8.4 Streaming aggregation]
+  [8.5 Adaptive joins: hash, merge, nested-loop]
+  [8.6 Plan caching и feedback]
+  [8.7 Format-aware execution]
+  [8.8 Copy-on-write snapshots]
+  [8.9 Instant backup/restore]
+  [8.10 Clone tables и реплики]
+}
+
+package "9. Расширяемость" {
+  [9.1 Поддержка UDF/UDAF на C/C++/Lua/WASM]
+  [9.2 Модули: dlopen / LoadLibrary]
+  [9.3 PostgreSQL wire protocol]
+  [9.4 REST / gRPC / JSON:API]
+  [9.5 DSL/UDF для ERP и ETL]
+  [9.6 Расширения и sandbox API]
+}
+
+package "10. Тестируемость и структура" {
+  [10.1 Unit / Integration / Stress Tests]
+  [10.2 Fuzz / Mutation Testing]
+  [10.3 Code coverage]
+  [10.4 Структура модулей core/, sql/, api/]
+  [10.5 Архитектура: Parser → Planner → Optimizer → Executor → Storage]
+  [10.6 Логирование операций: log_event()]
+  [10.7 Мониторинг: CLI / REST / Web UI]
+  [10.8 Контекстный API и opaque-структуры]
+}
+
+@enduml
 
