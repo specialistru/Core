@@ -890,71 +890,90 @@
       "internal_id": "redo_replay_engine",
       "incoming": [],
       "outgoing": []
-    }
-
-
-
-
-
+    },    
     {
-      "block_number": 22,
+      "block_number": "2.29",
       "block_name": "Координатор кворума и согласования",
-      "internal_id": "quorum_coordinator"
+      "internal_id": "quorum_coordinator",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 23,
+      "block_number": "2.30",
       "block_name": "Движок синхронизации кластерного состояния",
-      "internal_id": "cluster_state_sync_engine"
+      "internal_id": "cluster_state_sync_engine",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 24,
+      "block_number": "2.31",
       "block_name": "Движок повтора WAL и восстановления",
-      "internal_id": "redo_replay_engine"
-    }
+      "internal_id": "redo_replay_engine",
+      "incoming": [],
+      "outgoing": []
+    },
     {
-      "block_number": 25,
+      "block_number": "2.32",
       "block_name": "Движок анализа видимости и конфликтов MVCC",
-      "internal_id": "mvcc_visibility_detector"
+      "internal_id": "mvcc_visibility_detector",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 26,
+      "block_number": "2.33",
       "block_name": "Сжатие undo-цепочек для откатов",
-      "internal_id": "undo_chain_compression"
+      "internal_id": "undo_chain_compression",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 27,
+      "block_number": "2.34",
       "block_name": "Проверка сериализуемости транзакций",
-      "internal_id": "serializable_txn_verifier"
-    }
+      "internal_id": "serializable_txn_verifier",
+      "incoming": [],
+      "outgoing": []
+    },
     {
-      "block_number": 28,
+      "block_number": "2.35",
       "block_name": "Центральный менеджер транзакций",
-      "internal_id": "transaction_manager_core"
+      "internal_id": "transaction_manager_core",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 29,
+      "block_number": "2.36",
       "block_name": "Граф зависимостей транзакций и deadlock detector",
-      "internal_id": "txn_dependency_graph"
+      "internal_id": "txn_dependency_graph",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 30,
+      "block_number": "2.37",
       "block_name": "Координатор двухфазного коммита (2PC)",
-      "internal_id": "two_phase_commit_coordinator"
-    }
+      "internal_id": "two_phase_commit_coordinator",
+      "incoming": [],
+      "outgoing": []
+    },
     {
-      "block_number": 31,
+      "block_number": "2.38",
       "block_name": "Контроллер синхронизации и переключения DR-сайтов",
-      "internal_id": "dr_failover_controller"
+      "internal_id": "dr_failover_controller",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 32,
+      "block_number": "2.39",
       "block_name": "Планировщик репликаций между зонами и датацентрами",
-      "internal_id": "cross_zone_replication"
+      "internal_id": "cross_zone_replication",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 33,
+      "block_number": "2.40",
       "block_name": "Мониторинг SLA по RPO/RTO и нарушениям восстановления",
-      "internal_id": "rpo_rto_sla_monitor"
+      "internal_id": "rpo_rto_sla_monitor",
+      "incoming": [],
+      "outgoing": []
     }
   ]
 },
