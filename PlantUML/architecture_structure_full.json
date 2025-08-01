@@ -319,20 +319,6 @@
       "outgoing": []
     },
     {
-      "block_number": "1.6",
-      "block_name": "NUMA-aware allocation",
-      "internal_id": "numa_aware_allocation",
-      "incoming": [],
-      "outgoing": []
-    },
-    {
-      "block_number": "1.7",
-      "block_name": "CPU affinity, cache coloring",
-      "internal_id": "cpu_affinity_cache_coloring",
-      "incoming": [],
-      "outgoing": []
-    },
-    {
       "block_number": "1.8",
       "block_name": "Prefetching и кеш-подсистема",
       "internal_id": "prefetching_cache_subsystem",
@@ -403,23 +389,9 @@
       "outgoing": []
     },
     {
-      "block_number": "1.18",
-      "block_name": "PAX и Apache Arrow Layouts",
-      "internal_id": "pax_arrow_layouts",
-      "incoming": [],
-      "outgoing": []
-    },
-    {
       "block_number": "1.19",
       "block_name": "Frame-of-Reference и векторное сжатие",
       "internal_id": "frame_of_reference_compression",
-      "incoming": [],
-      "outgoing": []
-    },
-    {
-      "block_number": "1.20",
-      "block_name": "Страница / Page Cache / Buffer Pool",
-      "internal_id": "page_cache_buffer_pool",
       "incoming": [],
       "outgoing": []
     },
@@ -434,13 +406,6 @@
       "block_number": "1.22",
       "block_name": "Preload и отслеживание dirty-страниц",
       "internal_id": "preload_dirty_tracking",
-      "incoming": [],
-      "outgoing": []
-    },
-    {
-      "block_number": "1.23",
-      "block_name": "Write-Ahead Logging (WAL)",
-      "internal_id": "write_ahead_logging",
       "incoming": [],
       "outgoing": []
     },
@@ -462,13 +427,6 @@
       "block_number": "1.26",
       "block_name": "Сжатие: Dictionary, RLE, Delta",
       "internal_id": "compression_dictionary_rle_delta",
-      "incoming": [],
-      "outgoing": []
-    },
-    {
-      "block_number": "1.27",
-      "block_name": "Векторная декомпрессия",
-      "internal_id": "vectorized_decompression",
       "incoming": [],
       "outgoing": []
     },
@@ -984,27 +942,6 @@
     },
     {
       "block_number": "2.28",
-      "block_name": "Движок повтора WAL и восстановления",
-      "internal_id": "redo_replay_engine",
-      "incoming": [],
-      "outgoing": []
-    },    
-    {
-      "block_number": "2.29",
-      "block_name": "Координатор кворума и согласования",
-      "internal_id": "quorum_coordinator",
-      "incoming": [],
-      "outgoing": []
-    },
-    {
-      "block_number": "2.30",
-      "block_name": "Движок синхронизации кластерного состояния",
-      "internal_id": "cluster_state_sync_engine",
-      "incoming": [],
-      "outgoing": []
-    },
-    {
-      "block_number": "2.31",
       "block_name": "Движок повтора WAL и восстановления",
       "internal_id": "redo_replay_engine",
       "incoming": [],
@@ -1579,13 +1516,6 @@
       "block_number": "4.8",
       "block_name": "Импорт JSON, XML, S3",
       "internal_id": "import_json_xml_s3",
-      "incoming": [],
-      "outgoing": []
-    },
-    {
-      "block_number": "4.9",
-      "block_name": "Webhooks и внешние процедуры",
-      "internal_id": "webhooks_external_procedures",
       "incoming": [],
       "outgoing": []
     },
