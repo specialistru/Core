@@ -1,1 +1,21 @@
-
+{
+  "id": "20.4",
+  "internal_id": "core_storage_row_column_json_indexes",
+  "title": "Ядро хранилища: row-store, column-store, JSON-store и индексы",
+  "package": "20. Внутренняя структура и ядро",
+  "description": "...",
+  "functions": [
+    {
+      "name": "storage_row_insert",
+      "prototype": "bool storage_row_insert(table_t *table, const row_t *row);",
+      "description": "Вставляет строку в row-store.",
+      "returns": "true"
+    },
+    ...
+  ],
+  "structures": [...],
+  "metrics": [...],
+  "security": [...],
+  "dependencies": [...],
+  "tests": [...]
+}
