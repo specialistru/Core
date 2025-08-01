@@ -4,6 +4,13 @@
   "package_name": "Инициализация и системный старт",
   "blocks": [
     {
+      "block_number": "0.0",
+      "block_name": "Обзор архитектуры и компонентов",
+      "internal_id": "architecture_overview",
+      "incoming": [],
+      "outgoing": []
+    },    
+    {
       "block_number": "0.1",
       "block_name": "Точка входа: main()",
       "internal_id": "app_entrypoint_main",
@@ -75,6 +82,13 @@
       "outgoing": []
     },
     {
+      "block_number": "0.2.1",
+      "block_name": "Слой абстракции метаданных",
+      "internal_id": "metadata_abstraction_layer",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
       "block_number": "0.3",
       "block_name": "Обработка аргументов",
       "internal_id": "cli_arguments_parser",
@@ -100,6 +114,13 @@
           "package_number": 0
         }
       ],
+      "outgoing": []
+    },
+    {
+      "block_number": "0.5.1",
+      "block_name": "Обработчик SQL и протокольных соединений",
+      "internal_id": "core_protocol_handler",
+      "incoming": [],
       "outgoing": []
     },
     {
