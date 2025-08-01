@@ -102,7 +102,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 0,
   "package_name": "Инициализация и системный старт",
@@ -164,8 +164,7 @@
       "outgoing": []
     }
   ]
-}
-
+},
 {
   "package_number": 0,
   "package_name": "Инициализация и системный старт",
@@ -218,13 +217,7 @@
       "internal_id": "shutdown_controller",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 0,
-  "package_name": "Инициализация и системный старт",
-  "blocks": [
+    },
     {
       "block_number": "0.16",
       "block_name": "Контроль версий",
@@ -261,7 +254,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 1,
   "package_name": "Архитектура и Хранилище",
@@ -300,13 +293,7 @@
       "internal_id": "json_store",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 1,
-  "package_name": "Архитектура и Хранилище",
-  "blocks": [
+    },
     {
       "block_number": "1.6",
       "block_name": "NUMA-aware allocation",
@@ -341,13 +328,7 @@
       "internal_id": "auto_rebalancing",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 1,
-  "package_name": "Архитектура и Хранилище",
-  "blocks": [
+    },
     {
       "block_number": "1.11",
       "block_name": "Distributed Query Planner",
@@ -382,13 +363,7 @@
       "internal_id": "system_versioned_asof_queries",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 1,
-  "package_name": "Архитектура и Хранилище",
-  "blocks": [
+    },
     {
       "block_number": "1.16",
       "block_name": "Поддержка большого объема памяти",
@@ -423,13 +398,7 @@
       "internal_id": "page_cache_buffer_pool",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 1,
-  "package_name": "Архитектура и Хранилище",
-  "blocks": [
+    },
     {
       "block_number": "1.21",
       "block_name": "Алгоритмы вытеснения: LRU, ARC",
@@ -464,13 +433,7 @@
       "internal_id": "diff_based_snapshots",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 1,
-  "package_name": "Архитектура и Хранилище",
-  "blocks": [
+    },
     {
       "block_number": "1.26",
       "block_name": "Сжатие: Dictionary, RLE, Delta",
@@ -505,13 +468,7 @@
       "internal_id": "auto_tiering_ttl_eviction",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 1,
-  "package_name": "Архитектура и Хранилище",
-  "blocks": [
+    },
     {
       "block_number": "1.31",
       "block_name": "Адаптивные индексы и перестроение",
@@ -546,13 +503,7 @@
       "internal_id": "data_placement_info",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 1,
-  "package_name": "Архитектура и Хранилище",
-  "blocks": [
+    },
     {
       "block_number": "1.36",
       "block_name": "Распределение по NUMA-узлам",
@@ -587,13 +538,7 @@
       "internal_id": "online_tiering_switch",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 1,
-  "package_name": "Архитектура и Хранилище",
-  "blocks": [
+    },
     {
       "block_number": "1.41",
       "block_name": "Сжимаемые страницы и блоки",
@@ -630,7 +575,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 2,
   "package_name": "Транзакционность и Надёжность",
@@ -669,13 +614,7 @@
       "internal_id": "snapshots_and_recovery",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 2,
-  "package_name": "Транзакционность и Надёжность",
-  "blocks": [
+    },
     {
       "block_number": "2.6",
       "block_name": "Мгновенное восстановление после сбоя",
@@ -710,13 +649,7 @@
       "internal_id": "failover_and_watchdog",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 2,
-  "package_name": "Транзакционность и Надёжность",
-  "blocks": [
+    },
     {
       "block_number": "2.11",
       "block_name": "Многонодовое восстановление",
@@ -751,13 +684,7 @@
       "internal_id": "version_visibility_control",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 2,
-  "package_name": "Транзакционность и Надёжность",
-  "blocks": [
+    },
     {
       "block_number": "2.16",
       "block_name": "Сжатие версий и GC цепочек",
@@ -792,13 +719,7 @@
       "internal_id": "snapshot_tid_masking",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 2,
-  "package_name": "Транзакционность и Надёжность",
-  "blocks": [
+    },
     {
       "block_number": "2.21",
       "block_name": "Read set и write set snapshot",
@@ -835,7 +756,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 3,
   "package_name": "SQL и Языки",
@@ -874,13 +795,7 @@
       "internal_id": "sql_optimizer_adaptive",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 3,
-  "package_name": "SQL и Языки",
-  "blocks": [
+    },
     {
       "block_number": "3.6",
       "block_name": "Оконные функции (window functions)",
@@ -915,13 +830,7 @@
       "internal_id": "json_functions_support",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 3,
-  "package_name": "SQL и Языки",
-  "blocks": [
+    },
     {
       "block_number": "3.11",
       "block_name": "Собственный транзакционный DSL",
@@ -956,13 +865,7 @@
       "internal_id": "builtin_procedures_forecast_cluster",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 3,
-  "package_name": "SQL и Языки",
-  "blocks": [
+    },
     {
       "block_number": "3.16",
       "block_name": "SELECT-подсистема и анализ планов",
@@ -997,13 +900,7 @@
       "internal_id": "plan_cache_and_reoptimization",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 3,
-  "package_name": "SQL и Языки",
-  "blocks": [
+    },
     {
       "block_number": "3.21",
       "block_name": "Селективность и NDV-анализ",
@@ -1038,13 +935,7 @@
       "internal_id": "built_in_aggregates_filter",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 3,
-  "package_name": "SQL и Языки",
-  "blocks": [
+    },
     {
       "block_number": "3.26",
       "block_name": "Аналитические функции: ранжирование, квантили",
@@ -1060,7 +951,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 4,
   "package_name": "Интерфейсы и Интеграции",
@@ -1099,13 +990,7 @@
       "internal_id": "debezium_redis_streams",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 4,
-  "package_name": "Интерфейсы и Интеграции",
-  "blocks": [
+    },
     {
       "block_number": "4.6",
       "block_name": "Changefeed и событийные источники",
@@ -1140,13 +1025,7 @@
       "internal_id": "async_event_processing",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 4,
-  "package_name": "Интерфейсы и Интеграции",
-  "blocks": [
+    },
     {
       "block_number": "4.11",
       "block_name": "Интеграция с ERP и BI",
@@ -1181,14 +1060,7 @@
       "internal_id": "unified_sql_gateway",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-
-{
-  "package_number": 4,
-  "package_name": "Интерфейсы и Интеграции",
-  "blocks": [
+    },
     {
       "block_number": "4.16",
       "block_name": "Импорт пользовательских форматов",
@@ -1225,7 +1097,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 5,
   "package_name": "BI, ML и OLAP",
@@ -1264,13 +1136,7 @@
       "internal_id": "rollup_cube_support",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 5,
-  "package_name": "BI, ML и OLAP",
-  "blocks": [
+    },
     {
       "block_number": "5.6",
       "block_name": "Аналитика временных окон",
@@ -1305,13 +1171,7 @@
       "internal_id": "sql_ml_model_inference",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 5,
-  "package_name": "BI, ML и OLAP",
-  "blocks": [
+    },
     {
       "block_number": "5.11",
       "block_name": "Поддержка ONNX runtime",
@@ -1346,13 +1206,7 @@
       "internal_id": "trained_model_caching",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 5,
-  "package_name": "BI, ML и OLAP",
-  "blocks": [
+    },
     {
       "block_number": "5.16",
       "block_name": "Отложенное обучение и retrain",
@@ -1387,13 +1241,7 @@
       "internal_id": "ml_results_visualization",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 5,
-  "package_name": "BI, ML и OLAP",
-  "blocks": [
+    },
     {
       "block_number": "5.21",
       "block_name": "Интеграция BI-инструментов",
@@ -1430,7 +1278,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 6,
   "package_name": "Безопасность",
@@ -1469,13 +1317,7 @@
       "internal_id": "forward_secrecy_support",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 6,
-  "package_name": "Безопасность",
-  "blocks": [
+    },
     {
       "block_number": "6.6",
       "block_name": "Сетевые ACL и scoped tokens",
@@ -1510,13 +1352,7 @@
       "internal_id": "sql_injection_protection",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 6,
-  "package_name": "Безопасность",
-  "blocks": [
+    },
     {
       "block_number": "6.11",
       "block_name": "Песочница для Lua / WASM",
@@ -1553,7 +1389,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 7,
   "package_name": "Observability и DevOps",
@@ -1592,13 +1428,7 @@
       "internal_id": "perf_tool_integration",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 7,
-  "package_name": "Observability и DevOps",
-  "blocks": [
+    },
     {
       "block_number": "7.6",
       "block_name": "Flamegraph и execution timeline viewer",
@@ -1633,13 +1463,7 @@
       "internal_id": "fault_injection_chaos_testing",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 7,
-  "package_name": "Observability и DevOps",
-  "blocks": [
+    },
     {
       "block_number": "7.11",
       "block_name": "Crash recovery тесты",
@@ -1674,13 +1498,7 @@
       "internal_id": "instant_rollback_live_reload",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 7,
-  "package_name": "Observability и DevOps",
-  "blocks": [
+    },
     {
       "block_number": "7.16",
       "block_name": "Мониторинг через CLI и REST API",
@@ -1717,7 +1535,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 8,
   "package_name": "Производительность",
@@ -1756,13 +1574,7 @@
       "internal_id": "vectorized_execution_engine",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 8,
-  "package_name": "Производительность",
-  "blocks": [
+    },
     {
       "block_number": "8.6",
       "block_name": "Параллельные пайплайны исполнения",
@@ -1797,13 +1609,7 @@
       "internal_id": "runtime_reoptimization",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 8,
-  "package_name": "Производительность",
-  "blocks": [
+    },
     {
       "block_number": "8.11",
       "block_name": "Кэширование планов выполнения",
@@ -1838,13 +1644,7 @@
       "internal_id": "copy_on_write_snapshots",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 8,
-  "package_name": "Производительность",
-  "blocks": [
+    },
     {
       "block_number": "8.16",
       "block_name": "Мгновенное backup / restore",
@@ -1881,7 +1681,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 9,
   "package_name": "Расширяемость",
@@ -1920,13 +1720,7 @@
       "internal_id": "dsl_udf_erp_scenarios",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 9,
-  "package_name": "Расширяемость",
-  "blocks": [
+    },
     {
       "block_number": "9.6",
       "block_name": "Генерация ETL-процессов",
@@ -1963,7 +1757,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 10,
   "package_name": "Тестируемость и структура проекта",
@@ -2002,13 +1796,7 @@
       "internal_id": "architecture_parser_planner_executor",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 10,
-  "package_name": "Тестируемость и структура проекта",
-  "blocks": [
+    },
     {
       "block_number": "10.6",
       "block_name": "Модули: core/, tx/, sql/, net/, api/",
@@ -2045,7 +1833,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 11,
   "package_name": "Сжатие и хранение",
@@ -2084,13 +1872,7 @@
       "internal_id": "vector_compression",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 11,
-  "package_name": "Сжатие и хранение",
-  "blocks": [
+    },
     {
       "block_number": "11.6",
       "block_name": "Векторная распаковка на лету",
@@ -2125,13 +1907,7 @@
       "internal_id": "hybrid_storage_engine",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 11,
-  "package_name": "Сжатие и хранение",
-  "blocks": [
+    },
     {
       "block_number": "11.11",
       "block_name": "Page Cache и Buffer Pool",
@@ -2166,13 +1942,7 @@
       "internal_id": "auto_eviction_ttl",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 11,
-  "package_name": "Сжатие и хранение",
-  "blocks": [
+    },
     {
       "block_number": "11.16",
       "block_name": "Горячие и холодные данные",
@@ -2207,13 +1977,7 @@
       "internal_id": "prefetch_ordered_loading",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 12,
-  "package_name": "Системные таблицы и метаданные",
-  "blocks": [
+    },
     {
       "block_number": "12.1",
       "block_name": "Каталог схем и таблиц",
@@ -2248,13 +2012,7 @@
       "internal_id": "mvcc_system_tables",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 12,
-  "package_name": "Системные таблицы и метаданные",
-  "blocks": [
+    },
     {
       "block_number": "12.6",
       "block_name": "Каталог транзакций и TID",
@@ -2289,13 +2047,7 @@
       "internal_id": "system_log_ddl_events",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 12,
-  "package_name": "Системные таблицы и метаданные",
-  "blocks": [
+    },
     {
       "block_number": "12.11",
       "block_name": "Репликация метаданных",
@@ -2332,7 +2084,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 13,
   "package_name": "Локализация и языковая поддержка",
@@ -2373,7 +2125,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 14,
   "package_name": "Интерфейс администратора",
@@ -2413,12 +2165,6 @@
       "incoming": [],
       "outgoing": []
     }
-  ]
-}
-{
-  "package_number": 14,
-  "package_name": "Интерфейс администратора",
-  "blocks": [
     {
       "block_number": "14.6",
       "block_name": "Настройки и конфигурация",
@@ -2455,7 +2201,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 15,
   "package_name": "Хронология и версии данных (SYSTEM VERSIONED)",
@@ -2494,13 +2240,7 @@
       "internal_id": "retrospective_queries",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 15,
-  "package_name": "Хронология и версии данных (SYSTEM VERSIONED)",
-  "blocks": [
+    },
     {
       "block_number": "15.6",
       "block_name": "Аудит на основе версий",
@@ -2537,7 +2277,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 16,
   "package_name": "Управление ресурсами и изоляция (Multi-Tenant, Quotas)",
@@ -2576,13 +2316,7 @@
       "internal_id": "quotas_model",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 16,
-  "package_name": "Управление ресурсами и изоляция (Multi-Tenant, Quotas)",
-  "blocks": [
+    },
     {
       "block_number": "16.6",
       "block_name": "Изоляция данных между арендаторами",
@@ -2619,7 +2353,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 17,
   "package_name": "Планировщик задач и события",
@@ -2658,13 +2392,7 @@
       "internal_id": "data_change_events",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 17,
-  "package_name": "Планировщик задач и события",
-  "blocks": [
+    },
     {
       "block_number": "17.6",
       "block_name": "Очереди заданий",
@@ -2701,7 +2429,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 18,
   "package_name": "Временные окна и TimeSeries аналитика",
@@ -2740,13 +2468,7 @@
       "internal_id": "timeseries_aggregates",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 18,
-  "package_name": "Временные окна и TimeSeries аналитика",
-  "blocks": [
+    },
     {
       "block_number": "18.6",
       "block_name": "Интервалы соскальзывания (sliding windows)",
@@ -2783,7 +2505,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 19,
   "package_name": "Форматы и обработка данных",
@@ -2822,13 +2544,7 @@
       "internal_id": "changefeed_debezium_support",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 19,
-  "package_name": "Форматы и обработка данных",
-  "blocks": [
+    },
     {
       "block_number": "19.6",
       "block_name": "Kafka и Pulsar интеграция",
@@ -2863,13 +2579,7 @@
       "internal_id": "data_parsing_transformation",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 19,
-  "package_name": "Форматы и обработка данных",
-  "blocks": [
+    },
     {
       "block_number": "19.11",
       "block_name": "Валидация и нормализация данных",
@@ -2906,7 +2616,7 @@
       "outgoing": []
     }
   ]
-}
+},
 {
   "package_number": 20,
   "package_name": "Внутренняя структура и ядро",
@@ -2945,13 +2655,7 @@
       "internal_id": "transaction_engine_dsl",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 20,
-  "package_name": "Внутренняя структура и ядро",
-  "blocks": [
+    },
     {
       "block_number": "20.6",
       "block_name": "MVCC и snapshot isolation",
@@ -2986,13 +2690,7 @@
       "internal_id": "session_object_catalog",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 20,
-  "package_name": "Внутренняя структура и ядро",
-  "blocks": [
+    },
     {
       "block_number": "20.11",
       "block_name": "Менеджер блокировок и изоляции",
@@ -3027,13 +2725,7 @@
       "internal_id": "built_in_data_types",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 20,
-  "package_name": "Внутренняя структура и ядро",
-  "blocks": [
+    },
     {
       "block_number": "20.16",
       "block_name": "Работа с типами timestamp (нс)",
@@ -3068,13 +2760,7 @@
       "internal_id": "system_initialization",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-}
-{
-  "package_number": 20,
-  "package_name": "Внутренняя структура и ядро",
-  "blocks": [
+    },
     {
       "block_number": "20.21",
       "block_name": "Завершение работы системы",
