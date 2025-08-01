@@ -124,3 +124,94 @@ with full_output_path.open("w", encoding="utf-8") as f:
     json.dump(full_json_blocks, f, indent=2, ensure_ascii=False)
 
 full_output_path.name
+
+//////////////////
+
+import json
+from pathlib import Path
+
+# Примерная структура одного блока (последнего), для иллюстрации начала формирования JSON
+example_block = {
+    "id": "20.4",
+    "internal_id": "core_storage_row_column_json_indexes",
+    "title": "Ядро хранилища: row-store, column-store, JSON-store и индексы",
+    "package": "20. Внутренняя структура и ядро",
+    "description": "Блок реализует унифицированное in-memory хранилище, включающее: row-store, column-store, JSON-store и индексацию (B+ tree, hash, bitmap, inverted, adaptive).",
+    "functions": [
+        {
+            "name": "storage_row_insert",
+            "prototype": "bool storage_row_insert(table_t *table, const row_t *row);",
+            "description": "Вставляет строку в row-store.",
+            "returns": "true"
+        },
+        {
+            "name": "storage_column_insert",
+            "prototype": "bool storage_column_insert(table_t *table, const column_t *cols, size_t count);",
+            "description": "Вставка в column-store.",
+            "returns": "true"
+        },
+        {
+            "name": "storage_json_upsert",
+            "prototype": "bool storage_json_upsert(table_t *table, const json_t *doc);",
+            "description": "Добавляет или обновляет JSON.",
+            "returns": "true"
+        },
+        {
+            "name": "storage_index_build",
+            "prototype": "bool storage_index_build(table_t *table, index_type_t type);",
+            "description": "Создаёт индекс по типу.",
+            "returns": "true"
+        },
+        {
+            "name": "storage_tier_evict",
+            "prototype": "int storage_tier_evict(table_t *table, tier_policy_t *policy);",
+            "description": "Выполняет эвикцию данных.",
+            "returns": "Количество эвакуированных объектов"
+        }
+    ],
+    "structures": [
+        {
+            "name": "index_type_t",
+            "definition": "enum { INDEX_BTREE, INDEX_HASH, INDEX_BITMAP, INDEX_INVERTED, INDEX_ADAPTIVE }"
+        },
+        {
+            "name": "tier_policy_t",
+            "definition": "struct { size_t hot_threshold; size_t cold_retention; bool compress; }"
+        }
+    ],
+    "metrics": [
+        "storage_inserts_total{store}",
+        "storage_index_build_total{type}",
+        "storage_json_docs_total",
+        "storage_evicted_pages_total"
+    ],
+    "security": [
+        "Контроль доступа на уровне таблиц/колонок/документов",
+        "Изоляция JSON-полей по row-level security",
+        "Журналирование всех DML/DDL операций"
+    ],
+    "dependencies": [
+        "1.10 — Storage Engine",
+        "1.13 — TTL / Tiering",
+        "1.6 — Compression Engine",
+        "5.3 — Insert Engine",
+        "6.1 — Security / RBAC"
+    ],
+    "tests": [
+        "test_insert_row_and_retrieve",
+        "test_column_store_vectorized_write",
+        "test_json_upsert_and_query_path",
+        "test_index_btree_lookup_range",
+        "test_eviction_policy_under_load"
+    ]
+}
+
+# Заготовка JSON-файла
+json_output = [example_block]  # Здесь будет массив из 374 блоков
+
+# Сохраняем как JSON-файл
+output_path = Path("/mnt/data/block_functions.json")
+with output_path.open("w", encoding="utf-8") as f:
+    json.dump(json_output, f, indent=2, ensure_ascii=False)
+
+output_path.name  # Отображаем имя созданного файла для загрузки пользователем
