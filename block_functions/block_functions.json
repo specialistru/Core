@@ -19,3 +19,108 @@
   "dependencies": [...],
   "tests": [...]
 }
+
+
+import zipfile
+
+# Создаём временную директорию и Markdown-файлы для каждого из 374 блоков
+markdown_dir = Path("/mnt/data/markdown_blocks")
+markdown_dir.mkdir(parents=True, exist_ok=True)
+
+for block in full_json_blocks:
+    md_path = markdown_dir / f"block_{block['id'].replace('.', '_')}.md"
+    with md_path.open("w", encoding="utf-8") as f:
+        f.write(f"# 🧩 Блок {block['id']} — {block['title']}\n\n")
+        f.write(f"**Пакет:** `{block['package']}`  \n")
+        f.write(f"**Block ID:** `{block['internal_id']}`\n\n")
+        f.write(f"### 📝 Назначение\n{block['description']}\n\n")
+
+        f.write("### 🔧 Основные функции\n")
+        for func in block["functions"]:
+            f.write(f"- `{func['prototype']}` — {func['description']} → **{func['returns']}**\n")
+        f.write("\n")
+
+        f.write("### 📈 Метрики и Observability\n")
+        if block["metrics"]:
+            for metric in block["metrics"]:
+                f.write(f"- `{metric}`\n")
+        else:
+            f.write("_нет_\n")
+        f.write("\n")
+
+        f.write("### 🔐 Безопасность\n")
+        if block["security"]:
+            for s in block["security"]:
+                f.write(f"- {s}\n")
+        else:
+            f.write("_нет_\n")
+        f.write("\n")
+
+        f.write("### ⚙️ Зависимости\n")
+        if block["dependencies"]:
+            for dep in block["dependencies"]:
+                f.write(f"- {dep}\n")
+        else:
+            f.write("_нет_\n")
+        f.write("\n")
+
+        f.write("### 🧪 Примеры тестов\n")
+        if block["tests"]:
+            for test in block["tests"]:
+                f.write(f"- `{test}`\n")
+        else:
+            f.write("_нет_\n")
+
+# Упаковываем в zip
+zip_path = Path("/mnt/data/block_functions_markdown.zip")
+with zipfile.ZipFile(zip_path, 'w') as zipf:
+    for md_file in markdown_dir.glob("*.md"):
+        zipf.write(md_file, arcname=md_file.name)
+
+zip_path.name
+////////////////
+
+# Загрузка всех 374 блоков в структуру JSON. Здесь симулируем заполнение 374 уникальных блоков на основе шаблона.
+
+# Создаём 374 блока с уникальными id и internal_id (названия условные, для примера)
+full_json_blocks = []
+
+for i in range(1, 375):
+    pkg_num = (i - 1) // 10  # Примерная группировка по пакетам
+    block_id = f"{pkg_num}.{(i - 1) % 10 + 1}"
+    internal_id = f"block_internal_{block_id.replace('.', '_')}"
+    
+    block = {
+        "id": block_id,
+        "internal_id": internal_id,
+        "title": f"Блок {block_id}",
+        "package": f"{pkg_num}. Пакет {pkg_num}",
+        "description": f"Описание архитектурного блока {block_id}.",
+        "functions": [
+            {
+                "name": f"function_{i}_a",
+                "prototype": f"void function_{i}_a(void);",
+                "description": f"Функция A блока {block_id}.",
+                "returns": "void"
+            },
+            {
+                "name": f"function_{i}_b",
+                "prototype": f"int function_{i}_b(int x);",
+                "description": f"Функция B блока {block_id}.",
+                "returns": "int"
+            }
+        ],
+        "structures": [],
+        "metrics": [],
+        "security": [],
+        "dependencies": [],
+        "tests": []
+    }
+    full_json_blocks.append(block)
+
+# Сохраняем файл с полным набором блоков
+full_output_path = Path("/mnt/data/block_functions_full_374.json")
+with full_output_path.open("w", encoding="utf-8") as f:
+    json.dump(full_json_blocks, f, indent=2, ensure_ascii=False)
+
+full_output_path.name
