@@ -1,4 +1,3 @@
-[
 {
   "package_number": 0,
   "package_name": "Инициализация и системный старт",
@@ -101,7 +100,13 @@
         }
       ],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 0,
+  "package_name": "Инициализация и системный старт",
+  "blocks": [
     {
       "block_number": "0.6",
       "block_name": "Загрузка схем",
@@ -157,7 +162,14 @@
       "internal_id": "app_profiler",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+
+{
+  "package_number": 0,
+  "package_name": "Инициализация и системный старт",
+  "blocks": [
     {
       "block_number": "0.11",
       "block_name": "Планировщик задач",
@@ -206,7 +218,13 @@
       "internal_id": "shutdown_controller",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 0,
+  "package_name": "Инициализация и системный старт",
+  "blocks": [
     {
       "block_number": "0.16",
       "block_name": "Контроль версий",
@@ -243,7 +261,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 1,
   "package_name": "Архитектура и Хранилище",
@@ -282,7 +300,13 @@
       "internal_id": "json_store",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 1,
+  "package_name": "Архитектура и Хранилище",
+  "blocks": [
     {
       "block_number": "1.6",
       "block_name": "NUMA-aware allocation",
@@ -317,7 +341,13 @@
       "internal_id": "auto_rebalancing",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 1,
+  "package_name": "Архитектура и Хранилище",
+  "blocks": [
     {
       "block_number": "1.11",
       "block_name": "Distributed Query Planner",
@@ -352,7 +382,13 @@
       "internal_id": "system_versioned_asof_queries",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 1,
+  "package_name": "Архитектура и Хранилище",
+  "blocks": [
     {
       "block_number": "1.16",
       "block_name": "Поддержка большого объема памяти",
@@ -387,7 +423,13 @@
       "internal_id": "page_cache_buffer_pool",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 1,
+  "package_name": "Архитектура и Хранилище",
+  "blocks": [
     {
       "block_number": "1.21",
       "block_name": "Алгоритмы вытеснения: LRU, ARC",
@@ -422,7 +464,13 @@
       "internal_id": "diff_based_snapshots",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 1,
+  "package_name": "Архитектура и Хранилище",
+  "blocks": [
     {
       "block_number": "1.26",
       "block_name": "Сжатие: Dictionary, RLE, Delta",
@@ -457,7 +505,13 @@
       "internal_id": "auto_tiering_ttl_eviction",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 1,
+  "package_name": "Архитектура и Хранилище",
+  "blocks": [
     {
       "block_number": "1.31",
       "block_name": "Адаптивные индексы и перестроение",
@@ -492,7 +546,13 @@
       "internal_id": "data_placement_info",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 1,
+  "package_name": "Архитектура и Хранилище",
+  "blocks": [
     {
       "block_number": "1.36",
       "block_name": "Распределение по NUMA-узлам",
@@ -527,7 +587,13 @@
       "internal_id": "online_tiering_switch",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 1,
+  "package_name": "Архитектура и Хранилище",
+  "blocks": [
     {
       "block_number": "1.41",
       "block_name": "Сжимаемые страницы и блоки",
@@ -564,7 +630,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 2,
   "package_name": "Транзакционность и Надёжность",
@@ -603,7 +669,13 @@
       "internal_id": "snapshots_and_recovery",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 2,
+  "package_name": "Транзакционность и Надёжность",
+  "blocks": [
     {
       "block_number": "2.6",
       "block_name": "Мгновенное восстановление после сбоя",
@@ -638,7 +710,13 @@
       "internal_id": "failover_and_watchdog",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 2,
+  "package_name": "Транзакционность и Надёжность",
+  "blocks": [
     {
       "block_number": "2.11",
       "block_name": "Многонодовое восстановление",
@@ -673,7 +751,13 @@
       "internal_id": "version_visibility_control",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 2,
+  "package_name": "Транзакционность и Надёжность",
+  "blocks": [
     {
       "block_number": "2.16",
       "block_name": "Сжатие версий и GC цепочек",
@@ -708,7 +792,13 @@
       "internal_id": "snapshot_tid_masking",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 2,
+  "package_name": "Транзакционность и Надёжность",
+  "blocks": [
     {
       "block_number": "2.21",
       "block_name": "Read set и write set snapshot",
@@ -745,7 +835,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 3,
   "package_name": "SQL и Языки",
@@ -784,7 +874,13 @@
       "internal_id": "sql_optimizer_adaptive",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 3,
+  "package_name": "SQL и Языки",
+  "blocks": [
     {
       "block_number": "3.6",
       "block_name": "Оконные функции (window functions)",
@@ -819,7 +915,13 @@
       "internal_id": "json_functions_support",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 3,
+  "package_name": "SQL и Языки",
+  "blocks": [
     {
       "block_number": "3.11",
       "block_name": "Собственный транзакционный DSL",
@@ -854,7 +956,13 @@
       "internal_id": "builtin_procedures_forecast_cluster",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 3,
+  "package_name": "SQL и Языки",
+  "blocks": [
     {
       "block_number": "3.16",
       "block_name": "SELECT-подсистема и анализ планов",
@@ -889,7 +997,13 @@
       "internal_id": "plan_cache_and_reoptimization",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 3,
+  "package_name": "SQL и Языки",
+  "blocks": [
     {
       "block_number": "3.21",
       "block_name": "Селективность и NDV-анализ",
@@ -924,7 +1038,13 @@
       "internal_id": "built_in_aggregates_filter",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 3,
+  "package_name": "SQL и Языки",
+  "blocks": [
     {
       "block_number": "3.26",
       "block_name": "Аналитические функции: ранжирование, квантили",
@@ -940,7 +1060,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 4,
   "package_name": "Интерфейсы и Интеграции",
@@ -979,7 +1099,13 @@
       "internal_id": "debezium_redis_streams",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 4,
+  "package_name": "Интерфейсы и Интеграции",
+  "blocks": [
     {
       "block_number": "4.6",
       "block_name": "Changefeed и событийные источники",
@@ -1014,7 +1140,13 @@
       "internal_id": "async_event_processing",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 4,
+  "package_name": "Интерфейсы и Интеграции",
+  "blocks": [
     {
       "block_number": "4.11",
       "block_name": "Интеграция с ERP и BI",
@@ -1049,7 +1181,14 @@
       "internal_id": "unified_sql_gateway",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+
+{
+  "package_number": 4,
+  "package_name": "Интерфейсы и Интеграции",
+  "blocks": [
     {
       "block_number": "4.16",
       "block_name": "Импорт пользовательских форматов",
@@ -1086,7 +1225,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 5,
   "package_name": "BI, ML и OLAP",
@@ -1125,7 +1264,13 @@
       "internal_id": "rollup_cube_support",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 5,
+  "package_name": "BI, ML и OLAP",
+  "blocks": [
     {
       "block_number": "5.6",
       "block_name": "Аналитика временных окон",
@@ -1160,7 +1305,13 @@
       "internal_id": "sql_ml_model_inference",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 5,
+  "package_name": "BI, ML и OLAP",
+  "blocks": [
     {
       "block_number": "5.11",
       "block_name": "Поддержка ONNX runtime",
@@ -1195,7 +1346,13 @@
       "internal_id": "trained_model_caching",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 5,
+  "package_name": "BI, ML и OLAP",
+  "blocks": [
     {
       "block_number": "5.16",
       "block_name": "Отложенное обучение и retrain",
@@ -1230,7 +1387,13 @@
       "internal_id": "ml_results_visualization",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 5,
+  "package_name": "BI, ML и OLAP",
+  "blocks": [
     {
       "block_number": "5.21",
       "block_name": "Интеграция BI-инструментов",
@@ -1265,7 +1428,13 @@
       "internal_id": "analytic_function_optimization",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 6,
+  "package_name": "Безопасность",
+  "blocks": [
     {
       "block_number": "6.1",
       "block_name": "RBAC / ABAC управление доступом",
@@ -1300,7 +1469,13 @@
       "internal_id": "forward_secrecy_support",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 6,
+  "package_name": "Безопасность",
+  "blocks": [
     {
       "block_number": "6.6",
       "block_name": "Сетевые ACL и scoped tokens",
@@ -1335,7 +1510,13 @@
       "internal_id": "sql_injection_protection",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 6,
+  "package_name": "Безопасность",
+  "blocks": [
     {
       "block_number": "6.11",
       "block_name": "Песочница для Lua / WASM",
@@ -1372,7 +1553,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 7,
   "package_name": "Observability и DevOps",
@@ -1411,7 +1592,13 @@
       "internal_id": "perf_tool_integration",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 7,
+  "package_name": "Observability и DevOps",
+  "blocks": [
     {
       "block_number": "7.6",
       "block_name": "Flamegraph и execution timeline viewer",
@@ -1446,7 +1633,13 @@
       "internal_id": "fault_injection_chaos_testing",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 7,
+  "package_name": "Observability и DevOps",
+  "blocks": [
     {
       "block_number": "7.11",
       "block_name": "Crash recovery тесты",
@@ -1481,7 +1674,13 @@
       "internal_id": "instant_rollback_live_reload",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 7,
+  "package_name": "Observability и DevOps",
+  "blocks": [
     {
       "block_number": "7.16",
       "block_name": "Мониторинг через CLI и REST API",
@@ -1518,7 +1717,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 8,
   "package_name": "Производительность",
@@ -1557,7 +1756,13 @@
       "internal_id": "vectorized_execution_engine",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 8,
+  "package_name": "Производительность",
+  "blocks": [
     {
       "block_number": "8.6",
       "block_name": "Параллельные пайплайны исполнения",
@@ -1592,7 +1797,13 @@
       "internal_id": "runtime_reoptimization",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 8,
+  "package_name": "Производительность",
+  "blocks": [
     {
       "block_number": "8.11",
       "block_name": "Кэширование планов выполнения",
@@ -1627,7 +1838,13 @@
       "internal_id": "copy_on_write_snapshots",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 8,
+  "package_name": "Производительность",
+  "blocks": [
     {
       "block_number": "8.16",
       "block_name": "Мгновенное backup / restore",
@@ -1664,7 +1881,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 9,
   "package_name": "Расширяемость",
@@ -1703,7 +1920,13 @@
       "internal_id": "dsl_udf_erp_scenarios",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 9,
+  "package_name": "Расширяемость",
+  "blocks": [
     {
       "block_number": "9.6",
       "block_name": "Генерация ETL-процессов",
@@ -1740,7 +1963,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 10,
   "package_name": "Тестируемость и структура проекта",
@@ -1779,7 +2002,13 @@
       "internal_id": "architecture_parser_planner_executor",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 10,
+  "package_name": "Тестируемость и структура проекта",
+  "blocks": [
     {
       "block_number": "10.6",
       "block_name": "Модули: core/, tx/, sql/, net/, api/",
@@ -1816,7 +2045,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 11,
   "package_name": "Сжатие и хранение",
@@ -1855,7 +2084,13 @@
       "internal_id": "vector_compression",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 11,
+  "package_name": "Сжатие и хранение",
+  "blocks": [
     {
       "block_number": "11.6",
       "block_name": "Векторная распаковка на лету",
@@ -1890,7 +2125,13 @@
       "internal_id": "hybrid_storage_engine",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 11,
+  "package_name": "Сжатие и хранение",
+  "blocks": [
     {
       "block_number": "11.11",
       "block_name": "Page Cache и Buffer Pool",
@@ -1925,7 +2166,13 @@
       "internal_id": "auto_eviction_ttl",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 11,
+  "package_name": "Сжатие и хранение",
+  "blocks": [
     {
       "block_number": "11.16",
       "block_name": "Горячие и холодные данные",
@@ -1962,7 +2209,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 12,
   "package_name": "Системные таблицы и метаданные",
@@ -2001,7 +2248,13 @@
       "internal_id": "mvcc_system_tables",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 12,
+  "package_name": "Системные таблицы и метаданные",
+  "blocks": [
     {
       "block_number": "12.6",
       "block_name": "Каталог транзакций и TID",
@@ -2036,7 +2289,13 @@
       "internal_id": "system_log_ddl_events",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 12,
+  "package_name": "Системные таблицы и метаданные",
+  "blocks": [
     {
       "block_number": "12.11",
       "block_name": "Репликация метаданных",
@@ -2073,7 +2332,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 13,
   "package_name": "Локализация и языковая поддержка",
@@ -2114,7 +2373,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 14,
   "package_name": "Интерфейс администратора",
@@ -2153,7 +2412,13 @@
       "internal_id": "admin_user_access_control",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 14,
+  "package_name": "Интерфейс администратора",
+  "blocks": [
     {
       "block_number": "14.6",
       "block_name": "Настройки и конфигурация",
@@ -2190,7 +2455,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 15,
   "package_name": "Хронология и версии данных (SYSTEM VERSIONED)",
@@ -2229,7 +2494,13 @@
       "internal_id": "retrospective_queries",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 15,
+  "package_name": "Хронология и версии данных (SYSTEM VERSIONED)",
+  "blocks": [
     {
       "block_number": "15.6",
       "block_name": "Аудит на основе версий",
@@ -2266,7 +2537,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 16,
   "package_name": "Управление ресурсами и изоляция (Multi-Tenant, Quotas)",
@@ -2305,7 +2576,13 @@
       "internal_id": "quotas_model",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 16,
+  "package_name": "Управление ресурсами и изоляция (Multi-Tenant, Quotas)",
+  "blocks": [
     {
       "block_number": "16.6",
       "block_name": "Изоляция данных между арендаторами",
@@ -2342,7 +2619,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 17,
   "package_name": "Планировщик задач и события",
@@ -2381,7 +2658,13 @@
       "internal_id": "data_change_events",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 17,
+  "package_name": "Планировщик задач и события",
+  "blocks": [
     {
       "block_number": "17.6",
       "block_name": "Очереди заданий",
@@ -2418,7 +2701,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 18,
   "package_name": "Временные окна и TimeSeries аналитика",
@@ -2457,7 +2740,13 @@
       "internal_id": "timeseries_aggregates",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 18,
+  "package_name": "Временные окна и TimeSeries аналитика",
+  "blocks": [
     {
       "block_number": "18.6",
       "block_name": "Интервалы соскальзывания (sliding windows)",
@@ -2494,7 +2783,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 19,
   "package_name": "Форматы и обработка данных",
@@ -2533,7 +2822,13 @@
       "internal_id": "changefeed_debezium_support",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 19,
+  "package_name": "Форматы и обработка данных",
+  "blocks": [
     {
       "block_number": "19.6",
       "block_name": "Kafka и Pulsar интеграция",
@@ -2568,7 +2863,13 @@
       "internal_id": "data_parsing_transformation",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 19,
+  "package_name": "Форматы и обработка данных",
+  "blocks": [
     {
       "block_number": "19.11",
       "block_name": "Валидация и нормализация данных",
@@ -2605,7 +2906,7 @@
       "outgoing": []
     }
   ]
-},
+}
 {
   "package_number": 20,
   "package_name": "Внутренняя структура и ядро",
@@ -2644,7 +2945,13 @@
       "internal_id": "transaction_engine_dsl",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 20,
+  "package_name": "Внутренняя структура и ядро",
+  "blocks": [
     {
       "block_number": "20.6",
       "block_name": "MVCC и snapshot isolation",
@@ -2679,7 +2986,13 @@
       "internal_id": "session_object_catalog",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 20,
+  "package_name": "Внутренняя структура и ядро",
+  "blocks": [
     {
       "block_number": "20.11",
       "block_name": "Менеджер блокировок и изоляции",
@@ -2714,7 +3027,13 @@
       "internal_id": "built_in_data_types",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 20,
+  "package_name": "Внутренняя структура и ядро",
+  "blocks": [
     {
       "block_number": "20.16",
       "block_name": "Работа с типами timestamp (нс)",
@@ -2749,7 +3068,13 @@
       "internal_id": "system_initialization",
       "incoming": [],
       "outgoing": []
-    },
+    }
+  ]
+}
+{
+  "package_number": 20,
+  "package_name": "Внутренняя структура и ядро",
+  "blocks": [
     {
       "block_number": "20.21",
       "block_name": "Завершение работы системы",
@@ -2784,7 +3109,986 @@
       "internal_id": "counters_stats_uuid",
       "incoming": [],
       "outgoing": []
+    },
+    {
+      "block_number": "20.26",
+      "block_name": "Встроенные утилиты отладки",
+      "internal_id": "builtin_debug_utilities",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.27",
+      "block_name": "Механизм тестирования ядра",
+      "internal_id": "core_testing_mechanism",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.28",
+      "block_name": "Клонирование контекста исполнения",
+      "internal_id": "execution_context_cloning",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.29",
+      "block_name": "Диагностика внутренних структур",
+      "internal_id": "internal_structure_diagnostics",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.30",
+      "block_name": "Ручная инициализация компонентов",
+      "internal_id": "manual_component_initialization",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.31",
+      "block_name": "Отключение и перезапуск подсистем",
+      "internal_id": "subsystem_disable_restart",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.32",
+      "block_name": "Поддержка обновлений ядра на лету",
+      "internal_id": "live_core_patch_support",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.33",
+      "block_name": "Управление версиями ядра",
+      "internal_id": "core_versioning_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.34",
+      "block_name": "Обновление конфигурации без перезапуска",
+      "internal_id": "hot_config_reload",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.35",
+      "block_name": "Механизм переключения версий",
+      "internal_id": "core_version_switching",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.36",
+      "block_name": "Встроенные заглушки и fallback",
+      "internal_id": "builtin_stubs_fallback",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.37",
+      "block_name": "Символическое разрешение компонентов",
+      "internal_id": "symbolic_component_resolution",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.38",
+      "block_name": "Песочница исполнения ядра",
+      "internal_id": "core_execution_sandbox",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.39",
+      "block_name": "Кроссплатформенная абстракция",
+      "internal_id": "crossplatform_abstraction_layer",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.40",
+      "block_name": "Фреймворк ядра СУБД",
+      "internal_id": "rdbms_core_framework",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.41",
+      "block_name": "Минималистичный startup runtime",
+      "internal_id": "minimal_startup_runtime",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.42",
+      "block_name": "Инициализация ядра через ABI",
+      "internal_id": "core_init_via_abi",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.43",
+      "block_name": "Режим single-thread safe",
+      "internal_id": "single_thread_safe_mode",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.44",
+      "block_name": "Скрытие реализации через opaque",
+      "internal_id": "opaque_internal_abstraction",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.45",
+      "block_name": "Профили конфигурации для Dev/Prod",
+      "internal_id": "config_profiles_dev_prod",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.46",
+      "block_name": "Динамическая регистрация компонентов",
+      "internal_id": "dynamic_component_registration",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.47",
+      "block_name": "Гибкая маршрутизация вызовов",
+      "internal_id": "flexible_call_routing",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.48",
+      "block_name": "Проверка целостности компонентов",
+      "internal_id": "component_integrity_check",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.49",
+      "block_name": "Автогенерация boilerplate-структур",
+      "internal_id": "boilerplate_autogen_engine",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.50",
+      "block_name": "Ядро нулевой зависимости (zero-dep)",
+      "internal_id": "zero_dependency_core",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.51",
+      "block_name": "Метаданные компиляции",
+      "internal_id": "compilation_metadata",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.52",
+      "block_name": "Система сборки и линковки",
+      "internal_id": "build_and_link_system",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.53",
+      "block_name": "Расширяемость ABI",
+      "internal_id": "abi_extensibility_support",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.54",
+      "block_name": "Частичная компиляция компонентов",
+      "internal_id": "partial_component_compilation",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.55",
+      "block_name": "Контроль совместимости версий",
+      "internal_id": "version_compatibility_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.56",
+      "block_name": "Обратная совместимость API",
+      "internal_id": "api_backward_compatibility",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.57",
+      "block_name": "Инструменты автоматической генерации кода",
+      "internal_id": "code_autogeneration_tools",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.58",
+      "block_name": "Конфигурация на этапе сборки",
+      "internal_id": "build_time_configuration",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.59",
+      "block_name": "Управление зависимостями и include-пути",
+      "internal_id": "include_dependency_management",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.60",
+      "block_name": "Оптимизация структуры header-файлов",
+      "internal_id": "header_structure_optimization",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.61",
+      "block_name": "Система перехвата ошибок ядра",
+      "internal_id": "core_error_interception_system",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.62",
+      "block_name": "Механизм восстановления после сбоев",
+      "internal_id": "core_fault_recovery_mechanism",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.63",
+      "block_name": "Фреймворк тестов для ядра",
+      "internal_id": "core_test_framework",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.64",
+      "block_name": "Переключение фич-флагов в ядре",
+      "internal_id": "core_feature_flag_switching",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.65",
+      "block_name": "Гибкое включение компонентов",
+      "internal_id": "core_dynamic_component_enabling",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.66",
+      "block_name": "Встроенные типы ошибок и enum",
+      "internal_id": "builtin_error_types_enum",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.67",
+      "block_name": "Поддержка атомарных структур",
+      "internal_id": "atomic_structure_support",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.68",
+      "block_name": "Встроенные структуры протоколов",
+      "internal_id": "builtin_protocol_structures",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.69",
+      "block_name": "Асинхронные очереди событий",
+      "internal_id": "async_event_queues",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.70",
+      "block_name": "Функции глобального контекста",
+      "internal_id": "global_context_functions",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.71",
+      "block_name": "Реестр интерфейсов и адаптеров",
+      "internal_id": "interface_adapter_registry",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.72",
+      "block_name": "Обработка метаданных типов",
+      "internal_id": "type_metadata_processing",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.73",
+      "block_name": "Резервный контекст исполнения",
+      "internal_id": "fallback_execution_context",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.74",
+      "block_name": "Менеджер системных флагов",
+      "internal_id": "system_flag_manager",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.75",
+      "block_name": "Интеграция с внутренними DSL",
+      "internal_id": "internal_dsl_integration",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.76",
+      "block_name": "Безопасный API ядра",
+      "internal_id": "secure_core_api",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.77",
+      "block_name": "Ядро с поддержкой hot-reload",
+      "internal_id": "hot_reloadable_core",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.78",
+      "block_name": "Структура внутренних вызовов",
+      "internal_id": "internal_call_structure",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.79",
+      "block_name": "Наблюдаемость ядра",
+      "internal_id": "core_observability_hooks",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.80",
+      "block_name": "Реализация ABI интерфейса",
+      "internal_id": "abi_interface_implementation",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.81",
+      "block_name": "Поддержка shadow-структур",
+      "internal_id": "shadow_struct_support",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.82",
+      "block_name": "Фиксация внутренних ошибок",
+      "internal_id": "internal_error_capture",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.83",
+      "block_name": "Оптимизация init-кода",
+      "internal_id": "init_code_optimization",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.84",
+      "block_name": "Управление дефолтными значениями",
+      "internal_id": "default_value_management",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.85",
+      "block_name": "Кеш инициализации типов",
+      "internal_id": "type_initialization_cache",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.86",
+      "block_name": "Отложенная инициализация структур",
+      "internal_id": "deferred_structure_init",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.87",
+      "block_name": "Zero-cost абстракции C23",
+      "internal_id": "zero_cost_abstractions_c23",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.88",
+      "block_name": "Отладка исполнения в ядре",
+      "internal_id": "core_execution_debugging",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.89",
+      "block_name": "Трассировка вызовов ядра",
+      "internal_id": "core_call_tracing",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.90",
+      "block_name": "Поддержка opaque-типа и context-based API",
+      "internal_id": "opaque_context_api_support",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.91",
+      "block_name": "Core API lifecycle и events",
+      "internal_id": "core_api_lifecycle_events",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.92",
+      "block_name": "Стабильность ABI ядра",
+      "internal_id": "core_abi_stability",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.93",
+      "block_name": "Типизация внутренних вызовов",
+      "internal_id": "internal_call_typing",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.94",
+      "block_name": "Контроль областей памяти ядра",
+      "internal_id": "core_memory_region_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.95",
+      "block_name": "Тестируемость внутренних интерфейсов",
+      "internal_id": "internal_interface_testability",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.96",
+      "block_name": "Системный планировщик вызовов",
+      "internal_id": "system_call_scheduler",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.97",
+      "block_name": "Структура точек расширения",
+      "internal_id": "extension_point_structure",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.98",
+      "block_name": "Управление режимами сборки",
+      "internal_id": "build_mode_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.99",
+      "block_name": "Ядро с нулевыми аллокациями",
+      "internal_id": "zero_allocation_core",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.100",
+      "block_name": "Идентичность ядра (core identity)",
+      "internal_id": "core_identity_management",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.101",
+      "block_name": "Ядро без глобального состояния",
+      "internal_id": "stateless_core_architecture",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.102",
+      "block_name": "Масштабируемая модель исполнения",
+      "internal_id": "scalable_execution_model",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.103",
+      "block_name": "Скрытые internal-only структуры",
+      "internal_id": "internal_only_hidden_structs",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.104",
+      "block_name": "Низкоуровневая отладка и assert",
+      "internal_id": "low_level_debug_assert",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.105",
+      "block_name": "Контроль init-порядка модулей",
+      "internal_id": "module_init_order_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.106",
+      "block_name": "Ядро без malloc: static layout",
+      "internal_id": "malloc_free_static_core",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.107",
+      "block_name": "Единый интерфейс инициализации ядра",
+      "internal_id": "unified_core_init_interface",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.108",
+      "block_name": "Режим полной изоляции ядра",
+      "internal_id": "full_core_isolation_mode",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.109",
+      "block_name": "Управление внутренним ABI",
+      "internal_id": "internal_abi_management",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.110",
+      "block_name": "Резервная маршрутизация вызовов",
+      "internal_id": "fallback_call_routing",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.111",
+      "block_name": "Модульная сборка ядра",
+      "internal_id": "modular_core_build",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.112",
+      "block_name": "Контроль порядка линковки",
+      "internal_id": "link_order_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.113",
+      "block_name": "Многоверсионная маршрутизация API",
+      "internal_id": "multi_version_api_routing",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.114",
+      "block_name": "Минимальный footprint исполнения",
+      "internal_id": "minimal_execution_footprint",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.115",
+      "block_name": "Ядро как библиотека (embeddable)",
+      "internal_id": "embeddable_core_library",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.116",
+      "block_name": "Контроль доступа к ядру",
+      "internal_id": "core_access_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.117",
+      "block_name": "Zero-ABI костяк ядра",
+      "internal_id": "zero_abi_core_skeleton",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.118",
+      "block_name": "Контроль схемы взаимодействий модулей",
+      "internal_id": "module_interaction_scheme_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.119",
+      "block_name": "Ядро с минимальным API",
+      "internal_id": "minimal_core_api",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.120",
+      "block_name": "Полный сброс ядра",
+      "internal_id": "core_total_reset",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.121",
+      "block_name": "Состояние ядра в runtime",
+      "internal_id": "core_runtime_state",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.122",
+      "block_name": "Гибкая маршрутизация ошибок",
+      "internal_id": "flexible_error_routing",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.123",
+      "block_name": "Изоляция встроенных утилит",
+      "internal_id": "embedded_utility_isolation",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.124",
+      "block_name": "Инкапсуляция компонентов",
+      "internal_id": "component_encapsulation",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.125",
+      "block_name": "Упрощённый режим исполнения",
+      "internal_id": "simplified_execution_mode",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.126",
+      "block_name": "Реестр внутренних API",
+      "internal_id": "internal_api_registry",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.127",
+      "block_name": "Встроенный роутер интерфейсов",
+      "internal_id": "embedded_interface_router",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.128",
+      "block_name": "Модель ядра без побочных эффектов",
+      "internal_id": "side_effect_free_core",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.129",
+      "block_name": "Наблюдение за изменениями в ядре",
+      "internal_id": "core_change_observer",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.130",
+      "block_name": "Управление метаинформацией ядра",
+      "internal_id": "core_meta_management",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.131",
+      "block_name": "Ядро без глобальных синглтонов",
+      "internal_id": "no_global_singleton_core",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.132",
+      "block_name": "Унификация контекста исполнения",
+      "internal_id": "execution_context_unification",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.133",
+      "block_name": "Контроль init/deinit блоков",
+      "internal_id": "init_deinit_control_blocks",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.134",
+      "block_name": "Интеграция с ABI-слоем",
+      "internal_id": "abi_layer_integration",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.135",
+      "block_name": "Отладочные хэдеры",
+      "internal_id": "debug_header_support",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.136",
+      "block_name": "Трассировка init/deinit времени",
+      "internal_id": "init_deinit_timing_trace",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.137",
+      "block_name": "Zero-lock исполнение",
+      "internal_id": "zero_lock_execution",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.138",
+      "block_name": "Ядро с иммутабельной логикой",
+      "internal_id": "immutable_core_logic",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.139",
+      "block_name": "Сборка ядра как объектного модуля",
+      "internal_id": "core_object_module_build",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.140",
+      "block_name": "Режим ядра с полной трассировкой",
+      "internal_id": "full_trace_mode_core",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.141",
+      "block_name": "Встроенный self-test фреймворк",
+      "internal_id": "builtin_selftest_framework",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.142",
+      "block_name": "Управление временем жизни объектов",
+      "internal_id": "object_lifecycle_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.143",
+      "block_name": "Zero-runtime overhead init",
+      "internal_id": "zero_runtime_init",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.144",
+      "block_name": "Мониторинг внутренних структур",
+      "internal_id": "internal_structure_monitoring",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.145",
+      "block_name": "Микроядро и плагинная архитектура",
+      "internal_id": "microkernel_plugin_architecture",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.146",
+      "block_name": "Управление макроскопическим состоянием",
+      "internal_id": "macro_state_management",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.147",
+      "block_name": "Минимальные зависимости ядра",
+      "internal_id": "minimal_core_dependencies",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.148",
+      "block_name": "Контроль init-директив",
+      "internal_id": "init_directives_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.149",
+      "block_name": "Расширение internal-only API",
+      "internal_id": "internal_only_api_extension",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.150",
+      "block_name": "Гибкая компоновка модулей",
+      "internal_id": "flexible_module_linkage",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.151",
+      "block_name": "Слои компиляции и линковки",
+      "internal_id": "compilation_linking_layers",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.152",
+      "block_name": "Поддержка внутриядерных UDF",
+      "internal_id": "core_level_udf_support",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.153",
+      "block_name": "Контроль утечек состояния",
+      "internal_id": "state_leak_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.154",
+      "block_name": "Служебные утилиты ядра",
+      "internal_id": "core_utility_tools",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.155",
+      "block_name": "Потокобезопасные singleton'ы",
+      "internal_id": "thread_safe_singletons",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.156",
+      "block_name": "Core DSL для внутренних вызовов",
+      "internal_id": "internal_core_dsl",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.157",
+      "block_name": "Генерация runtime-интерфейсов",
+      "internal_id": "runtime_interface_generation",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.158",
+      "block_name": "Жизненный цикл runtime-объектов",
+      "internal_id": "runtime_object_lifecycle",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.159",
+      "block_name": "Модульная сериализация ядра",
+      "internal_id": "modular_core_serialization",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.160",
+      "block_name": "Контроль полной инициализации",
+      "internal_id": "full_initialization_control",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.161",
+      "block_name": "Сборка runtime-инфраструктуры",
+      "internal_id": "runtime_infrastructure_build",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.162",
+      "block_name": "Инкапсуляция runtime-состояний",
+      "internal_id": "runtime_state_encapsulation",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.163",
+      "block_name": "Ядро с flat memory layout",
+      "internal_id": "flat_memory_layout_core",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.164",
+      "block_name": "Runtime API bootstrap",
+      "internal_id": "runtime_api_bootstrap",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.165",
+      "block_name": "Zero-touch runtime",
+      "internal_id": "zero_touch_runtime",
+      "incoming": [],
+      "outgoing": []
     }
   ]
 }
-]
