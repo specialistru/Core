@@ -1,3 +1,4 @@
+[
 {
   "package_number": 0,
   "package_name": "Инициализация и системный старт",
@@ -100,13 +101,7 @@
         }
       ],
       "outgoing": []
-    }
-  ]
-},
-{
-  "package_number": 0,
-  "package_name": "Инициализация и системный старт",
-  "blocks": [
+    },
     {
       "block_number": "0.6",
       "block_name": "Загрузка схем",
@@ -162,13 +157,7 @@
       "internal_id": "app_profiler",
       "incoming": [],
       "outgoing": []
-    }
-  ]
-},
-{
-  "package_number": 0,
-  "package_name": "Инициализация и системный старт",
-  "blocks": [
+    },
     {
       "block_number": "0.11",
       "block_name": "Планировщик задач",
@@ -2164,7 +2153,7 @@
       "internal_id": "admin_user_access_control",
       "incoming": [],
       "outgoing": []
-    }
+    },
     {
       "block_number": "14.6",
       "block_name": "Настройки и конфигурация",
@@ -3778,3 +3767,4 @@
     }
   ]
 }
+]
