@@ -601,7 +601,7 @@
     {
       "block_number": "1.48",
       "block_name": "Контроллер размера страниц и выравнивания in-memory",
-      "internal_id": "page_alignment_controller"
+      "internal_id": "page_alignment_controller",
       "incoming": [],
       "outgoing": []
     },
