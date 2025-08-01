@@ -583,6 +583,111 @@
       "internal_id": "delta_incremental_updates",
       "incoming": [],
       "outgoing": []
+    },
+    {
+      "block_number": "1.46",
+      "block_name": "Контроллер жизненного цикла in-memory данных",
+      "internal_id": "in_memory_lifecycle_controller",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.47",
+      "block_name": "NUMA ребалансировка и балансировщик давления памяти",
+      "internal_id": "numa_memory_balancer",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.48",
+      "block_name": "Контроллер размера страниц и выравнивания in-memory",
+      "internal_id": "page_alignment_controller"
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.49",
+      "block_name": "Арена-аллокатор / Slab-менеджер памяти",
+      "internal_id": "arena_allocator",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.50",
+      "block_name": "API выравненного выделения памяти (alloc_aligned)",
+      "internal_id": "aligned_allocator_api",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.51",
+      "block_name": "Отслеживание владения памятью и утечек",
+      "internal_id": "memory_ownership_tracker",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.52",
+      "block_name": "Delta Store и движок фонового слияния",
+      "internal_id": "delta_merge_engine",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.53",
+      "block_name": "JIT / C-компиляция и кэш скомпилированных планов",
+      "internal_id": "compiled_query_plan_cache",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.54",
+      "block_name": "Tuple Reconstruction Engine (сборка строк из колонок)",
+      "internal_id": "tuple_reconstruction_engine",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.55",
+      "block_name": "Механизм компактирования и дефрагментации in-memory страниц",
+      "internal_id": "page_compaction_engine",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.56",
+      "block_name": "Пул временных буферов и повторного использования",
+      "internal_id": "temp_buffer_pool",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.57",
+      "block_name": "Контроль учёта и лимитов памяти",
+      "internal_id": "memory_accounting_api",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.58",
+      "block_name": "Zone Map и адаптивные диапазонные индексы",
+      "internal_id": "adaptive_zone_map",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.59",
+      "block_name": "Гибридный движок сканирования таблиц",
+      "internal_id": "hybrid_scan_engine",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "1.60",
+      "block_name": "Векторизированный итератор таблиц и пакетный курсор",
+      "internal_id": "vector_table_iterator",
+      "incoming": [],
+      "outgoing": []
     }
   ]
 },
@@ -764,6 +869,92 @@
       "internal_id": "mvcc_statistics",
       "incoming": [],
       "outgoing": []
+    },
+    {
+      "block_number": "2.26",
+      "block_name": "Координатор кворума и согласования",
+      "internal_id": "quorum_coordinator",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "2.27",
+      "block_name": "Движок синхронизации кластерного состояния",
+      "internal_id": "cluster_state_sync_engine",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "2.28",
+      "block_name": "Движок повтора WAL и восстановления",
+      "internal_id": "redo_replay_engine",
+      "incoming": [],
+      "outgoing": []
+    }
+
+
+
+
+
+    {
+      "block_number": 22,
+      "block_name": "Координатор кворума и согласования",
+      "internal_id": "quorum_coordinator"
+    },
+    {
+      "block_number": 23,
+      "block_name": "Движок синхронизации кластерного состояния",
+      "internal_id": "cluster_state_sync_engine"
+    },
+    {
+      "block_number": 24,
+      "block_name": "Движок повтора WAL и восстановления",
+      "internal_id": "redo_replay_engine"
+    }
+    {
+      "block_number": 25,
+      "block_name": "Движок анализа видимости и конфликтов MVCC",
+      "internal_id": "mvcc_visibility_detector"
+    },
+    {
+      "block_number": 26,
+      "block_name": "Сжатие undo-цепочек для откатов",
+      "internal_id": "undo_chain_compression"
+    },
+    {
+      "block_number": 27,
+      "block_name": "Проверка сериализуемости транзакций",
+      "internal_id": "serializable_txn_verifier"
+    }
+    {
+      "block_number": 28,
+      "block_name": "Центральный менеджер транзакций",
+      "internal_id": "transaction_manager_core"
+    },
+    {
+      "block_number": 29,
+      "block_name": "Граф зависимостей транзакций и deadlock detector",
+      "internal_id": "txn_dependency_graph"
+    },
+    {
+      "block_number": 30,
+      "block_name": "Координатор двухфазного коммита (2PC)",
+      "internal_id": "two_phase_commit_coordinator"
+    }
+    {
+      "block_number": 31,
+      "block_name": "Контроллер синхронизации и переключения DR-сайтов",
+      "internal_id": "dr_failover_controller"
+    },
+    {
+      "block_number": 32,
+      "block_name": "Планировщик репликаций между зонами и датацентрами",
+      "internal_id": "cross_zone_replication"
+    },
+    {
+      "block_number": 33,
+      "block_name": "Мониторинг SLA по RPO/RTO и нарушениям восстановления",
+      "internal_id": "rpo_rto_sla_monitor"
     }
   ]
 },
@@ -960,6 +1151,68 @@
       "incoming": [],
       "outgoing": []
     }
+
+
+    {
+      "block_number": 21,
+      "block_name": "Ядро лексера и грамматики SQL",
+      "internal_id": "sql_grammar_core"
+    },
+    {
+      "block_number": 22,
+      "block_name": "Движок правил перезаписи SQL-запросов",
+      "internal_id": "sql_rewrite_rules_engine"
+    },
+    {
+      "block_number": 23,
+      "block_name": "Реестр SQL-расширений и пользовательских функций",
+      "internal_id": "sql_extension_registry"
+    }
+    {
+      "block_number": 24,
+      "block_name": "Генератор физического плана выполнения",
+      "internal_id": "physical_plan_generator"
+    },
+    {
+      "block_number": 25,
+      "block_name": "Выбор стратегии соединения (Join Strategy Selector)",
+      "internal_id": "join_strategy_selector"
+    },
+    {
+      "block_number": 26,
+      "block_name": "Движок распределения фрагментов запроса",
+      "internal_id": "query_fragment_distribution"
+    }
+    {
+      "block_number": 27,
+      "block_name": "Интерпретатор SQL-планов (Execution Engine)",
+      "internal_id": "sql_interpreter_engine"
+    },
+    {
+      "block_number": 28,
+      "block_name": "JIT-движок генерации кода SQL",
+      "internal_id": "sql_jit_engine"
+    },
+    {
+      "block_number": 29,
+      "block_name": "Библиотека векторизированных операторов",
+      "internal_id": "vector_operator_library"
+    }
+    {
+      "block_number": 30,
+      "block_name": "Транзакционный слой DDL",
+      "internal_id": "ddl_transactional_layer"
+    },
+    {
+      "block_number": 31,
+      "block_name": "Ядро системы типов и реестр пользовательских типов",
+      "internal_id": "type_system_core"
+    },
+    {
+      "block_number": 32,
+      "block_name": "Трекер зависимостей схемы и каскадный движок",
+      "internal_id": "ddl_dependency_tracker"
+    }
   ]
 },
 {
@@ -1105,6 +1358,52 @@
       "internal_id": "postgresql_wire_compat",
       "incoming": [],
       "outgoing": []
+    }
+
+    {
+      "block_number": 17,
+      "block_name": "Слой интеграции с ERP-системами и API Gateway",
+      "internal_id": "erp_api_integration_layer"
+    },
+    {
+      "block_number": 18,
+      "block_name": "DSL-интерпретатор и компилятор бизнес-процессов",
+      "internal_id": "erp_dsl_engine"
+    },
+    {
+      "block_number": 19,
+      "block_name": "Изолятор и менеджер многопользовательских экземпляров",
+      "internal_id": "multi_tenant_isolation_manager"
+    }
+    {
+      "block_number": 20,
+      "block_name": "Оркестратор ETL-конвейеров и потоков обработки",
+      "internal_id": "etl_pipeline_orchestrator"
+    },
+    {
+      "block_number": 21,
+      "block_name": "Реестр форматов и адаптеров внешних источников",
+      "internal_id": "format_adapter_registry"
+    },
+    {
+      "block_number": 22,
+      "block_name": "Коннектор внешних каталогов и синхронизация метаданных",
+      "internal_id": "external_catalog_connector"
+    }
+    {
+      "block_number": 23,
+      "block_name": "Менеджер сессий SQL-клиентов",
+      "internal_id": "sql_client_session_manager"
+    },
+    {
+      "block_number": 24,
+      "block_name": "Мультиплексор протоколов и механизм согласования",
+      "internal_id": "protocol_negotiator"
+    },
+    {
+      "block_number": 25,
+      "block_name": "Координатор клиентского исполнения и Pushdown-механизм",
+      "internal_id": "client_pushdown_engine"
     }
   ]
 },
@@ -1398,6 +1697,189 @@
       "incoming": [],
       "outgoing": []
     }
+
+
+
+    {
+      "block_number": 16,
+      "block_name": "Движок исполнения политик безопасности",
+      "internal_id": "policy_evaluation_engine"
+    },
+    {
+      "block_number": 17,
+      "block_name": "Менеджер секретов и интеграция с внешними хранилищами ключей",
+      "internal_id": "secrets_vault_manager"
+    },
+    {
+      "block_number": 18,
+      "block_name": "SQL Firewall и эвристический слой безопасности",
+      "internal_id": "sql_firewall_engine"
+    }
+    {
+      "block_number": 19,
+      "block_name": "Управление иерархией ролей и графом прав",
+      "internal_id": "role_hierarchy_manager"
+    },
+    {
+      "block_number": 20,
+      "block_name": "Компилятор политик доступа и статическая проверка",
+      "internal_id": "policy_static_validator"
+    },
+    {
+      "block_number": 21,
+      "block_name": "Анализ журнала доступа и активностей ролей",
+      "internal_id": "audit_role_usage_analyzer"
+    }
+    {
+      "block_number": 22,
+      "block_name": "Защищённый буферный пул и контроль памяти",
+      "internal_id": "encrypted_buffer_guard"
+    },
+    {
+      "block_number": 23,
+      "block_name": "Система обнаружения аномалий и поведенческий анализ",
+      "internal_id": "anomaly_detection_engine"
+    },
+    {
+      "block_number": 24,
+      "block_name": "Слой токенизированного доступа к SQL",
+      "internal_id": "scoped_token_sql_layer"
+    }
+    {
+      "block_number": 25,
+      "block_name": "Рантайм проверки границ и безопасные string-операции",
+      "internal_id": "safe_string_runtime"
+    },
+    {
+      "block_number": 26,
+      "block_name": "Уровень compile-time защиты и фортфикации",
+      "internal_id": "compile_time_hardening"
+    },
+    {
+      "block_number": 27,
+      "block_name": "Принудительное разделение интерфейсов и контекстов доступа",
+      "internal_id": "opaque_interface_enforcer"
+    }
+    {
+      "block_number": 28,
+      "block_name": "Слой сокращения атакующей поверхности",
+      "internal_id": "attack_surface_reducer"
+    },
+    {
+      "block_number": 29,
+      "block_name": "Экспорт потока событий безопасности и SIEM-интеграция",
+      "internal_id": "security_event_exporter"
+    },
+    {
+      "block_number": 30,
+      "block_name": "Механизм защиты от подделки аудита и удаления логов",
+      "internal_id": "audit_tamper_protection"
+    }
+    {
+      "block_number": 31,
+      "block_name": "Движок обнаружения бокового перемещения и эскалации доступа",
+      "internal_id": "lateral_movement_detector"
+    },
+    {
+      "block_number": 32,
+      "block_name": "Механизм ловушек и приманок в схемах",
+      "internal_id": "honeypot_schema_objects"
+    },
+    {
+      "block_number": 33,
+      "block_name": "Защита от эскалации прав и эвристический анализ доступа",
+      "internal_id": "privilege_escalation_guard"
+    }
+    {
+      "block_number": 34,
+      "block_name": "Применение политик жёсткости исполнения (Hardening)",
+      "internal_id": "runtime_hardening_enforcer"
+    },
+    {
+      "block_number": 35,
+      "block_name": "Движок правил обнаружения вторжений",
+      "internal_id": "intrusion_detection_rules_engine"
+    },
+    {
+      "block_number": 36,
+      "block_name": "Контроллер карантина и реакции на инциденты",
+      "internal_id": "quarantine_response_controller"
+    }
+    {
+      "block_number": 37,
+      "block_name": "Zero Trust шлюз доступа и верификация контекста",
+      "internal_id": "zero_trust_access_gateway"
+    },
+    {
+      "block_number": 38,
+      "block_name": "Управление жизненным циклом данных и политиками хранения",
+      "internal_id": "data_lifecycle_governance"
+    },
+    {
+      "block_number": 39,
+      "block_name": "Слой сетевой зональности и разграничения доступа",
+      "internal_id": "security_zoning_layer"
+    }
+    {
+      "block_number": 40,
+      "block_name": "Менеджер профилей соответствия стандартам",
+      "internal_id": "compliance_profile_manager"
+    },
+    {
+      "block_number": 41,
+      "block_name": "Агрегатор рисков и панель безопасности",
+      "internal_id": "security_posture_dashboard"
+    },
+    {
+      "block_number": 42,
+      "block_name": "Слой управления корпоративными политиками и синхронизации",
+      "internal_id": "enterprise_policy_sync"
+    }
+    {
+      "block_number": 43,
+      "block_name": "Движок сканирования уязвимостей и сигнатур",
+      "internal_id": "vulnerability_scanner"
+    },
+    {
+      "block_number": 44,
+      "block_name": "Фреймворк симуляции эксплуатации и атак",
+      "internal_id": "exploit_simulation_framework"
+    },
+    {
+      "block_number": 45,
+      "block_name": "Поток внешней разведки угроз и CVE-база",
+      "internal_id": "threat_intelligence_feed"
+    }
+    {
+      "block_number": 46,
+      "block_name": "Менеджер жизненного цикла инцидентов и маршрутизации алертов",
+      "internal_id": "incident_lifecycle_manager"
+    },
+    {
+      "block_number": 47,
+      "block_name": "Исполнитель плейбуков реагирования и автоматика защиты",
+      "internal_id": "security_playbook_executor"
+    },
+    {
+      "block_number": 48,
+      "block_name": "Движок форензики и послесобытийного анализа",
+      "internal_id": "post_incident_forensics_engine"
+    }
+    {
+      "block_number": 49,
+      "block_name": "Слой безопасного облачного развёртывания и контроля манифестов",
+      "internal_id": "cloud_deployment_security"
+    },
+    {
+      "block_number": 50,
+      "block_name": "Интегратор KMS и ротация секретов",
+      "internal_id": "secrets_rotation_kms"
+    },
+    {
+      "block_number": 51,
+      "block_name": "Координатор границ доверия в мультиоблачной среде",
+      "internal_id": "multi_cloud_trust_boundary"
+    }
   ]
 },
 {
@@ -1544,6 +2026,70 @@
       "incoming": [],
       "outgoing": []
     }
+
+
+
+
+    {
+      "block_number": 10,
+      "block_name": "Диспетчер потоков и пул задач с Work-Stealing",
+      "internal_id": "thread_pool_scheduler"
+    },
+    {
+      "block_number": 11,
+      "block_name": "Асинхронный исполнитель задач и граф зависимостей",
+      "internal_id": "async_task_executor"
+    },
+    {
+      "block_number": 12,
+      "block_name": "Lock-Free очереди и кольцевые буферы",
+      "internal_id": "lock_free_queues"
+    }
+    {
+      "block_number": 13,
+      "block_name": "Движок управления конфигурациями",
+      "internal_id": "configuration_manager"
+    },
+    {
+      "block_number": 14,
+      "block_name": "Менеджер развёртывания и инициализации кластера",
+      "internal_id": "deployment_manager"
+    },
+    {
+      "block_number": 15,
+      "block_name": "Планировщик миграций и версионирование схемы",
+      "internal_id": "migration_planner"
+    }
+    {
+      "block_number": 16,
+      "block_name": "Агрегатор метрик и движок downsampling",
+      "internal_id": "metrics_aggregator"
+    },
+    {
+      "block_number": 17,
+      "block_name": "Координатор трассировок в распределённой среде",
+      "internal_id": "distributed_tracing_correlator"
+    },
+    {
+      "block_number": 18,
+      "block_name": "Динамическая конфигурация логирования",
+      "internal_id": "dynamic_logging_config"
+    }
+    {
+      "block_number": 19,
+      "block_name": "Подсистема обработки сигналов и аварийных состояний",
+      "internal_id": "signal_crash_handler"
+    },
+    {
+      "block_number": 20,
+      "block_name": "Генератор дампов ядра и снимков стека",
+      "internal_id": "core_dump_generator"
+    },
+    {
+      "block_number": 21,
+      "block_name": "Анализатор аварий и инструмент постмортем-диагностики",
+      "internal_id": "crash_postmortem_analyzer"
+    }
   ]
 },
 {
@@ -1689,6 +2235,21 @@
       "internal_id": "predictable_query_latency",
       "incoming": [],
       "outgoing": []
+    }
+    {
+      "block_number": 13,
+      "block_name": "Сборщик обратной связи по планам выполнения",
+      "internal_id": "plan_feedback_collector"
+    },
+    {
+      "block_number": 14,
+      "block_name": "Анализатор узких мест производительности",
+      "internal_id": "bottleneck_analyzer"
+    },
+    {
+      "block_number": 15,
+      "block_name": "Профайлер путей выполнения запроса",
+      "internal_id": "execution_path_profiler"
     }
   ]
 },
@@ -1841,6 +2402,38 @@
       "internal_id": "monitoring_cli_rest_web",
       "incoming": [],
       "outgoing": []
+    }
+
+
+    {
+      "block_number": 11,
+      "block_name": "Движок генерации тестов и трекер покрытия",
+      "internal_id": "test_scenario_engine"
+    },
+    {
+      "block_number": 12,
+      "block_name": "Система валидации результатов и сравнения с эталоном",
+      "internal_id": "golden_result_validator"
+    },
+    {
+      "block_number": 13,
+      "block_name": "Движок проверки соответствия SQL-стандартам",
+      "internal_id": "sql_conformance_engine"
+    }
+    {
+      "block_number": 14,
+      "block_name": "Контроль зависимостей и безопасная сборка",
+      "internal_id": "secure_dependency_manager"
+    },
+    {
+      "block_number": 15,
+      "block_name": "Workflow безопасного ревью и запретов на CI",
+      "internal_id": "secure_code_review_gatekeeper"
+    },
+    {
+      "block_number": 16,
+      "block_name": "Подпись релизов и слой доверенности",
+      "internal_id": "release_security_attestation"
     }
   ]
 },
@@ -3783,6 +4376,27 @@
       "block_number": "20.165",
       "block_name": "Zero-touch runtime",
       "internal_id": "zero_touch_runtime",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.166",
+      "block_name": "Менеджер лицензий и SKU-фич",
+      "internal_id": "license_sku_feature_manager",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.167",
+      "block_name": "Динамическое управление feature-флагами",
+      "internal_id": "runtime_feature_flag_controller",
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "block_number": "20.168",
+      "block_name": "Distributed Execution Graph Coordinator",
+      "internal_id": "distributed_execution_coordinator",
       "incoming": [],
       "outgoing": []
     }
