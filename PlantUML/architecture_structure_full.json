@@ -1169,68 +1169,90 @@
       "internal_id": "json_sql_unification",
       "incoming": [],
       "outgoing": []
-    }
-
-
+    },
     {
-      "block_number": 21,
+      "block_number": "3.28",
       "block_name": "Ядро лексера и грамматики SQL",
-      "internal_id": "sql_grammar_core"
+      "internal_id": "sql_grammar_core",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 22,
+      "block_number": "3.29",
       "block_name": "Движок правил перезаписи SQL-запросов",
-      "internal_id": "sql_rewrite_rules_engine"
+      "internal_id": "sql_rewrite_rules_engine",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 23,
+      "block_number": "3.30",
       "block_name": "Реестр SQL-расширений и пользовательских функций",
-      "internal_id": "sql_extension_registry"
-    }
+      "internal_id": "sql_extension_registry",
+      "incoming": [],
+      "outgoing": []
+    },
     {
-      "block_number": 24,
+      "block_number": "3.31",
       "block_name": "Генератор физического плана выполнения",
-      "internal_id": "physical_plan_generator"
+      "internal_id": "physical_plan_generator",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 25,
+      "block_number": "3.32",
       "block_name": "Выбор стратегии соединения (Join Strategy Selector)",
-      "internal_id": "join_strategy_selector"
+      "internal_id": "join_strategy_selector",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 26,
+      "block_number": "3.33",
       "block_name": "Движок распределения фрагментов запроса",
-      "internal_id": "query_fragment_distribution"
-    }
+      "internal_id": "query_fragment_distribution",
+      "incoming": [],
+      "outgoing": []
+    },
     {
-      "block_number": 27,
+      "block_number": "3.34",
       "block_name": "Интерпретатор SQL-планов (Execution Engine)",
-      "internal_id": "sql_interpreter_engine"
+      "internal_id": "sql_interpreter_engine",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 28,
+      "block_number": "3.35",
       "block_name": "JIT-движок генерации кода SQL",
-      "internal_id": "sql_jit_engine"
+      "internal_id": "sql_jit_engine",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 29,
+      "block_number": "3.36",
       "block_name": "Библиотека векторизированных операторов",
-      "internal_id": "vector_operator_library"
-    }
+      "internal_id": "vector_operator_library",
+      "incoming": [],
+      "outgoing": []
+    },
     {
-      "block_number": 30,
+      "block_number": "3.37",
       "block_name": "Транзакционный слой DDL",
-      "internal_id": "ddl_transactional_layer"
+      "internal_id": "ddl_transactional_layer",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 31,
+      "block_number": "3.38",
       "block_name": "Ядро системы типов и реестр пользовательских типов",
-      "internal_id": "type_system_core"
+      "internal_id": "type_system_core",
+      "incoming": [],
+      "outgoing": []
     },
     {
-      "block_number": 32,
+      "block_number": "3.39",
       "block_name": "Трекер зависимостей схемы и каскадный движок",
-      "internal_id": "ddl_dependency_tracker"
+      "internal_id": "ddl_dependency_tracker",
+      "incoming": [],
+      "outgoing": []
     }
   ]
 },
