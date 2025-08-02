@@ -1,1 +1,1446 @@
-
+{
+  "db_latency_avg_ms": {
+    "value": 2.05,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "db_latency_p95_ms": {
+    "value": 2.31,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "db_latency_p99_ms": {
+    "value": 3.81,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "db_latency_critical_ns": {
+    "value": 448,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "query_latency_bucket": {
+    "value": 6,
+    "type": "histogram",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "db_tps": {
+    "value": 40043,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "query_rps": {
+    "value": 16147,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "ingest_rps": {
+    "value": 36576,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "ingest_throughput_bytes": {
+    "value": 377547946,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "egress_throughput_bytes": {
+    "value": 830910516,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "row_processing_rate": {
+    "value": 7952.34,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "executor_scan_time_ns": {
+    "value": 120625,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "executor_join_time_ns": {
+    "value": 972011,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "executor_aggregate_time_ns": {
+    "value": 7553.33,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "executor_output_time_ns": {
+    "value": 4809.25,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "executor_pipeline_depth": {
+    "value": 9694.44,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "executor_vector_batch_size": {
+    "value": 3956.16,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "executor_parallel_tasks": {
+    "value": 3777.6,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "plan_reoptimization_count": {
+    "value": 14840,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "selectivity_feedback_count": {
+    "value": 443144,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "jit_compile_time_ms": {
+    "value": 4800.08,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "jit_plan_reuse_ratio": {
+    "value": 5683.54,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "adaptive_join_switch_count": {
+    "value": 313640,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "active_sessions_total": {
+    "value": 5790.36,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "blocked_sessions_total": {
+    "value": 9517.54,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "parallel_workers_active": {
+    "value": 3640.02,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "task_queue_depth": {
+    "value": 2924.3,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "query_concurrent_limit_reached": {
+    "value": 397657,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "snapshot_duration_ms": {
+    "value": 5219.64,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "snapshot_size_bytes": {
+    "value": 354442589,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "wal_flush_rate_bytes": {
+    "value": 9775.37,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "wal_compaction_ratio": {
+    "value": 94.83,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "recovery_duration_ms": {
+    "value": 9.02,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "recovery_state": {
+    "value": 59.07,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "memory_total_allocated_bytes": {
+    "value": 9391219165,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "memory_numa_usage_bytes": {
+    "value": 46618326943,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "memory_pressure_score": {
+    "value": 39871409599,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "numa_gc_rebalance_events": {
+    "value": 145239,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "slab_allocator_fragmentation": {
+    "value": 1289.17,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "idle_memory_evictions_total": {
+    "value": 62544400677,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "replication_lag_ms": {
+    "value": 3.97,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "quorum_consensus_latency_ms": {
+    "value": 54,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "failover_event_total": {
+    "value": 318709,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "split_brain_detected_total": {
+    "value": 168184,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "raft_commit_index": {
+    "value": 4142.42,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "rpo_rto_violation_total": {
+    "value": 5,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "buffer_pool_hit_ratio": {
+    "value": 7005.66,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "page_cache_dirty_ratio": {
+    "value": 3979.53,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "page_eviction_rate": {
+    "value": 6171.57,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "cache_prefetch_success_rate": {
+    "value": 8797.77,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "arc_lru_pressure_score": {
+    "value": 8262.24,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "qos_violations_total": {
+    "value": 0,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "query_throttling_events": {
+    "value": 395130,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "priority_queue_wait_time_ms": {
+    "value": 2775.7,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "query_flamegraph_stage_time_ns": {
+    "value": 5895.93,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "query_flamegraph_stage_count": {
+    "value": 193126,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "diagnostics_anomaly_score": {
+    "value": 9995.46,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "debug_trace_event_total": {
+    "value": 407115,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "query_retry_attempts_total": {
+    "value": 479059,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "storage_read_latency_ms": {
+    "value": 88,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "storage_io_queue_depth": {
+    "value": 7000.08,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "storage_tier_access_ratio": {
+    "value": 7469.7,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "hot_column_access_ratio": {
+    "value": 1626.95,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "skewed_key_ratio": {
+    "value": 7124.8,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "shard_rebalance_events": {
+    "value": 108272,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "data_skew_factor": {
+    "value": 3067.15,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "ttl_evictions_total": {
+    "value": 380008,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "retention_expired_rows": {
+    "value": 32137,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "mview_refresh_duration_ms": {
+    "value": 5615.54,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "mview_outdated_count": {
+    "value": 2676.12,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "model_inference_time_ms": {
+    "value": 2013.53,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "onnx_ops_count": {
+    "value": 325681,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "audit_log_size_bytes": {
+    "value": 4768.27,
+    "type": "gauge",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "policy_block_count": {
+    "value": 418083,
+    "type": "counter",
+    "labels": {
+      "class": "HTAP",
+      "engine": "vectorized",
+      "node_id": "node_3",
+      "plan_id": "plan789",
+      "query_id": "q123",
+      "session_id": "s456",
+      "shard_id": "shard_01",
+      "tenant_id": "tenant_A",
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132152
+  },
+  "query_error_rate": {
+    "type": "gauge",
+    "value": 0.002,
+    "labels": {
+      "tenant_id": "tenant_A",
+      "shard_id": "shard_01",
+      "query_id": "q123",
+      "class": "HTAP"
+    },
+    "timestamp": 1754132692
+  },
+  "plan_compile_failures_total": {
+    "type": "counter",
+    "value": 18,
+    "labels": {
+      "tenant_id": "tenant_A",
+      "engine": "vectorized"
+    },
+    "timestamp": 1754132692
+  },
+  "snapshot_failure_total": {
+    "type": "counter",
+    "value": 1,
+    "labels": {
+      "node_id": "node_3"
+    },
+    "timestamp": 1754132692
+  },
+  "replication_sync_failures_total": {
+    "type": "counter",
+    "value": 0,
+    "labels": {
+      "node_id": "node_3"
+    },
+    "timestamp": 1754132692
+  },
+  "security_policy_violations_total": {
+    "type": "counter",
+    "value": 4,
+    "labels": {
+      "user": "analytics_user"
+    },
+    "timestamp": 1754132692
+  },
+  "grpc_latency_p99_ms": {
+    "type": "gauge",
+    "value": 6.8,
+    "labels": {
+      "node_id": "node_3"
+    },
+    "timestamp": 1754132692
+  },
+  "api_error_rate": {
+    "type": "gauge",
+    "value": 0.0095,
+    "labels": {
+      "user": "analytics_user",
+      "endpoint": "/query/execute"
+    },
+    "timestamp": 1754132692
+  },
+  "sla_violation_total": {
+    "type": "counter",
+    "value": 41,
+    "labels": {
+      "tenant_id": "tenant_A",
+      "sla_class": "gold"
+    },
+    "timestamp": 1754132692
+  },
+  "sla_latency_p99_violation_ratio": {
+    "type": "gauge",
+    "value": 0.014,
+    "labels": {
+      "sla_class": "gold",
+      "query_type": "analytical"
+    },
+    "timestamp": 1754132692
+  },
+  "data_format_conversion_time": {
+    "value": 2.4,
+    "type": "gauge",
+    "labels": {
+      "source_format": "JSON",
+      "target_format": "binary",
+      "query_id": "q203"
+    }
+  },
+ "index_lookup_time_ns": {
+    "value": 145,
+    "type": "gauge",
+    "labels": {
+      "engine": "vectorized",
+      "index_type": "btree",
+      "query_id": "q102"
+    }
+  },
+  "adaptive_index_switch_total": {
+    "value": 3,
+    "type": "counter",
+    "labels": {
+      "engine": "adaptive",
+      "index_type": "bitmap",
+      "query_id": "q105"
+    }
+  },
+"tenant_priority_class": {
+    "value": 2,
+    "type": "gauge",
+    "labels": {
+      "tenant_id": "acme-corp"
+    }
+  },
+"tenant_isolation_violation_total": {
+    "value": 1,
+    "type": "counter",
+    "labels": {
+      "tenant_id": "acme-corp",
+      "class": "OLTP"
+    }
+  },
+ "io_throttling_events": {
+    "value": 17,
+    "type": "counter",
+    "labels": {
+      "node_id": "node-03",
+      "shard_id": "sh-21",
+      "tenant_id": "acme-corp",
+      "query_id": "q307"
+    }
+  },
+ "io_bandwidth_limit_bytes": {
+    "value": 104857600,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node-03",
+      "shard_id": "sh-21",
+      "tenant_id": "acme-corp"
+    }
+  },
+  "query_estimated_cost": {
+    "value": 112.34,
+    "type": "gauge",
+    "labels": {
+      "query_id": "q405",
+      "plan_id": "p57"
+    }
+  },
+  "query_actual_cost": {
+    "value": 114.85,
+    "type": "gauge",
+    "labels": {
+      "query_id": "q405",
+      "plan_id": "p57"
+    }
+  },
+ "uptime_seconds_total": {
+    "value": 86450,
+    "type": "counter",
+    "labels": {
+      "node_id": "node-01"
+    }
+  },
+"crash_recovery_events_total": {
+    "value": 0,
+    "type": "counter",
+    "labels": {
+      "node_id": "node-01",
+      "shard_id": "sh-11"
+    }
+  },
+  "trace_spans_total": {
+    "value": 15837,
+    "type": "counter",
+    "labels": {
+      "trace_id": "trc-984",
+      "tenant_id": "acme-corp"
+    }
+  },
+  "trace_span_duration_bucket": {
+    "value": 1,
+    "type": "histogram",
+    "labels": {
+      "le": "0.05",
+      "trace_id": "trc-984",
+      "engine": "pipeline"
+    }
+  },
+  "log_queue_depth": {
+    "value": 42,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node-04",
+      "engine": "core"
+    }
+  },
+  "log_backpressure_score": {
+    "value": 0.64,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node-04"
+    }
+  },
+  "unit_test_failures_total": {
+    "value": 0,
+    "type": "counter",
+    "labels": {
+      "module": "wal",
+      "test_suite": "wal_writer"
+    }
+  },
+  "integration_test_failures": {
+    "value": 1,
+    "type": "counter",
+    "labels": {
+      "component": "replication",
+      "scenario": "split-brain"
+    }
+  },
+  "fuzzing_crashes_total": {
+    "value": 2,
+    "type": "counter",
+    "labels": {
+      "engine": "parser",
+      "module": "sql_lexer",
+      "test_case": "utf8-unicode-fuzz"
+    }
+  },
+  "fuzzing_mutation_coverage": {
+    "value": 0.78,
+    "type": "gauge",
+    "labels": {
+      "module": "optimizer"
+    }
+  },
+ "sql_injection_detected_total": {
+    "value": 1,
+    "type": "counter",
+    "labels": {
+      "tenant_id": "tenant-x",
+      "user": "internal_scan",
+      "query_id": "q999"
+    }
+  },
+  "access_policy_violation_total": {
+    "value": 3,
+    "type": "counter",
+    "labels": {
+      "tenant_id": "tenant-x",
+      "user": "reader",
+      "operation": "select"
+    }
+  },
+ "audit_trail_integrity_error": {
+    "value": 0,
+    "type": "counter",
+    "labels": {
+      "node_id": "node-01"
+    }
+  }
+}
