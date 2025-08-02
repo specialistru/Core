@@ -1460,7 +1460,7 @@
       "query_id": "q123"
     }
   },
-    "pipeline_utilization_ratio": {
+  "pipeline_utilization_ratio": {
     "type": "gauge",
     "value": 0.91,
     "labels": {
@@ -1523,5 +1523,189 @@
       "query_id": "q123",
       "node_id": "node_3"
     }
+  },
+ "executor_pipeline_stall_count": {
+    "value": 5,
+    "type": "counter",
+    "labels": {
+      "engine": "vectorized",
+      "stage": "scan",
+      "node_id": "node_1",
+      "query_id": "q777"
+    },
+    "timestamp": 1754135985
+  },
+ "jit_codegen_success_ratio": {
+    "value": 0.97,
+    "type": "gauge",
+    "labels": {
+      "engine": "jit",
+      "node_id": "node_2"
+    },
+    "timestamp": 1754135985
+  },
+ "jit_cache_eviction_count": {
+    "value": 11,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_3",
+      "engine": "jit"
+    },
+    "timestamp": 1754135985
+  },
+ "query_compile_time_ms": {
+    "value": 2.8,
+    "type": "gauge",
+    "labels": {
+      "query_id": "q102",
+      "plan_id": "p17"
+    },
+    "timestamp": 1754135985
+  },
+ "storage_compaction_ratio": {
+    "value": 0.86,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_5",
+      "tier": "ssd"
+    },
+    "timestamp": 1754135985
+  },
+ "tenant_cpu_limit": {
+    "value": 2,
+    "type": "gauge",
+    "labels": {
+      "tenant_id": "tenant_x"
+    },
+    "timestamp": 1754135985
+  },
+ "tenant_memory_limit": {
+    "value": 1073741824,
+    "type": "gauge",
+    "labels": {
+      "tenant_id": "tenant_x"
+    },
+    "timestamp": 1754135985
+  },
+ "audit_log_violation_total": {
+    "value": 1,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_2"
+    },
+    "timestamp": 1754135985
+  },
+ "index_usage_rate": {
+    "value": 0.94,
+    "type": "gauge",
+    "labels": {
+      "index_type": "btree",
+      "query_id": "q789",
+      "node_id": "node_4",
+      "tenant_id": "tenant_B",
+      "engine": "vectorized",
+      "class": "OLTP"
+    },
+    "timestamp": 1754135985
+  },
+ "index_adaptation_trigger_total": {
+    "value": 7,
+    "type": "counter",
+    "labels": {
+      "index_type": "adaptive",
+      "query_id": "q453"
+    },
+    "timestamp": 1754135985
+  },
+ "telemetry_export_failures": {
+    "value": 2,
+    "type": "counter",
+    "labels": {
+      "target": "prometheus"
+    },
+    "timestamp": 1754135985
+  },
+  "grpc_error_rate": {
+    "value": 0.003,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_1"
+    },
+    "timestamp": 1754135985
+  },
+  "rest_api_latency_avg_ms": {
+    "value": 12.4,
+    "type": "gauge",
+    "labels": {
+      "endpoint": "/sql/execute"
+    },
+    "timestamp": 1754135985
+  },
+   "scheduler_preemption_count": {
+    "value": 4,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_6"
+    },
+    "timestamp": 1754135985
+  },
+  "query_queue_max_depth": {
+    "value": 42,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_1",
+      "class": "OLAP"
+    },
+    "timestamp": 1754135985
+  },
+   "replication_replay_lag_ms": {
+    "value": 63,
+    "type": "gauge",
+    "labels": {
+      "replica": "replica_1"
+    },
+    "timestamp": 1754135985
+  },
+ "cpu_pressure_score": {
+    "value": 0.75,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_4"
+    },
+    "timestamp": 1754135985
+  },
+  "forecast_error_rate": {
+    "value": 0.08,
+    "type": "gauge",
+    "labels": {
+      "model": "timeseries_forecast"
+    },
+    "timestamp": 1754135985
+  },
+  "ts_gap_fill_duration_ms": {
+    "value": 1.7,
+    "type": "gauge",
+    "labels": {
+      "query_id": "q105",
+      "node_id": "node_8"
+    },
+    "timestamp": 1754135985
+  },
+  "cache_hit_latency_avg_ns": {
+    "value": 115,
+    "type": "gauge",
+    "labels": {
+      "cache": "buffer_pool"
+    },
+    "timestamp": 1754135985
+  },
+  "ddl_lock_wait_time_ms": {
+    "value": 8.2,
+    "type": "gauge",
+    "labels": {
+      "query_id": "qDDL1",
+      "node_id": "node_2"
+    },
+    "timestamp": 1754135985
   }
 }
