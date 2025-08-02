@@ -1014,147 +1014,147 @@
       "internal_id": "import_json_xml_s3"
     },
     {
-      "block_number": "4.10",
+      "block_number": "4.9",
       "block_name": "Асинхронная обработка событий",
       "internal_id": "async_event_processing"
     },
     {
-      "block_number": "4.11",
+      "block_number": "4.10",
       "block_name": "Интеграция с ERP и BI",
       "internal_id": "integration_erp_bi"
     },
     {
-      "block_number": "4.12",
+      "block_number": "4.11",
       "block_name": "Интеграция с BPMN-системами",
       "internal_id": "integration_bpmn_systems"
     },
     {
-      "block_number": "4.13",
+      "block_number": "4.12",
       "block_name": "Поддержка DSL/UDF сценариев",
       "internal_id": "dsl_udf_scenario_support"
     },
     {
-      "block_number": "4.14",
+      "block_number": "4.13",
       "block_name": "Пользовательские API-интерфейсы",
       "internal_id": "custom_api_interfaces"
     },
     {
-      "block_number": "4.15",
+      "block_number": "4.14",
       "block_name": "Унифицированный SQL Gateway",
       "internal_id": "unified_sql_gateway"
     },
     {
-      "block_number": "4.16",
+      "block_number": "4.15",
       "block_name": "Импорт пользовательских форматов",
       "internal_id": "custom_format_import"
     },
     {
-      "block_number": "4.17",
+      "block_number": "4.16",
       "block_name": "Интеграция с облачными платформами",
       "internal_id": "cloud_platform_integration"
     },
     {
-      "block_number": "4.18",
+      "block_number": "4.17",
       "block_name": "Управление API-ключами и токенами",
       "internal_id": "api_keys_tokens_management"
     },
     {
-      "block_number": "4.19",
+      "block_number": "4.18",
       "block_name": "Поддержка GraphQL Federation",
       "internal_id": "graphql_federation_support"
     },
     {
-      "block_number": "4.20",
+      "block_number": "4.19",
       "block_name": "Протокол совместимости PostgreSQL",
       "internal_id": "postgresql_wire_compat"
     },
     {
-      "block_number": "4.21",
+      "block_number": "4.20",
       "block_name": "Слой интеграции с ERP-системами и API Gateway",
       "internal_id": "erp_api_integration_layer"
     },
     {
-      "block_number": "4.22",
+      "block_number": "4.21",
       "block_name": "DSL-интерпретатор и компилятор бизнес-процессов",
       "internal_id": "erp_dsl_engine"
     },
     {
-      "block_number": "4.23",
+      "block_number": "4.22",
       "block_name": "Изолятор и менеджер многопользовательских экземпляров",
       "internal_id": "multi_tenant_isolation_manager"
     },
     {
-      "block_number": "4.24",
+      "block_number": "4.23",
       "block_name": "Оркестратор ETL-конвейеров и потоков обработки",
       "internal_id": "etl_pipeline_orchestrator"
     },
     {
-      "block_number": "4.25",
+      "block_number": "4.24",
       "block_name": "Реестр форматов и адаптеров внешних источников",
       "internal_id": "format_adapter_registry"
     },
     {
-      "block_number": "4.26",
+      "block_number": "4.25",
       "block_name": "Коннектор внешних каталогов и синхронизация метаданных",
       "internal_id": "external_catalog_connector"
     },
     {
-      "block_number": "4.27",
+      "block_number": "4.26",
       "block_name": "Менеджер сессий SQL-клиентов",
       "internal_id": "sql_client_session_manager"
     },
     {
-      "block_number": "4.28",
+      "block_number": "4.27",
       "block_name": "Мультиплексор протоколов и механизм согласования",
       "internal_id": "protocol_negotiator"
     },
     {
-      "block_number": "4.29",
+      "block_number": "4.28",
       "block_name": "Координатор клиентского исполнения и Pushdown-механизм",
       "internal_id": "client_pushdown_engine"
     },
     {
-      "block_number": "4.30",
+      "block_number": "4.29",
       "block_name": "Движок управления бизнес-процессами (BPMN)",
       "internal_id": "bpmn_engine"
     },
     {
-      "block_number": "4.31",
+      "block_number": "4.30",
       "block_name": "Коннектор Master Data Management ERP",
       "internal_id": "erp_master_data_connector"
     },
     {
-      "block_number": "4.32",
+      "block_number": "4.31",
       "block_name": "Движок поддержки мультивалютности и локализаций",
       "internal_id": "multi_currency_localization_engine"
     },
     {
-      "block_number": "4.33",
+      "block_number": "4.32",
       "block_name": "Трекер происхождения данных и анализ влияния",
       "internal_id": "data_lineage_tracker"
     },
     {
-      "block_number": "4.34",
+      "block_number": "4.33",
       "block_name": "Синхронизация эволюции схем с внешними системами",
       "internal_id": "schema_evolution_sync"
     },
     {
-      "block_number": "4.35",
+      "block_number": "4.34",
       "block_name": "Оркестрация событий с механизмом повторных попыток",
       "internal_id": "event_driven_retry_orchestrator"
     },
     {
-      "block_number": "4.36",
+      "block_number": "4.35",
       "block_name": "Менеджер пула соединений и квоты ресурсов",
       "internal_id": "connection_pool_manager"
     },
     {
-      "block_number": "4.37",
+      "block_number": "4.36",
       "block_name": "Слой версионирования API и обратной совместимости",
       "internal_id": "api_versioning_layer"
     },
     {
-      "block_number": "4.38",
+      "block_number": "4.37",
       "block_name": "Клиентский кэш запросов и механизм prefetch",
       "internal_id": "client_query_cache"
     }
