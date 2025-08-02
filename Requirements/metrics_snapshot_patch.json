@@ -1707,5 +1707,238 @@
       "node_id": "node_2"
     },
     "timestamp": 1754135985
+  },
+   "cpu_utilization_percent": {
+    "value": 73.5,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_1"
+    },
+    "timestamp": 1754137274
+  },
+   "cpu_stall_cycles": {
+    "value": 124000,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_1"
+    },
+    "timestamp": 1754137274
+  },
+   "cpu_cache_misses": {
+    "value": 5589,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_1"
+    },
+    "timestamp": 1754137274
+  },
+   "cpu_affinity_violation_total": {
+    "value": 2,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_1"
+    },
+    "timestamp": 1754137274
+  },
+   "disk_iops_read": {
+    "value": 4200,
+    "type": "gauge",
+    "labels": {
+      "tier": "nvme"
+    },
+    "timestamp": 1754137274
+  },
+   "disk_iops_write": {
+    "value": 3600,
+    "type": "gauge",
+    "labels": {
+      "tier": "nvme"
+    },
+    "timestamp": 1754137274
+  },
+   "disk_latency_ms": {
+    "value": 0.91,
+    "type": "gauge",
+    "labels": {
+      "tier": "nvme"
+    },
+    "timestamp": 1754137274
+  },
+   "net_egress_bytes": {
+    "value": 982344,
+    "type": "counter",
+    "labels": {
+      "interface": "eth0"
+    },
+    "timestamp": 1754137274
+  },
+   "net_ingress_bytes": {
+    "value": 1298832,
+    "type": "counter",
+    "labels": {
+      "interface": "eth0"
+    },
+    "timestamp": 1754137274
+  },
+   "grpc_calls_total": {
+    "value": 44500,
+    "type": "counter",
+    "labels": {
+      "endpoint": "/Execute"
+    },
+    "timestamp": 1754137274
+  },
+   "grpc_error_rate": {
+    "value": 0.0032,
+    "type": "gauge",
+    "labels": {
+      "endpoint": "/Execute"
+    },
+    "timestamp": 1754137274
+  },
+   "wal_compaction_duration_ms": {
+    "value": 31,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_2"
+    },
+    "timestamp": 1754137274
+  },
+   "wal_compaction_size_bytes": {
+    "value": 3048576,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_2"
+    },
+    "timestamp": 1754137274
+  },
+   "sla_violations_per_class": {
+    "value": 7,
+    "type": "counter",
+    "labels": {
+      "class": "OLTP"
+    },
+    "timestamp": 1754137274
+  },
+   "sla_penalty_score": {
+    "value": 0.07,
+    "type": "gauge",
+    "labels": {
+      "tenant_id": "t42"
+    },
+    "timestamp": 1754137274
+  },
+   "sla_class_latency_percentile": {
+    "value": 0.94,
+    "type": "gauge",
+    "labels": {
+      "class": "OLAP",
+      "percentile": "p95"
+    },
+    "timestamp": 1754137274
+  },
+   "snapshot_diff_bytes": {
+    "value": 1480023,
+    "type": "gauge",
+    "labels": {
+      "snapshot_id": "snap7"
+    },
+    "timestamp": 1754137274
+  },
+   "snapshot_row_delta_total": {
+    "value": 19822,
+    "type": "counter",
+    "labels": {
+      "snapshot_id": "snap7"
+    },
+    "timestamp": 1754137274
+  },
+   "ml_model_cache_hit_ratio": {
+    "value": 0.87,
+    "type": "gauge",
+    "labels": {
+      "model": "xgb_t5"
+    },
+    "timestamp": 1754137274
+  },
+   "ml_model_eviction_total": {
+    "value": 2,
+    "type": "counter",
+    "labels": {
+      "model": "xgb_t5"
+    },
+    "timestamp": 1754137274
+  },
+   "query_plan_cache_hits": {
+    "value": 7783,
+    "type": "counter",
+    "labels": {
+      "engine": "planner"
+    },
+    "timestamp": 1754137274
+  },
+   "query_plan_cache_evictions": {
+    "value": 41,
+    "type": "counter",
+    "labels": {
+      "engine": "planner"
+    },
+    "timestamp": 1754137274
+  },
+   "optimizer_histogram_miss_rate": {
+    "value": 0.016,
+    "type": "gauge",
+    "labels": {
+      "engine": "optimizer"
+    },
+    "timestamp": 1754137274
+  },
+   "jwt_token_validation_failures": {
+    "value": 1,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_6"
+    },
+    "timestamp": 1754137274
+  },
+   "access_policy_eval_time_ns": {
+    "value": 2950,
+    "type": "gauge",
+    "labels": {
+      "policy": "tenant_read"
+    },
+    "timestamp": 1754137274
+  },
+   "audit_entry_dropped_total": {
+    "value": 3,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_6"
+    },
+    "timestamp": 1754137274
+  },
+   "tenant_disk_quota_used_percent": {
+    "value": 81.5,
+    "type": "gauge",
+    "labels": {
+      "tenant_id": "t42"
+    },
+    "timestamp": 1754137274
+  },
+   "tenant_session_limit_exceeded_total": {
+    "value": 5,
+    "type": "counter",
+    "labels": {
+      "tenant_id": "t42"
+    },
+    "timestamp": 1754137274
+  },
+   "tenant_cpu_quota_violation_total": {
+    "value": 2,
+    "type": "counter",
+    "labels": {
+      "tenant_id": "t42"
+    },
+    "timestamp": 1754137274
   }
 }
