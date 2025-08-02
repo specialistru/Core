@@ -2397,5 +2397,43 @@
     "labels": {
       "exporter": "otlp"
     }
+  },
+  "mutation_test_coverage": {
+    "type": "gauge",
+    "value": 0.87,
+    "labels": {
+      "component": "optimizer",
+      "test_type": "mutation"
+    }
+  },
+  "statement_coverage_ratio": {
+    "type": "gauge",
+    "value": 0.93,
+    "labels": {
+      "module": "sql_parser"
+    }
+  },
+  "cpu_affinity_migrations_total": {
+    "type": "counter",
+    "value": 14,
+    "labels": {
+      "thread_class": "executor",
+      "node_id": "node_1"
+    }
+  },
+  "locale_usage_count": {
+    "type": "counter",
+    "value": 18,
+    "labels": {
+      "locale": "ru_RU.UTF-8"
+    }
+  },
+  "sla_violation_trace_id": {
+    "type": "gauge",
+    "value": 1,
+    "labels": {
+      "trace_id": "trc_10203",
+      "reason": "latency_breach"
+    }
   }
 }
