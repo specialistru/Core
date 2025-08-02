@@ -15,7 +15,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Средняя задержка OLTP"
+      "description_en": "Средняя задержка OLTP",
+      "tags": [
+        "latency"
+      ],
+      "unit": "ms",
+      "sla_critical": true,
+      "test_coverage": true
     },
     {
       "name": "db_latency_p95_ms",
@@ -32,7 +38,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "P95 задержка"
+      "description_en": "P95 задержка",
+      "tags": [
+        "latency"
+      ],
+      "unit": "ms",
+      "sla_critical": true,
+      "test_coverage": true
     },
     {
       "name": "db_latency_p99_ms",
@@ -49,7 +61,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "P99 задержка"
+      "description_en": "P99 задержка",
+      "tags": [
+        "latency"
+      ],
+      "unit": "ms",
+      "sla_critical": true,
+      "test_coverage": true
     },
     {
       "name": "db_latency_critical_ns",
@@ -66,7 +84,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Latency критического запроса в наносекундах"
+      "description_en": "Latency критического запроса в наносекундах",
+      "tags": [
+        "latency"
+      ],
+      "unit": "ns",
+      "sla_critical": true,
+      "test_coverage": true
     },
     {
       "name": "query_latency_bucket",
@@ -84,7 +108,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Гистограмма задержек запросов"
+      "description_en": "Гистограмма задержек запросов",
+      "tags": [
+        "latency"
+      ],
+      "unit": "ns",
+      "sla_critical": true,
+      "test_coverage": true
     }
   ],
   "throughput": [
@@ -103,7 +133,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Транзакций в секунду"
+      "description_en": "Транзакций в секунду",
+      "tags": [
+        "throughput"
+      ],
+      "unit": "ops/s",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "query_rps",
@@ -120,7 +156,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "SQL-запросов в секунду"
+      "description_en": "SQL-запросов в секунду",
+      "tags": [
+        "throughput"
+      ],
+      "unit": "ops/s",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "ingest_rps",
@@ -137,7 +179,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Скорость вставки строк в секунду"
+      "description_en": "Скорость вставки строк в секунду",
+      "tags": [
+        "throughput"
+      ],
+      "unit": "ops/s",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "ingest_throughput_bytes",
@@ -154,7 +202,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Входной поток данных (байт/сек)"
+      "description_en": "Входной поток данных (байт/сек)",
+      "tags": [
+        "throughput"
+      ],
+      "unit": "bytes",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "egress_throughput_bytes",
@@ -171,7 +225,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Исходящий поток данных (байт/сек)"
+      "description_en": "Исходящий поток данных (байт/сек)",
+      "tags": [
+        "throughput"
+      ],
+      "unit": "bytes",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "row_processing_rate",
@@ -188,7 +248,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Обработка строк в секунду"
+      "description_en": "Обработка строк в секунду",
+      "tags": [
+        "throughput"
+      ],
+      "unit": "ops/s",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "execution_pipeline": [
@@ -207,7 +273,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время сканирования таблиц"
+      "description_en": "Время сканирования таблиц",
+      "tags": [
+        "execution_pipeline"
+      ],
+      "unit": "ns",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "executor_join_time_ns",
@@ -224,7 +296,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время выполнения join"
+      "description_en": "Время выполнения join",
+      "tags": [
+        "execution_pipeline"
+      ],
+      "unit": "ns",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "executor_aggregate_time_ns",
@@ -241,7 +319,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время агрегации"
+      "description_en": "Время агрегации",
+      "tags": [
+        "execution_pipeline"
+      ],
+      "unit": "ns",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "executor_output_time_ns",
@@ -258,7 +342,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время сериализации/вывода"
+      "description_en": "Время сериализации/вывода",
+      "tags": [
+        "execution_pipeline"
+      ],
+      "unit": "ns",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "executor_pipeline_depth",
@@ -275,7 +365,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Глубина пайплайна"
+      "description_en": "Глубина пайплайна",
+      "tags": [
+        "execution_pipeline"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "executor_vector_batch_size",
@@ -292,7 +388,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Размер векторных батчей"
+      "description_en": "Размер векторных батчей",
+      "tags": [
+        "execution_pipeline"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "executor_parallel_tasks",
@@ -309,7 +411,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Кол-во активных подзадач"
+      "description_en": "Кол-во активных подзадач",
+      "tags": [
+        "execution_pipeline"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "optimizer_jit": [
@@ -328,7 +436,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Кол-во адаптивных перестроек планов"
+      "description_en": "Кол-во адаптивных перестроек планов",
+      "tags": [
+        "optimizer_jit"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "selectivity_feedback_count",
@@ -345,7 +459,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Обратная связь о селективности"
+      "description_en": "Обратная связь о селективности",
+      "tags": [
+        "optimizer_jit"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "jit_compile_time_ms",
@@ -362,7 +482,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время компиляции JIT"
+      "description_en": "Время компиляции JIT",
+      "tags": [
+        "optimizer_jit"
+      ],
+      "unit": "ms",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "jit_plan_reuse_ratio",
@@ -379,7 +505,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Доля повторного использования JIT-планов"
+      "description_en": "Доля повторного использования JIT-планов",
+      "tags": [
+        "optimizer_jit"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "adaptive_join_switch_count",
@@ -396,7 +528,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Кол-во переключений join-стратегии в рантайме"
+      "description_en": "Кол-во переключений join-стратегии в рантайме",
+      "tags": [
+        "optimizer_jit"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "concurrency_scheduling": [
@@ -415,7 +553,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Активные сессии"
+      "description_en": "Активные сессии",
+      "tags": [
+        "concurrency_scheduling"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "blocked_sessions_total",
@@ -432,7 +576,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Заблокированные сессии"
+      "description_en": "Заблокированные сессии",
+      "tags": [
+        "concurrency_scheduling"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "parallel_workers_active",
@@ -449,7 +599,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Используемые рабочие потоки"
+      "description_en": "Используемые рабочие потоки",
+      "tags": [
+        "concurrency_scheduling"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "task_queue_depth",
@@ -466,7 +622,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Глубина очереди задач"
+      "description_en": "Глубина очереди задач",
+      "tags": [
+        "concurrency_scheduling"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "query_concurrent_limit_reached",
@@ -483,7 +645,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Кол-во отказов из-за превышения лимита параллелизма"
+      "description_en": "Кол-во отказов из-за превышения лимита параллелизма",
+      "tags": [
+        "concurrency_scheduling"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "snapshot_wal": [
@@ -502,7 +670,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время создания снапшота"
+      "description_en": "Время создания снапшота",
+      "tags": [
+        "snapshot_wal"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "snapshot_size_bytes",
@@ -519,7 +693,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Размер снапшота"
+      "description_en": "Размер снапшота",
+      "tags": [
+        "snapshot_wal"
+      ],
+      "unit": "bytes",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "wal_flush_rate_bytes",
@@ -536,7 +716,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Скорость WAL записи"
+      "description_en": "Скорость WAL записи",
+      "tags": [
+        "snapshot_wal"
+      ],
+      "unit": "bytes",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "wal_compaction_ratio",
@@ -553,7 +739,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Коэффициент сжатия WAL"
+      "description_en": "Коэффициент сжатия WAL",
+      "tags": [
+        "snapshot_wal"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "recovery_duration_ms",
@@ -570,7 +762,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время восстановления"
+      "description_en": "Время восстановления",
+      "tags": [
+        "snapshot_wal"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "recovery_state",
@@ -587,7 +785,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Текущий этап восстановления"
+      "description_en": "Текущий этап восстановления",
+      "tags": [
+        "snapshot_wal"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "memory_numa": [
@@ -606,7 +810,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Общий объём памяти"
+      "description_en": "Общий объём памяти",
+      "tags": [
+        "memory_numa"
+      ],
+      "unit": "bytes",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "memory_numa_usage_bytes",
@@ -624,7 +834,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Использование памяти на NUMA-узлах"
+      "description_en": "Использование памяти на NUMA-узлах",
+      "tags": [
+        "memory_numa"
+      ],
+      "unit": "bytes",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "memory_pressure_score",
@@ -641,7 +857,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Индикатор давления на память (0.0-1.0)"
+      "description_en": "Индикатор давления на память (0.0-1.0)",
+      "tags": [
+        "memory_numa"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "numa_gc_rebalance_events",
@@ -658,7 +880,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Кол-во ребалансов по GC/NUMA"
+      "description_en": "Кол-во ребалансов по GC/NUMA",
+      "tags": [
+        "memory_numa"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "slab_allocator_fragmentation",
@@ -675,7 +903,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Фрагментация аллокатора"
+      "description_en": "Фрагментация аллокатора",
+      "tags": [
+        "memory_numa"
+      ],
+      "unit": "count",
+      "sla_critical": true,
+      "test_coverage": true
     },
     {
       "name": "idle_memory_evictions_total",
@@ -692,7 +926,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Кол-во вытесненной неактивной памяти"
+      "description_en": "Кол-во вытесненной неактивной памяти",
+      "tags": [
+        "memory_numa"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "replication_ha": [
@@ -712,7 +952,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Задержка репликации"
+      "description_en": "Задержка репликации",
+      "tags": [
+        "replication_ha"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "quorum_consensus_latency_ms",
@@ -729,7 +975,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время достижения консенсуса"
+      "description_en": "Время достижения консенсуса",
+      "tags": [
+        "replication_ha"
+      ],
+      "unit": "ms",
+      "sla_critical": true,
+      "test_coverage": true
     },
     {
       "name": "failover_event_total",
@@ -746,7 +998,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Кол-во failover"
+      "description_en": "Кол-во failover",
+      "tags": [
+        "replication_ha"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "split_brain_detected_total",
@@ -763,7 +1021,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Сценарии split-brain"
+      "description_en": "Сценарии split-brain",
+      "tags": [
+        "replication_ha"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "raft_commit_index",
@@ -780,7 +1044,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Текущий индекс коммита в Raft"
+      "description_en": "Текущий индекс коммита в Raft",
+      "tags": [
+        "replication_ha"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "rpo_rto_violation_total",
@@ -797,7 +1067,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Нарушения SLA по восстановлению"
+      "description_en": "Нарушения SLA по восстановлению",
+      "tags": [
+        "replication_ha"
+      ],
+      "unit": "count",
+      "sla_critical": true,
+      "test_coverage": true
     }
   ],
   "cache_metrics": [
@@ -816,7 +1092,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Попадания в буферный пул"
+      "description_en": "Попадания в буферный пул",
+      "tags": [
+        "cache_metrics"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "page_cache_dirty_ratio",
@@ -833,7 +1115,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Доля грязных страниц"
+      "description_en": "Доля грязных страниц",
+      "tags": [
+        "cache_metrics"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "page_eviction_rate",
@@ -850,7 +1138,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Скорость вытеснения страниц"
+      "description_en": "Скорость вытеснения страниц",
+      "tags": [
+        "cache_metrics"
+      ],
+      "unit": "ops/s",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "cache_prefetch_success_rate",
@@ -867,7 +1161,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Эффективность prefetch"
+      "description_en": "Эффективность prefetch",
+      "tags": [
+        "cache_metrics"
+      ],
+      "unit": "ops/s",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "arc_lru_pressure_score",
@@ -884,7 +1184,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Давление на ARC / LRU"
+      "description_en": "Давление на ARC / LRU",
+      "tags": [
+        "cache_metrics"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "qos_guarantees": [
@@ -903,7 +1209,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Нарушения SLA/SLO"
+      "description_en": "Нарушения SLA/SLO",
+      "tags": [
+        "qos_guarantees"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "query_throttling_events",
@@ -920,7 +1232,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Ограничения на выполнение запросов"
+      "description_en": "Ограничения на выполнение запросов",
+      "tags": [
+        "qos_guarantees"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "priority_queue_wait_time_ms",
@@ -937,7 +1255,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время ожидания в очереди приоритетов"
+      "description_en": "Время ожидания в очереди приоритетов",
+      "tags": [
+        "qos_guarantees"
+      ],
+      "unit": "ms",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "query_flamegraph": [
@@ -957,7 +1281,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время на стадии исполнения"
+      "description_en": "Время на стадии исполнения",
+      "tags": [
+        "query_flamegraph"
+      ],
+      "unit": "ns",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "query_flamegraph_stage_count",
@@ -975,7 +1305,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Количество вызовов на стадии"
+      "description_en": "Количество вызовов на стадии",
+      "tags": [
+        "query_flamegraph"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "diagnostics_anomalies": [
@@ -995,7 +1331,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Оценка аномалии по поведению запроса"
+      "description_en": "Оценка аномалии по поведению запроса",
+      "tags": [
+        "diagnostics_anomalies"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "debug_trace_event_total",
@@ -1012,7 +1354,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Трассированные события"
+      "description_en": "Трассированные события",
+      "tags": [
+        "diagnostics_anomalies"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "query_retry_attempts_total",
@@ -1029,7 +1377,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Количество повторных попыток выполнения"
+      "description_en": "Количество повторных попыток выполнения",
+      "tags": [
+        "diagnostics_anomalies"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "storage_io": [
@@ -1048,7 +1402,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Средняя задержка чтения с хранилища"
+      "description_en": "Средняя задержка чтения с хранилища",
+      "tags": [
+        "storage_io"
+      ],
+      "unit": "ms",
+      "sla_critical": true,
+      "test_coverage": true
     },
     {
       "name": "storage_io_queue_depth",
@@ -1065,7 +1425,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Глубина очереди ввода-вывода"
+      "description_en": "Глубина очереди ввода-вывода",
+      "tags": [
+        "storage_io"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "storage_tier_access_ratio",
@@ -1082,7 +1448,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Доля обращений к разным уровням хранения (in-memory, SSD)"
+      "description_en": "Доля обращений к разным уровням хранения (in-memory, SSD)",
+      "tags": [
+        "storage_io"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "hotspot_analysis": [
@@ -1101,7 +1473,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Доля обращений к горячим колонкам"
+      "description_en": "Доля обращений к горячим колонкам",
+      "tags": [
+        "hotspot_analysis"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "skewed_key_ratio",
@@ -1118,7 +1496,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Степень перекоса распределения ключей"
+      "description_en": "Степень перекоса распределения ключей",
+      "tags": [
+        "hotspot_analysis"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "auto_rebalance": [
@@ -1137,7 +1521,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Количество событий автоматической перебалансировки шардов"
+      "description_en": "Количество событий автоматической перебалансировки шардов",
+      "tags": [
+        "auto_rebalance"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "data_skew_factor",
@@ -1154,7 +1544,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Фактор перекоса распределения данных между шардами"
+      "description_en": "Фактор перекоса распределения данных между шардами",
+      "tags": [
+        "auto_rebalance"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "cold_data_tiering": [
@@ -1173,7 +1569,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Общее число вытесненных записей по TTL"
+      "description_en": "Общее число вытесненных записей по TTL",
+      "tags": [
+        "cold_data_tiering"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "retention_expired_rows",
@@ -1190,7 +1592,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Количество строк, удалённых из-за срока хранения"
+      "description_en": "Количество строк, удалённых из-за срока хранения",
+      "tags": [
+        "cold_data_tiering"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "materialized_views": [
@@ -1209,7 +1617,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Длительность обновления материализованных представлений"
+      "description_en": "Длительность обновления материализованных представлений",
+      "tags": [
+        "materialized_views"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "mview_outdated_count",
@@ -1226,7 +1640,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Количество устаревших материализованных представлений"
+      "description_en": "Количество устаревших материализованных представлений",
+      "tags": [
+        "materialized_views"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "ml_runtime": [
@@ -1245,7 +1665,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Время выполнения ML-инференса"
+      "description_en": "Время выполнения ML-инференса",
+      "tags": [
+        "ml_runtime"
+      ],
+      "unit": "ms",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "onnx_ops_count",
@@ -1262,7 +1688,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Количество операций ONNX-инференса"
+      "description_en": "Количество операций ONNX-инференса",
+      "tags": [
+        "ml_runtime"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "security_audit": [
@@ -1281,7 +1713,13 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Размер журнала аудита"
+      "description_en": "Размер журнала аудита",
+      "tags": [
+        "security_audit"
+      ],
+      "unit": "bytes",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "policy_block_count",
@@ -1298,257 +1736,367 @@
         "tenant_id",
         "user"
       ],
-      "description_en": "Количество заблокированных операций политиками доступа"
+      "description_en": "Количество заблокированных операций политиками доступа",
+      "tags": [
+        "security_audit"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "api_network": [
-  {
-   "name": "grpc_latency_p99_ms",
-          "type": "gauge",
-          "description": "P99 задержка gRPC",
-          "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-          ]
-        },
-        {
-          "name": "api_error_rate",
-          "type": "gauge",
-          "description": "Ошибки API/gRPC",
-          "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-          ]
-        }
-    ],
-    "error_faults": [
-        {
-          "name": "query_error_rate",
-          "type": "gauge",
-          "description": "Доля ошибок выполнения",
-          "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-          ]
-        },
-        {
-          "name": "plan_compile_failures_total",
-          "type": "counter",
-          "description": "Ошибки компиляции планов",
-          "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-          ]
-        },
-        {
-          "name": "snapshot_failure_total",
-          "type": "counter",
-          "description": "Ошибки создания снапшота",
-          "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-          ]
-        }
-    ],
-    "sla_control": [
-        {
-          "name": "sla_violation_total",
-          "type": "counter",
-          "description": "Нарушения SLA",
-          "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-          ]
-        },
-        {
-          "name": "sla_latency_p99_violation_ratio",
-          "type": "gauge",
-          "description": "P99 latency SLA violation",
-          "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-          ]
-        },
-        {
-          "name": "priority_class_latency_p95_ms",
-          "type": "gauge",
-          "description": "P95 latency per QoS class",
-          "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-       ]
-     }
- ],
-"load_control": [
-  {
-    "name": "engine_overload_score",
-    "type": "gauge",
-    "description": "Индикатор перегрузки ядра исполнения",
-    "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-       ]
-  },
-  {
-    "name": "task_scheduler_backpressure",
-    "type": "gauge",
-    "description": "Backpressure планировщика",
-    "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-       ]
-  }
-],
-"gc_vacuum": [
-  {
-    "name": "gc_cycles_total",
-    "type": "counter",
-    "description": "Количество циклов сборки мусора",
-    "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-       ]
-  },
-  {
-    "name": "vacuum_lag_bytes",
-    "type": "gauge",
-    "description": "Объём необработанных удалённых данных",
-    "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-       ]
-  }
-],
-"session_activity": [
-  {
-    "name": "session_query_count",
-    "type": "counter",
-    "description": "Количество выполненных запросов в сессии",
-    "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-       ]
-  },
-  {
-    "name": "session_idle_time_ms",
-    "type": "gauge",
-    "description": "Время простоя сессии",
-    "labels": [
-          "class",
-          "engine",
-          "node_id",
-          "plan_id",
-          "query_id",
-          "session_id",
-          "shard_id",
-          "tenant_id",
-          "user"
-       ]
-  }
-],
+    {
+      "name": "grpc_latency_p99_ms",
+      "type": "gauge",
+      "description": "P99 задержка gRPC",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "api_network"
+      ],
+      "unit": "ms",
+      "sla_critical": true,
+      "test_coverage": true
+    },
+    {
+      "name": "api_error_rate",
+      "type": "gauge",
+      "description": "Ошибки API/gRPC",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "api_network"
+      ],
+      "unit": "ops/s",
+      "sla_critical": false,
+      "test_coverage": true
+    }
+  ],
+  "error_faults": [
+    {
+      "name": "query_error_rate",
+      "type": "gauge",
+      "description": "Доля ошибок выполнения",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "error_faults"
+      ],
+      "unit": "ops/s",
+      "sla_critical": false,
+      "test_coverage": true
+    },
+    {
+      "name": "plan_compile_failures_total",
+      "type": "counter",
+      "description": "Ошибки компиляции планов",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "error_faults"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
+    },
+    {
+      "name": "snapshot_failure_total",
+      "type": "counter",
+      "description": "Ошибки создания снапшота",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "error_faults"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
+    }
+  ],
+  "sla_control": [
+    {
+      "name": "sla_violation_total",
+      "type": "counter",
+      "description": "Нарушения SLA",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "sla_control"
+      ],
+      "unit": "count",
+      "sla_critical": true,
+      "test_coverage": true
+    },
+    {
+      "name": "sla_latency_p99_violation_ratio",
+      "type": "gauge",
+      "description": "P99 latency SLA violation",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "sla_control"
+      ],
+      "unit": "ns",
+      "sla_critical": true,
+      "test_coverage": true
+    },
+    {
+      "name": "priority_class_latency_p95_ms",
+      "type": "gauge",
+      "description": "P95 latency per QoS class",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "sla_control"
+      ],
+      "unit": "ms",
+      "sla_critical": true,
+      "test_coverage": true
+    }
+  ],
+  "load_control": [
+    {
+      "name": "engine_overload_score",
+      "type": "gauge",
+      "description": "Индикатор перегрузки ядра исполнения",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "load_control"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
+    },
+    {
+      "name": "task_scheduler_backpressure",
+      "type": "gauge",
+      "description": "Backpressure планировщика",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "load_control"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
+    }
+  ],
+  "gc_vacuum": [
+    {
+      "name": "gc_cycles_total",
+      "type": "counter",
+      "description": "Количество циклов сборки мусора",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "gc_vacuum"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
+    },
+    {
+      "name": "vacuum_lag_bytes",
+      "type": "gauge",
+      "description": "Объём необработанных удалённых данных",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "gc_vacuum"
+      ],
+      "unit": "bytes",
+      "sla_critical": false,
+      "test_coverage": true
+    }
+  ],
+  "session_activity": [
+    {
+      "name": "session_query_count",
+      "type": "counter",
+      "description": "Количество выполненных запросов в сессии",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "session_activity"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
+    },
+    {
+      "name": "session_idle_time_ms",
+      "type": "gauge",
+      "description": "Время простоя сессии",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "tags": [
+        "session_activity"
+      ],
+      "unit": "ms",
+      "sla_critical": false,
+      "test_coverage": true
+    }
+  ],
   "jit_executor": [
     {
       "name": "jit_vectorized_exec_enabled",
       "description": "Флаг включённого векторного JIT",
       "type": "gauge",
-      "labels": ["engine", "plan_id", "query_id"]
+      "labels": [
+        "engine",
+        "plan_id",
+        "query_id"
+      ],
+      "tags": [
+        "jit_executor"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "jit_vector_op_count",
       "description": "Количество векторных операций",
       "type": "counter",
-      "labels": ["engine", "plan_id", "query_id"]
+      "labels": [
+        "engine",
+        "plan_id",
+        "query_id"
+      ],
+      "tags": [
+        "jit_executor"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "plan_cache": [
@@ -1556,13 +2104,30 @@
       "name": "plan_cache_hit_ratio",
       "description": "Доля попаданий в кеш планов",
       "type": "gauge",
-      "labels": ["engine", "query_id"]
+      "labels": [
+        "engine",
+        "query_id"
+      ],
+      "tags": [
+        "plan_cache"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "plan_cache_evictions",
       "description": "Удаления из кеша планов",
       "type": "counter",
-      "labels": ["engine"]
+      "labels": [
+        "engine"
+      ],
+      "tags": [
+        "plan_cache"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "storage_access": [
@@ -1570,13 +2135,31 @@
       "name": "in_memory_access_ratio",
       "description": "Доля запросов к in-memory",
       "type": "gauge",
-      "labels": ["node_id", "engine", "query_id"]
+      "labels": [
+        "node_id",
+        "engine",
+        "query_id"
+      ],
+      "tags": [
+        "storage_access"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "nvme_access_latency_ms",
       "description": "Средняя задержка NVMe доступа",
       "type": "gauge",
-      "labels": ["node_id"]
+      "labels": [
+        "node_id"
+      ],
+      "tags": [
+        "storage_access"
+      ],
+      "unit": "ms",
+      "sla_critical": true,
+      "test_coverage": true
     }
   ],
   "security": [
@@ -1584,19 +2167,47 @@
       "name": "sql_injection_detected_total",
       "type": "counter",
       "description": "Обнаруженные попытки SQL-инъекций",
-      "labels": ["tenant_id", "user", "query_id"]
+      "labels": [
+        "tenant_id",
+        "user",
+        "query_id"
+      ],
+      "tags": [
+        "security"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "access_policy_violation_total",
       "type": "counter",
       "description": "Нарушения политик доступа ABAC/RBAC",
-      "labels": ["tenant_id", "user", "operation"]
+      "labels": [
+        "tenant_id",
+        "user",
+        "operation"
+      ],
+      "tags": [
+        "security"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "audit_trail_integrity_error",
       "type": "counter",
       "description": "Обнаруженные нарушения целостности журнала аудита",
-      "labels": ["node_id"]
+      "labels": [
+        "node_id"
+      ],
+      "tags": [
+        "security"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "fuzz_testing": [
@@ -1604,13 +2215,31 @@
       "name": "fuzzing_crashes_total",
       "type": "counter",
       "description": "Количество сбоев во время fuzz-тестирования",
-      "labels": ["engine", "module", "test_case"]
+      "labels": [
+        "engine",
+        "module",
+        "test_case"
+      ],
+      "tags": [
+        "fuzz_testing"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "fuzzing_mutation_coverage",
       "type": "gauge",
       "description": "Покрытие кода мутациями в fuzz-тестах",
-      "labels": ["module"]
+      "labels": [
+        "module"
+      ],
+      "tags": [
+        "fuzz_testing"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "testability": [
@@ -1618,13 +2247,31 @@
       "name": "unit_test_failures_total",
       "type": "counter",
       "description": "Количество неуспешных unit-тестов",
-      "labels": ["module", "test_suite"]
+      "labels": [
+        "module",
+        "test_suite"
+      ],
+      "tags": [
+        "testability"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "integration_test_failures",
       "type": "counter",
       "description": "Количество сбоев в интеграционных тестах",
-      "labels": ["component", "scenario"]
+      "labels": [
+        "component",
+        "scenario"
+      ],
+      "tags": [
+        "testability"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "logging": [
@@ -1632,13 +2279,30 @@
       "name": "log_queue_depth",
       "type": "gauge",
       "description": "Текущая глубина очереди логирования",
-      "labels": ["node_id", "engine"]
+      "labels": [
+        "node_id",
+        "engine"
+      ],
+      "tags": [
+        "logging"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "log_backpressure_score",
       "type": "gauge",
       "description": "Индикатор перегрузки логгера",
-      "labels": ["node_id"]
+      "labels": [
+        "node_id"
+      ],
+      "tags": [
+        "logging"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "observability": [
@@ -1646,13 +2310,32 @@
       "name": "trace_spans_total",
       "type": "counter",
       "description": "Общее количество трассировок (spans)",
-      "labels": ["trace_id", "tenant_id"]
+      "labels": [
+        "trace_id",
+        "tenant_id"
+      ],
+      "tags": [
+        "observability"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "trace_span_duration_bucket",
       "type": "histogram",
       "description": "Гистограмма продолжительности span (трассировок)",
-      "labels": ["le", "trace_id", "engine"]
+      "labels": [
+        "le",
+        "trace_id",
+        "engine"
+      ],
+      "tags": [
+        "observability"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "availability": [
@@ -1660,13 +2343,30 @@
       "name": "uptime_seconds_total",
       "type": "counter",
       "description": "Время непрерывной работы экземпляра (секунды)",
-      "labels": ["node_id"]
+      "labels": [
+        "node_id"
+      ],
+      "tags": [
+        "availability"
+      ],
+      "unit": "ns",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "crash_recovery_events_total",
       "type": "counter",
       "description": "Количество аварийных восстановлений",
-      "labels": ["node_id", "shard_id"]
+      "labels": [
+        "node_id",
+        "shard_id"
+      ],
+      "tags": [
+        "availability"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "query_costs": [
@@ -1674,13 +2374,31 @@
       "name": "query_estimated_cost",
       "type": "gauge",
       "description": "Оценка стоимости выполнения запроса",
-      "labels": ["query_id", "plan_id"]
+      "labels": [
+        "query_id",
+        "plan_id"
+      ],
+      "tags": [
+        "query_costs"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "query_actual_cost",
       "type": "gauge",
       "description": "Фактическая стоимость выполнения запроса",
-      "labels": ["query_id", "plan_id"]
+      "labels": [
+        "query_id",
+        "plan_id"
+      ],
+      "tags": [
+        "query_costs"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "multi_tenant": [
@@ -1688,13 +2406,29 @@
       "name": "tenant_memory_quota_usage",
       "type": "gauge",
       "description": "Использование квоты памяти арендатором",
-      "labels": ["tenant_id"]
+      "labels": [
+        "tenant_id"
+      ],
+      "tags": [
+        "multi_tenant"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "tenant_cpu_limit_violation",
       "type": "counter",
       "description": "Превышение лимитов CPU арендатором",
-      "labels": ["tenant_id"]
+      "labels": [
+        "tenant_id"
+      ],
+      "tags": [
+        "multi_tenant"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "format_conversion": [
@@ -1702,7 +2436,17 @@
       "name": "data_format_conversion_time",
       "type": "gauge",
       "description": "Время преобразования форматов (например, JSON → binary)",
-      "labels": ["source_format", "target_format", "query_id"]
+      "labels": [
+        "source_format",
+        "target_format",
+        "query_id"
+      ],
+      "tags": [
+        "format_conversion"
+      ],
+      "unit": "ns",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "io_control": [
@@ -1710,13 +2454,34 @@
       "name": "io_throttling_events",
       "description": "Количество событий ограничения I/O",
       "type": "counter",
-      "labels": ["node_id", "shard_id", "tenant_id", "query_id"]
+      "labels": [
+        "node_id",
+        "shard_id",
+        "tenant_id",
+        "query_id"
+      ],
+      "tags": [
+        "io_control"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "io_bandwidth_limit_bytes",
       "description": "Лимит I/O пропускной способности на шард",
       "type": "gauge",
-      "labels": ["node_id", "shard_id", "tenant_id"]
+      "labels": [
+        "node_id",
+        "shard_id",
+        "tenant_id"
+      ],
+      "tags": [
+        "io_control"
+      ],
+      "unit": "bytes",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "multi_tenant_qos": [
@@ -1724,13 +2489,30 @@
       "name": "tenant_priority_class",
       "description": "Класс приоритета арендатора",
       "type": "gauge",
-      "labels": ["tenant_id"]
+      "labels": [
+        "tenant_id"
+      ],
+      "tags": [
+        "multi_tenant_qos"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "tenant_isolation_violation_total",
       "description": "Нарушения изоляции арендатора",
       "type": "counter",
-      "labels": ["tenant_id", "class"]
+      "labels": [
+        "tenant_id",
+        "class"
+      ],
+      "tags": [
+        "multi_tenant_qos"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
   ],
   "index_performance": [
@@ -1738,13 +2520,54 @@
       "name": "index_lookup_time_ns",
       "description": "Среднее время поиска по индексу",
       "type": "gauge",
-      "labels": ["engine", "index_type", "query_id"]
+      "labels": [
+        "engine",
+        "index_type",
+        "query_id"
+      ],
+      "tags": [
+        "index_performance"
+      ],
+      "unit": "ns",
+      "sla_critical": false,
+      "test_coverage": true
     },
     {
       "name": "adaptive_index_switch_total",
       "description": "Количество переключений между индексами",
       "type": "counter",
-      "labels": ["engine", "index_type", "query_id"]
+      "labels": [
+        "engine",
+        "index_type",
+        "query_id"
+      ],
+      "tags": [
+        "index_performance"
+      ],
+      "unit": "count",
+      "sla_critical": false,
+      "test_coverage": true
     }
-  ]
+  ],
+  "__meta__": {
+    "metrics_version": "1.0.3",
+    "summary": {
+      "total_metrics": 118,
+      "categories": 40,
+      "updated": "2025-08-02"
+    },
+    "localization": {
+      "languages": [
+        "ru",
+        "en"
+      ],
+      "units": [
+        "ms",
+        "ns",
+        "bytes",
+        "ops/s",
+        "count"
+      ]
+    }
+  }
 }
