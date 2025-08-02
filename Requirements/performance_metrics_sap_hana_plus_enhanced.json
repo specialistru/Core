@@ -1,1 +1,1359 @@
-
+{
+  "latency": [
+    {
+      "name": "db_latency_avg_ms",
+      "description": "Средняя задержка OLTP",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Средняя задержка OLTP"
+    },
+    {
+      "name": "db_latency_p95_ms",
+      "description": "P95 задержка",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "P95 задержка"
+    },
+    {
+      "name": "db_latency_p99_ms",
+      "description": "P99 задержка",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "P99 задержка"
+    },
+    {
+      "name": "db_latency_critical_ns",
+      "description": "Latency критического запроса в наносекундах",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Latency критического запроса в наносекундах"
+    },
+    {
+      "name": "query_latency_bucket",
+      "description": "Гистограмма задержек запросов",
+      "type": "histogram",
+      "labels": [
+        "class",
+        "engine",
+        "le",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Гистограмма задержек запросов"
+    }
+  ],
+  "throughput": [
+    {
+      "name": "db_tps",
+      "description": "Транзакций в секунду",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Транзакций в секунду"
+    },
+    {
+      "name": "query_rps",
+      "description": "SQL-запросов в секунду",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "SQL-запросов в секунду"
+    },
+    {
+      "name": "ingest_rps",
+      "description": "Скорость вставки строк в секунду",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Скорость вставки строк в секунду"
+    },
+    {
+      "name": "ingest_throughput_bytes",
+      "description": "Входной поток данных (байт/сек)",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Входной поток данных (байт/сек)"
+    },
+    {
+      "name": "egress_throughput_bytes",
+      "description": "Исходящий поток данных (байт/сек)",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Исходящий поток данных (байт/сек)"
+    },
+    {
+      "name": "row_processing_rate",
+      "description": "Обработка строк в секунду",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Обработка строк в секунду"
+    }
+  ],
+  "execution_pipeline": [
+    {
+      "name": "executor_scan_time_ns",
+      "description": "Время сканирования таблиц",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время сканирования таблиц"
+    },
+    {
+      "name": "executor_join_time_ns",
+      "description": "Время выполнения join",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время выполнения join"
+    },
+    {
+      "name": "executor_aggregate_time_ns",
+      "description": "Время агрегации",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время агрегации"
+    },
+    {
+      "name": "executor_output_time_ns",
+      "description": "Время сериализации/вывода",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время сериализации/вывода"
+    },
+    {
+      "name": "executor_pipeline_depth",
+      "description": "Глубина пайплайна",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Глубина пайплайна"
+    },
+    {
+      "name": "executor_vector_batch_size",
+      "description": "Размер векторных батчей",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Размер векторных батчей"
+    },
+    {
+      "name": "executor_parallel_tasks",
+      "description": "Кол-во активных подзадач",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Кол-во активных подзадач"
+    }
+  ],
+  "optimizer_jit": [
+    {
+      "name": "plan_reoptimization_count",
+      "description": "Кол-во адаптивных перестроек планов",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Кол-во адаптивных перестроек планов"
+    },
+    {
+      "name": "selectivity_feedback_count",
+      "description": "Обратная связь о селективности",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Обратная связь о селективности"
+    },
+    {
+      "name": "jit_compile_time_ms",
+      "description": "Время компиляции JIT",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время компиляции JIT"
+    },
+    {
+      "name": "jit_plan_reuse_ratio",
+      "description": "Доля повторного использования JIT-планов",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Доля повторного использования JIT-планов"
+    },
+    {
+      "name": "adaptive_join_switch_count",
+      "description": "Кол-во переключений join-стратегии в рантайме",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Кол-во переключений join-стратегии в рантайме"
+    }
+  ],
+  "concurrency_scheduling": [
+    {
+      "name": "active_sessions_total",
+      "description": "Активные сессии",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Активные сессии"
+    },
+    {
+      "name": "blocked_sessions_total",
+      "description": "Заблокированные сессии",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Заблокированные сессии"
+    },
+    {
+      "name": "parallel_workers_active",
+      "description": "Используемые рабочие потоки",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Используемые рабочие потоки"
+    },
+    {
+      "name": "task_queue_depth",
+      "description": "Глубина очереди задач",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Глубина очереди задач"
+    },
+    {
+      "name": "query_concurrent_limit_reached",
+      "description": "Кол-во отказов из-за превышения лимита параллелизма",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Кол-во отказов из-за превышения лимита параллелизма"
+    }
+  ],
+  "snapshot_wal": [
+    {
+      "name": "snapshot_duration_ms",
+      "description": "Время создания снапшота",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время создания снапшота"
+    },
+    {
+      "name": "snapshot_size_bytes",
+      "description": "Размер снапшота",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Размер снапшота"
+    },
+    {
+      "name": "wal_flush_rate_bytes",
+      "description": "Скорость WAL записи",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Скорость WAL записи"
+    },
+    {
+      "name": "wal_compaction_ratio",
+      "description": "Коэффициент сжатия WAL",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Коэффициент сжатия WAL"
+    },
+    {
+      "name": "recovery_duration_ms",
+      "description": "Время восстановления",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время восстановления"
+    },
+    {
+      "name": "recovery_state",
+      "description": "Текущий этап восстановления",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Текущий этап восстановления"
+    }
+  ],
+  "memory_numa": [
+    {
+      "name": "memory_total_allocated_bytes",
+      "description": "Общий объём памяти",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Общий объём памяти"
+    },
+    {
+      "name": "memory_numa_usage_bytes",
+      "description": "Использование памяти на NUMA-узлах",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Использование памяти на NUMA-узлах"
+    },
+    {
+      "name": "memory_pressure_score",
+      "description": "Индикатор давления на память (0.0-1.0)",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Индикатор давления на память (0.0-1.0)"
+    },
+    {
+      "name": "numa_gc_rebalance_events",
+      "description": "Кол-во ребалансов по GC/NUMA",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Кол-во ребалансов по GC/NUMA"
+    },
+    {
+      "name": "slab_allocator_fragmentation",
+      "description": "Фрагментация аллокатора",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Фрагментация аллокатора"
+    },
+    {
+      "name": "idle_memory_evictions_total",
+      "description": "Кол-во вытесненной неактивной памяти",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Кол-во вытесненной неактивной памяти"
+    }
+  ],
+  "replication_ha": [
+    {
+      "name": "replication_lag_ms",
+      "description": "Задержка репликации",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "replica",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Задержка репликации"
+    },
+    {
+      "name": "quorum_consensus_latency_ms",
+      "description": "Время достижения консенсуса",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время достижения консенсуса"
+    },
+    {
+      "name": "failover_event_total",
+      "description": "Кол-во failover",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Кол-во failover"
+    },
+    {
+      "name": "split_brain_detected_total",
+      "description": "Сценарии split-brain",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Сценарии split-brain"
+    },
+    {
+      "name": "raft_commit_index",
+      "description": "Текущий индекс коммита в Raft",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Текущий индекс коммита в Raft"
+    },
+    {
+      "name": "rpo_rto_violation_total",
+      "description": "Нарушения SLA по восстановлению",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Нарушения SLA по восстановлению"
+    }
+  ],
+  "cache_metrics": [
+    {
+      "name": "buffer_pool_hit_ratio",
+      "description": "Попадания в буферный пул",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Попадания в буферный пул"
+    },
+    {
+      "name": "page_cache_dirty_ratio",
+      "description": "Доля грязных страниц",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Доля грязных страниц"
+    },
+    {
+      "name": "page_eviction_rate",
+      "description": "Скорость вытеснения страниц",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Скорость вытеснения страниц"
+    },
+    {
+      "name": "cache_prefetch_success_rate",
+      "description": "Эффективность prefetch",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Эффективность prefetch"
+    },
+    {
+      "name": "arc_lru_pressure_score",
+      "description": "Давление на ARC / LRU",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Давление на ARC / LRU"
+    }
+  ],
+  "qos_guarantees": [
+    {
+      "name": "qos_violations_total",
+      "description": "Нарушения SLA/SLO",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Нарушения SLA/SLO"
+    },
+    {
+      "name": "query_throttling_events",
+      "description": "Ограничения на выполнение запросов",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Ограничения на выполнение запросов"
+    },
+    {
+      "name": "priority_queue_wait_time_ms",
+      "description": "Время ожидания в очереди приоритетов",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время ожидания в очереди приоритетов"
+    }
+  ],
+  "query_flamegraph": [
+    {
+      "name": "query_flamegraph_stage_time_ns",
+      "description": "Время на стадии исполнения",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "stage",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время на стадии исполнения"
+    },
+    {
+      "name": "query_flamegraph_stage_count",
+      "description": "Количество вызовов на стадии",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "stage",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Количество вызовов на стадии"
+    }
+  ],
+  "diagnostics_anomalies": [
+    {
+      "name": "diagnostics_anomaly_score",
+      "description": "Оценка аномалии по поведению запроса",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "metric",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Оценка аномалии по поведению запроса"
+    },
+    {
+      "name": "debug_trace_event_total",
+      "description": "Трассированные события",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Трассированные события"
+    },
+    {
+      "name": "query_retry_attempts_total",
+      "description": "Количество повторных попыток выполнения",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Количество повторных попыток выполнения"
+    }
+  ],
+  "storage_io": [
+    {
+      "name": "storage_read_latency_ms",
+      "description": "Средняя задержка чтения с хранилища",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Средняя задержка чтения с хранилища"
+    },
+    {
+      "name": "storage_io_queue_depth",
+      "description": "Глубина очереди ввода-вывода",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Глубина очереди ввода-вывода"
+    },
+    {
+      "name": "storage_tier_access_ratio",
+      "description": "Доля обращений к разным уровням хранения (in-memory, SSD)",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Доля обращений к разным уровням хранения (in-memory, SSD)"
+    }
+  ],
+  "hotspot_analysis": [
+    {
+      "name": "hot_column_access_ratio",
+      "description": "Доля обращений к горячим колонкам",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Доля обращений к горячим колонкам"
+    },
+    {
+      "name": "skewed_key_ratio",
+      "description": "Степень перекоса распределения ключей",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Степень перекоса распределения ключей"
+    }
+  ],
+  "auto_rebalance": [
+    {
+      "name": "shard_rebalance_events",
+      "description": "Количество событий автоматической перебалансировки шардов",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Количество событий автоматической перебалансировки шардов"
+    },
+    {
+      "name": "data_skew_factor",
+      "description": "Фактор перекоса распределения данных между шардами",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Фактор перекоса распределения данных между шардами"
+    }
+  ],
+  "cold_data_tiering": [
+    {
+      "name": "ttl_evictions_total",
+      "description": "Общее число вытесненных записей по TTL",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Общее число вытесненных записей по TTL"
+    },
+    {
+      "name": "retention_expired_rows",
+      "description": "Количество строк, удалённых из-за срока хранения",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Количество строк, удалённых из-за срока хранения"
+    }
+  ],
+  "materialized_views": [
+    {
+      "name": "mview_refresh_duration_ms",
+      "description": "Длительность обновления материализованных представлений",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Длительность обновления материализованных представлений"
+    },
+    {
+      "name": "mview_outdated_count",
+      "description": "Количество устаревших материализованных представлений",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Количество устаревших материализованных представлений"
+    }
+  ],
+  "ml_runtime": [
+    {
+      "name": "model_inference_time_ms",
+      "description": "Время выполнения ML-инференса",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Время выполнения ML-инференса"
+    },
+    {
+      "name": "onnx_ops_count",
+      "description": "Количество операций ONNX-инференса",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Количество операций ONNX-инференса"
+    }
+  ],
+  "security_audit": [
+    {
+      "name": "audit_log_size_bytes",
+      "description": "Размер журнала аудита",
+      "type": "gauge",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Размер журнала аудита"
+    },
+    {
+      "name": "policy_block_count",
+      "description": "Количество заблокированных операций политиками доступа",
+      "type": "counter",
+      "labels": [
+        "class",
+        "engine",
+        "node_id",
+        "plan_id",
+        "query_id",
+        "session_id",
+        "shard_id",
+        "tenant_id",
+        "user"
+      ],
+      "description_en": "Количество заблокированных операций политиками доступа"
+    }
+  ],
+{
+    "api_network": [
+        {
+            "name": "grpc_latency_p99_ms",
+            "type": "gauge",
+            "description": "P99 задержка gRPC",
+            "labels": ["node_id", "tenant_id", "user"]
+        },
+        {
+            "name": "api_error_rate",
+            "type": "gauge",
+            "description": "Ошибки API/gRPC",
+            "labels": ["endpoint", "tenant_id", "user"]
+        }
+    ],
+    "error_faults": [
+        {
+            "name": "query_error_rate",
+            "type": "gauge",
+            "description": "Доля ошибок выполнения",
+            "labels": ["query_id", "tenant_id", "user"]
+        },
+        {
+            "name": "plan_compile_failures_total",
+            "type": "counter",
+            "description": "Ошибки компиляции планов",
+            "labels": ["engine", "plan_id"]
+        },
+        {
+            "name": "snapshot_failure_total",
+            "type": "counter",
+            "description": "Ошибки создания снапшота",
+            "labels": ["node_id"]
+        }
+    ],
+    "sla_control": [
+        {
+            "name": "sla_violation_total",
+            "type": "counter",
+            "description": "Нарушения SLA",
+            "labels": ["sla_class", "tenant_id"]
+        },
+        {
+            "name": "sla_latency_p99_violation_ratio",
+            "type": "gauge",
+            "description": "P99 latency SLA violation",
+            "labels": ["sla_class", "query_type"]
+        },
+        {
+            "name": "priority_class_latency_p95_ms",
+            "type": "gauge",
+            "description": "P95 latency per QoS class",
+            "labels": ["class", "tenant_id"]
+        }
+    ]
+}
