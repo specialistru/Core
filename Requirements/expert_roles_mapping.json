@@ -332,5 +332,187 @@
     ],
     "criticality": "medium",
     "core": false
+  },
+  {
+    "role": "Эксперт по NUMA и управлению памятью",
+    "responsibilities": [
+      "NUMA-aware распределение",
+      "Контроль локальности данных",
+      "Анализ и оптимизация использования кэша"
+    ],
+    "architecture_blocks": [
+      "1.16",
+      "1.17"
+    ],
+    "relevant_packages": [
+      "1"
+    ],
+    "criticality": "high",
+    "core": true
+  },
+  {
+    "role": "Инженер по QoS и ограничению ресурсов",
+    "responsibilities": [
+      "Контроль CPU/IOPS/memory per tenant",
+      "Реализация QoS-контроля и throttle",
+      "Мониторинг и SLA enforcement"
+    ],
+    "architecture_blocks": [
+      "1.17",
+      "7.1",
+      "7.3"
+    ],
+    "relevant_packages": [
+      "1",
+      "7"
+    ],
+    "criticality": "high",
+    "core": true
+  },
+  {
+    "role": "Эксперт по хранению и форматам данных",
+    "responsibilities": [
+      "PAX layout, Apache Arrow",
+      "Формат-aware execution",
+      "Сжатие и layout-aware доступ"
+    ],
+    "architecture_blocks": [
+      "1.18",
+      "1.19"
+    ],
+    "relevant_packages": [
+      "1"
+    ],
+    "criticality": "medium",
+    "core": true
+  },
+  {
+    "role": "Разработчик AS OF / версионности",
+    "responsibilities": [
+      "SYSTEM VERSIONED TABLES",
+      "Запросы вида AS OF TIMESTAMP",
+      "Временные представления"
+    ],
+    "architecture_blocks": [
+      "1.15"
+    ],
+    "relevant_packages": [
+      "1"
+    ],
+    "criticality": "medium",
+    "core": true
+  },
+  {
+    "role": "Инженер по rebalance и распределению",
+    "responsibilities": [
+      "Auto-rebalancing, sharding, partitioning",
+      "Distributed planner, planner aware topology",
+      "Геораспределение узлов и планов"
+    ],
+    "architecture_blocks": [
+      "1.14",
+      "3.4",
+      "3.5",
+      "3.6"
+    ],
+    "relevant_packages": [
+      "1",
+      "3"
+    ],
+    "criticality": "high",
+    "core": true
+  },
+  {
+    "role": "Инженер по кэшам и prefetch",
+    "responsibilities": [
+      "Cache coloring, prefetch, CPU locality",
+      "ARC, LRU, Dirty tracking, preload",
+      "Кэширование холодных и горячих страниц"
+    ],
+    "architecture_blocks": [
+      "1.7",
+      "1.13"
+    ],
+    "relevant_packages": [
+      "1"
+    ],
+    "criticality": "medium",
+    "core": false
+  },
+  {
+    "role": "Инженер по JIT/Runtime-оптимизациям",
+    "responsibilities": [
+      "JIT-инференс, plan caching",
+      "Adaptive joins, runtime feedback",
+      "Stage-wise execution и flamegraph"
+    ],
+    "architecture_blocks": [
+      "3.7",
+      "3.8",
+      "7.3"
+    ],
+    "relevant_packages": [
+      "3",
+      "7"
+    ],
+    "criticality": "medium",
+    "core": true
+  },
+  {
+    "role": "Эксперт по BI совместимости",
+    "responsibilities": [
+      "Поддержка ROLLUP, CUBE, materialized views",
+      "Совместимость с BI-инструментами",
+      "Поддержка аналитических функций"
+    ],
+    "architecture_blocks": [
+      "5.1",
+      "5.2",
+      "5.5"
+    ],
+    "relevant_packages": [
+      "5"
+    ],
+    "criticality": "medium",
+    "core": false
+  },
+  {
+    "role": "Инженер по ETL и миграциям",
+    "responsibilities": [
+      "Импорт/экспорт: CSV, JSON, Parquet",
+      "ETL из внешних систем",
+      "Сценарии миграции и rollback"
+    ],
+    "architecture_blocks": [
+      "4.6",
+      "4.7",
+      "11.1"
+    ],
+    "relevant_packages": [
+      "4",
+      "11"
+    ],
+    "criticality": "medium",
+    "core": false
+  },
+  {
+    "role": "DevOps инженер по CI/CD",
+    "responsibilities": [
+      "GitHub Actions, Pipeline testing",
+      "Инфраструктура метрик и алертов",
+      "Fault injection и Chaos testing"
+    ],
+    "architecture_blocks": [
+      "7.1",
+      "7.2",
+      "7.3",
+      "10.3"
+    ],
+    "relevant_packages": [
+      "7",
+      "10"
+    ],
+    "criticality": "medium",
+    "core": false
   }
 ]
