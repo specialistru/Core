@@ -151,307 +151,307 @@
       "internal_id": "json_store"
     },
     {
-      "block_number": "1.8",
+      "block_number": "1.6",
       "block_name": "Prefetching и кеш-подсистема",
       "internal_id": "prefetching_cache_subsystem"
     },
     {
-      "block_number": "1.9",
+      "block_number": "1.7",
       "block_name": "Sharding и партиционирование",
       "internal_id": "sharding_partitioning"
     },
     {
-      "block_number": "1.10",
+      "block_number": "1.8",
       "block_name": "Auto-rebalancing данных",
       "internal_id": "auto_rebalancing"
     },
     {
-      "block_number": "1.11",
+      "block_number": "1.9",
       "block_name": "Distributed Query Planner",
       "internal_id": "distributed_query_planner"
     },
     {
-      "block_number": "1.12",
+      "block_number": "1.10",
       "block_name": "Поддержка горячих и холодных данных",
       "internal_id": "hot_cold_data_support"
     },
     {
-      "block_number": "1.13",
+      "block_number": "1.11",
       "block_name": "TTL и Auto-tiering",
       "internal_id": "ttl_auto_tiering"
     },
     {
-      "block_number": "1.14",
+      "block_number": "1.12",
       "block_name": "Авто ребалансировка и распределение",
       "internal_id": "auto_rebalance_distribution"
     },
     {
-      "block_number": "1.15",
+      "block_number": "1.13",
       "block_name": "Системные версии и AS OF запросы",
       "internal_id": "system_versioned_asof_queries"
     },
     {
-      "block_number": "1.16",
+      "block_number": "1.14",
       "block_name": "Поддержка большого объема памяти",
       "internal_id": "large_memory_support"
     },
     {
-      "block_number": "1.17",
+      "block_number": "1.15",
       "block_name": "Ограничения по CPU/IOPS/Memory (multi-tenant)",
       "internal_id": "resource_limits_multitenant"
     },
     {
-      "block_number": "1.19",
+      "block_number": "1.16",
       "block_name": "Frame-of-Reference и векторное сжатие",
       "internal_id": "frame_of_reference_compression"
     },
     {
-      "block_number": "1.21",
+      "block_number": "1.17",
       "block_name": "Алгоритмы вытеснения: LRU, ARC",
       "internal_id": "eviction_algorithms_lru_arc"
     },
     {
-      "block_number": "1.22",
+      "block_number": "1.18",
       "block_name": "Preload и отслеживание dirty-страниц",
       "internal_id": "preload_dirty_tracking"
     },
     {
-      "block_number": "1.24",
+      "block_number": "1.19",
       "block_name": "WAL log compaction",
       "internal_id": "wal_log_compaction"
     },
     {
-      "block_number": "1.25",
+      "block_number": "1.20",
       "block_name": "Дифференциальные снапшоты",
       "internal_id": "diff_based_snapshots"
     },
     {
-      "block_number": "1.26",
+      "block_number": "1.21",
       "block_name": "Сжатие: Dictionary, RLE, Delta",
       "internal_id": "compression_dictionary_rle_delta"
     },
     {
-      "block_number": "1.28",
+      "block_number": "1.22",
       "block_name": "Индексы: B+Tree, Hash, Bitmap",
       "internal_id": "index_btree_hash_bitmap"
     },
     {
-      "block_number": "1.29",
+      "block_number": "1.23",
       "block_name": "Индексы: Inverted, Adaptive",
       "internal_id": "index_inverted_adaptive"
     },
     {
-      "block_number": "1.30",
+      "block_number": "1.24",
       "block_name": "Auto-tiering и TTL eviction",
       "internal_id": "auto_tiering_ttl_eviction"
     },
     {
-      "block_number": "1.31",
+      "block_number": "1.25",
       "block_name": "Адаптивные индексы и перестроение",
       "internal_id": "adaptive_indexing_rebuild"
     },
     {
-      "block_number": "1.32",
+      "block_number": "1.26",
       "block_name": "Shard-aware планировщик запросов",
       "internal_id": "shard_aware_query_planner"
     },
     {
-      "block_number": "1.33",
+      "block_number": "1.27",
       "block_name": "Масштабирование кластеров хранения",
       "internal_id": "storage_cluster_scaling"
     },
     {
-      "block_number": "1.34",
+      "block_number": "1.28",
       "block_name": "Слои хранения: Tier-1, Tier-2, Tier-N",
       "internal_id": "storage_tiers_tier1_tiern"
     },
     {
-      "block_number": "1.35",
+      "block_number": "1.29",
       "block_name": "Информация о размещении данных",
       "internal_id": "data_placement_info"
     },
     {
-      "block_number": "1.36",
+      "block_number": "1.30",
       "block_name": "Распределение по NUMA-узлам",
       "internal_id": "numa_node_distribution"
     },
     {
-      "block_number": "1.37",
+      "block_number": "1.31",
       "block_name": "Выделение памяти с CPU affinity",
       "internal_id": "memory_allocation_cpu_affinity"
     },
     {
-      "block_number": "1.38",
+      "block_number": "1.32",
       "block_name": "Monitoring слоёв хранения",
       "internal_id": "storage_layers_monitoring"
     },
     {
-      "block_number": "1.39",
+      "block_number": "1.33",
       "block_name": "Контроль размещения объектов",
       "internal_id": "object_placement_control"
     },
     {
-      "block_number": "1.40",
+      "block_number": "1.34",
       "block_name": "Онлайн переключение слоёв",
       "internal_id": "online_tiering_switch"
     },
     {
-      "block_number": "1.41",
+      "block_number": "1.35",
       "block_name": "Сжимаемые страницы и блоки",
       "internal_id": "compressible_pages_blocks"
     },
     {
-      "block_number": "1.42",
+      "block_number": "1.36",
       "block_name": "Загрузка данных в колонках",
       "internal_id": "columnar_data_ingestion"
     },
     {
-      "block_number": "1.43",
+      "block_number": "1.37",
       "block_name": "Хранение JSON сжатий",
       "internal_id": "json_storage_compression"
     },
     {
-      "block_number": "1.44",
+      "block_number": "1.38",
       "block_name": "Vector-optimized pages",
       "internal_id": "vector_optimized_pages"
     },
     {
-      "block_number": "1.45",
+      "block_number": "1.39",
       "block_name": "Delta-инкрементальные обновления",
       "internal_id": "delta_incremental_updates"
     },
     {
-      "block_number": "1.46",
+      "block_number": "1.40",
       "block_name": "Контроллер жизненного цикла in-memory данных",
       "internal_id": "in_memory_lifecycle_controller"
     },
     {
-      "block_number": "1.47",
+      "block_number": "1.41",
       "block_name": "NUMA ребалансировка и балансировщик давления памяти",
       "internal_id": "numa_memory_balancer"
     },
     {
-      "block_number": "1.48",
+      "block_number": "1.42",
       "block_name": "Контроллер размера страниц и выравнивания in-memory",
       "internal_id": "page_alignment_controller"
     },
     {
-      "block_number": "1.49",
+      "block_number": "1.43",
       "block_name": "Арена-аллокатор / Slab-менеджер памяти",
       "internal_id": "arena_allocator"
     },
     {
-      "block_number": "1.50",
+      "block_number": "1.44",
       "block_name": "API выравненного выделения памяти (alloc_aligned)",
       "internal_id": "aligned_allocator_api"
     },
     {
-      "block_number": "1.51",
+      "block_number": "1.45",
       "block_name": "Отслеживание владения памятью и утечек",
       "internal_id": "memory_ownership_tracker"
     },
     {
-      "block_number": "1.52",
+      "block_number": "1.46",
       "block_name": "Delta Store и движок фонового слияния",
       "internal_id": "delta_merge_engine"
     },
     {
-      "block_number": "1.53",
+      "block_number": "1.47",
       "block_name": "JIT / C-компиляция и кэш скомпилированных планов",
       "internal_id": "compiled_query_plan_cache"
     },
     {
-      "block_number": "1.54",
+      "block_number": "1.48",
       "block_name": "Tuple Reconstruction Engine (сборка строк из колонок)",
       "internal_id": "tuple_reconstruction_engine"
     },
     {
-      "block_number": "1.55",
+      "block_number": "1.49",
       "block_name": "Механизм компактирования и дефрагментации in-memory страниц",
       "internal_id": "page_compaction_engine"
     },
     {
-      "block_number": "1.56",
+      "block_number": "1.50",
       "block_name": "Пул временных буферов и повторного использования",
       "internal_id": "temp_buffer_pool"
     },
     {
-      "block_number": "1.57",
+      "block_number": "1.51",
       "block_name": "Контроль учёта и лимитов памяти",
       "internal_id": "memory_accounting_api"
     },
     {
-      "block_number": "1.58",
+      "block_number": "1.52",
       "block_name": "Zone Map и адаптивные диапазонные индексы",
       "internal_id": "adaptive_zone_map"
     },
     {
-      "block_number": "1.59",
+      "block_number": "1.53",
       "block_name": "Гибридный движок сканирования таблиц",
       "internal_id": "hybrid_scan_engine"
     },
     {
-      "block_number": "1.60",
+      "block_number": "1.54",
       "block_name": "Векторизированный итератор таблиц и пакетный курсор",
       "internal_id": "vector_table_iterator"
     },    
     {
-      "block_number": "1.61",
+      "block_number": "1.55",
       "block_name": "Мониторинг давления на память и автоматический ребаланс",
       "internal_id": "memory_pressure_monitor"
     },
     {
-      "block_number": "1.62",
+      "block_number": "1.56",
       "block_name": "Слой моментальных снимков in-memory без fork",
       "internal_id": "forkless_memory_snapshot"
     },
     {
-      "block_number": "1.63",
+      "block_number": "1.57",
       "block_name": "Оптимизатор размещения таблиц с учётом NUMA",
       "internal_id": "numa_table_layout_optimizer"
     },
     {
-      "block_number": "1.64",
+      "block_number": "1.58",
       "block_name": "Lock-free memory pool и slab allocator",
       "internal_id": "lockfree_slab_allocator"
     },
     {
-      "block_number": "1.65",
+      "block_number": "1.59",
       "block_name": "Слой обмена буферами без копирования",
       "internal_id": "zero_copy_buffer_layer"
     },
     {
-      "block_number": "1.66",
+      "block_number": "1.60",
       "block_name": "Трекер атомарных указателей и детектор гонок",
       "internal_id": "atomic_pointer_tracker"
     },
     {
-      "block_number": "1.67",
+      "block_number": "1.61",
       "block_name": "Монитор фрагментации памяти и механизм компактирования",
       "internal_id": "memory_fragmentation_compactor"
     },
     {
-      "block_number": "1.68",
+      "block_number": "1.62",
       "block_name": "Аллокатор с поддержкой раскраски страниц",
       "internal_id": "page_coloring_allocator"
     },
     {
-      "block_number": "1.69",
+      "block_number": "1.63",
       "block_name": "Освобождение простаивающей памяти и эвикция в холодный слой",
       "internal_id": "idle_memory_reclaimer"
     },
     {
-      "block_number": "1.70",
+      "block_number": "1.64",
       "block_name": "Сборщик статистики индексов и адаптивный перестроитель",
       "internal_id": "index_statistics_collector"
     },
     {
-      "block_number": "1.71",
+      "block_number": "1.65",
       "block_name": "Итератор многоверсионных цепочек и разрешитель видимости",
       "internal_id": "mvcc_chain_iterator"
     },
     {
-      "block_number": "1.72",
+      "block_number": "1.66",
       "block_name": "Компрессор дельта-цепочек для MVCC",
       "internal_id": "delta_chain_compressor"
     }
