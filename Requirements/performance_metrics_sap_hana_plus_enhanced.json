@@ -1704,5 +1704,47 @@
       "description": "Время преобразования форматов (например, JSON → binary)",
       "labels": ["source_format", "target_format", "query_id"]
     }
+  ],
+  "io_control": [
+    {
+      "name": "io_throttling_events",
+      "description": "Количество событий ограничения I/O",
+      "type": "counter",
+      "labels": ["node_id", "shard_id", "tenant_id", "query_id"]
+    },
+    {
+      "name": "io_bandwidth_limit_bytes",
+      "description": "Лимит I/O пропускной способности на шард",
+      "type": "gauge",
+      "labels": ["node_id", "shard_id", "tenant_id"]
+    }
+  ],
+  "multi_tenant_qos": [
+    {
+      "name": "tenant_priority_class",
+      "description": "Класс приоритета арендатора",
+      "type": "gauge",
+      "labels": ["tenant_id"]
+    },
+    {
+      "name": "tenant_isolation_violation_total",
+      "description": "Нарушения изоляции арендатора",
+      "type": "counter",
+      "labels": ["tenant_id", "class"]
+    }
+  ],
+  "index_performance": [
+    {
+      "name": "index_lookup_time_ns",
+      "description": "Среднее время поиска по индексу",
+      "type": "gauge",
+      "labels": ["engine", "index_type", "query_id"]
+    },
+    {
+      "name": "adaptive_index_switch_total",
+      "description": "Количество переключений между индексами",
+      "type": "counter",
+      "labels": ["engine", "index_type", "query_id"]
+    }
   ]
 }
