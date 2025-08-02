@@ -1536,6 +1536,47 @@
           "user"
        ]
   }
-]
-
+],
+  "jit_executor": [
+    {
+      "name": "jit_vectorized_exec_enabled",
+      "description": "Флаг включённого векторного JIT",
+      "type": "gauge",
+      "labels": ["engine", "plan_id", "query_id"]
+    },
+    {
+      "name": "jit_vector_op_count",
+      "description": "Количество векторных операций",
+      "type": "counter",
+      "labels": ["engine", "plan_id", "query_id"]
+    }
+  ],
+  "plan_cache": [
+    {
+      "name": "plan_cache_hit_ratio",
+      "description": "Доля попаданий в кеш планов",
+      "type": "gauge",
+      "labels": ["engine", "query_id"]
+    },
+    {
+      "name": "plan_cache_evictions",
+      "description": "Удаления из кеша планов",
+      "type": "counter",
+      "labels": ["engine"]
+    }
+  ],
+  "storage_access": [
+    {
+      "name": "in_memory_access_ratio",
+      "description": "Доля запросов к in-memory",
+      "type": "gauge",
+      "labels": ["node_id", "engine", "query_id"]
+    },
+    {
+      "name": "nvme_access_latency_ms",
+      "description": "Средняя задержка NVMe доступа",
+      "type": "gauge",
+      "labels": ["node_id"]
+    }
+  ]
 }
