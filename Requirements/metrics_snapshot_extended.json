@@ -2328,5 +2328,74 @@
     "description_en": "Превышение лимитов CPU арендатором",
     "aggregation": "avg",
     "component": "core"
+  },
+  "assert_failures_total": {
+    "value": 0,
+    "type": "counter",
+    "labels": {
+      "module": "core",
+      "node_id": "node-01"
+    }
+  },
+  "sanitizer_detected_errors_total": {
+    "value": 1,
+    "type": "counter",
+    "labels": {
+      "tool": "ASAN",
+      "node_id": "node-01"
+    }
+  },
+  "undefined_behavior_detected_total": {
+    "value": 0,
+    "type": "counter",
+    "labels": {
+      "tool": "UBSAN",
+      "node_id": "node-01"
+    }
+  },
+  "diagnostics_snapshot_checksum_mismatch": {
+    "value": 0,
+    "type": "counter",
+    "labels": {
+      "shard_id": "shard-02"
+    }
+  },
+  "grpc_call_failures_total": {
+    "value": 2,
+    "type": "counter",
+    "labels": {
+      "rpc": "stream_fetch",
+      "node_id": "node-02"
+    }
+  },
+  "tcp_retransmit_rate": {
+    "value": 0.002,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node-02"
+    }
+  },
+  "tenant_cpu_limit_violation_total": {
+    "value": 5,
+    "type": "counter",
+    "labels": {
+      "tenant_id": "tenant-x"
+    }
+  },
+  "column_compression_ratio": {
+    "value": 6.85,
+    "type": "gauge",
+    "labels": {
+      "column": "price",
+      "table": "orders",
+      "shard_id": "sh-2"
+    }
+  },
+  "otel_export_failures_total": {
+    "value": 0,
+    "type": "counter",
+    "labels": {
+      "exporter": "otlp"
+    }
   }
 }
