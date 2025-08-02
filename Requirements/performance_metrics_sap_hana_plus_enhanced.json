@@ -1578,5 +1578,131 @@
       "type": "gauge",
       "labels": ["node_id"]
     }
+  ],
+  "security": [
+    {
+      "name": "sql_injection_detected_total",
+      "type": "counter",
+      "description": "Обнаруженные попытки SQL-инъекций",
+      "labels": ["tenant_id", "user", "query_id"]
+    },
+    {
+      "name": "access_policy_violation_total",
+      "type": "counter",
+      "description": "Нарушения политик доступа ABAC/RBAC",
+      "labels": ["tenant_id", "user", "operation"]
+    },
+    {
+      "name": "audit_trail_integrity_error",
+      "type": "counter",
+      "description": "Обнаруженные нарушения целостности журнала аудита",
+      "labels": ["node_id"]
+    }
+  ],
+  "fuzz_testing": [
+    {
+      "name": "fuzzing_crashes_total",
+      "type": "counter",
+      "description": "Количество сбоев во время fuzz-тестирования",
+      "labels": ["engine", "module", "test_case"]
+    },
+    {
+      "name": "fuzzing_mutation_coverage",
+      "type": "gauge",
+      "description": "Покрытие кода мутациями в fuzz-тестах",
+      "labels": ["module"]
+    }
+  ],
+  "testability": [
+    {
+      "name": "unit_test_failures_total",
+      "type": "counter",
+      "description": "Количество неуспешных unit-тестов",
+      "labels": ["module", "test_suite"]
+    },
+    {
+      "name": "integration_test_failures",
+      "type": "counter",
+      "description": "Количество сбоев в интеграционных тестах",
+      "labels": ["component", "scenario"]
+    }
+  ],
+  "logging": [
+    {
+      "name": "log_queue_depth",
+      "type": "gauge",
+      "description": "Текущая глубина очереди логирования",
+      "labels": ["node_id", "engine"]
+    },
+    {
+      "name": "log_backpressure_score",
+      "type": "gauge",
+      "description": "Индикатор перегрузки логгера",
+      "labels": ["node_id"]
+    }
+  ],
+  "observability": [
+    {
+      "name": "trace_spans_total",
+      "type": "counter",
+      "description": "Общее количество трассировок (spans)",
+      "labels": ["trace_id", "tenant_id"]
+    },
+    {
+      "name": "trace_span_duration_bucket",
+      "type": "histogram",
+      "description": "Гистограмма продолжительности span (трассировок)",
+      "labels": ["le", "trace_id", "engine"]
+    }
+  ],
+  "availability": [
+    {
+      "name": "uptime_seconds_total",
+      "type": "counter",
+      "description": "Время непрерывной работы экземпляра (секунды)",
+      "labels": ["node_id"]
+    },
+    {
+      "name": "crash_recovery_events_total",
+      "type": "counter",
+      "description": "Количество аварийных восстановлений",
+      "labels": ["node_id", "shard_id"]
+    }
+  ],
+  "query_costs": [
+    {
+      "name": "query_estimated_cost",
+      "type": "gauge",
+      "description": "Оценка стоимости выполнения запроса",
+      "labels": ["query_id", "plan_id"]
+    },
+    {
+      "name": "query_actual_cost",
+      "type": "gauge",
+      "description": "Фактическая стоимость выполнения запроса",
+      "labels": ["query_id", "plan_id"]
+    }
+  ],
+  "multi_tenant": [
+    {
+      "name": "tenant_memory_quota_usage",
+      "type": "gauge",
+      "description": "Использование квоты памяти арендатором",
+      "labels": ["tenant_id"]
+    },
+    {
+      "name": "tenant_cpu_limit_violation",
+      "type": "counter",
+      "description": "Превышение лимитов CPU арендатором",
+      "labels": ["tenant_id"]
+    }
+  ],
+  "format_conversion": [
+    {
+      "name": "data_format_conversion_time",
+      "type": "gauge",
+      "description": "Время преобразования форматов (например, JSON → binary)",
+      "labels": ["source_format", "target_format", "query_id"]
+    }
   ]
 }
