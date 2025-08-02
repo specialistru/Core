@@ -1940,5 +1940,157 @@
       "tenant_id": "t42"
     },
     "timestamp": 1754137274
-  }
+  },
+    "sla_violation_latency_p99_ms": {
+    "type": "gauge",
+    "value": 12.3,
+    "labels": {
+      "sla_class": "platinum",
+      "node_id": "node_1",
+      "query_type": "read-heavy"
+    },
+    "timestamp": 1754132152
+  },
+  "sla_error_rate": {
+    "type": "gauge",
+    "value": 0.0035,
+    "labels": {
+      "sla_class": "platinum",
+      "query_type": "write-heavy"
+    },
+    "timestamp": 1754132152
+  },
+  "plan_compile_error_ratio": {
+    "type": "gauge",
+    "value": 0.018,
+    "labels": {
+      "engine": "vectorized",
+      "node_id": "node_4"
+    },
+    "timestamp": 1754132152
+  },
+    "network_packet_loss_ratio": {
+    "type": "gauge",
+    "value": 0.0007,
+    "labels": {
+      "source_node": "node_1",
+      "target_node": "node_2",
+      "stream_id": "stream_88"
+    },
+    "timestamp": 1754132152
+  },
+  "rpc_error_rate": {
+    "type": "gauge",
+    "value": 0.002,
+    "labels": {
+      "rpc": "raft_sync",
+      "from": "node_3",
+      "to": "node_5"
+    },
+    "timestamp": 1754132152
+  },
+  "rpc_queue_depth": {
+    "type": "gauge",
+    "value": 4,
+    "labels": {
+      "from": "node_3",
+      "to": "node_5"
+    },
+    "timestamp": 1754132152
+  },
+  "error_code_distribution": {
+    "type": "histogram",
+    "value": 1,
+    "labels": {
+      "code": "E1234",
+      "component": "optimizer"
+    },
+    "timestamp": 1754132152
+  },
+  "sla_latency_violation_histogram": {
+    "type": "histogram",
+    "value": 7,
+    "labels": {
+      "sla_class": "gold",
+      "query_type": "analytical",
+      "le": "100"
+    },
+    "timestamp": 1754132152
+  },
+"sla_violation_latency_p99_ms": {
+  "type": "gauge",
+  "value": 12.3,
+  "labels": {
+    "sla_class": "platinum",
+    "node_id": "node_1",
+    "query_type": "read-heavy"
+  },
+  "timestamp": 1754132152
+},
+"sla_error_rate": {
+  "type": "gauge",
+  "value": 0.0035,
+  "labels": {
+    "sla_class": "platinum",
+    "query_type": "write-heavy"
+  },
+  "timestamp": 1754132152
+},
+"plan_compile_error_ratio": {
+  "type": "gauge",
+  "value": 0.018,
+  "labels": {
+    "engine": "vectorized",
+    "node_id": "node_4"
+  },
+  "timestamp": 1754132152
+},
+"network_packet_loss_ratio": {
+  "type": "gauge",
+  "value": 0.0007,
+  "labels": {
+    "source_node": "node_1",
+    "target_node": "node_2",
+    "stream_id": "stream_88"
+  },
+  "timestamp": 1754132152
+},
+"rpc_error_rate": {
+  "type": "gauge",
+  "value": 0.002,
+  "labels": {
+    "rpc": "raft_sync",
+    "from": "node_3",
+    "to": "node_5"
+  },
+  "timestamp": 1754132152
+},
+"rpc_queue_depth": {
+  "type": "gauge",
+  "value": 4,
+  "labels": {
+    "from": "node_3",
+    "to": "node_5"
+  },
+  "timestamp": 1754132152
+},
+"error_code_distribution": {
+  "type": "histogram",
+  "value": 1,
+  "labels": {
+    "code": "E1234",
+    "component": "optimizer"
+  },
+  "timestamp": 1754132152
+},
+"sla_latency_violation_histogram": {
+  "type": "histogram",
+  "value": 7,
+  "labels": {
+    "sla_class": "gold",
+    "query_type": "analytical",
+    "le": "100"
+  },
+  "timestamp": 1754132152
+}
 }
