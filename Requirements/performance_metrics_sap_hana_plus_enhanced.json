@@ -1434,5 +1434,108 @@
           "user"
        ]
      }
- ]
+ ],
+"load_control": [
+  {
+    "name": "engine_overload_score",
+    "type": "gauge",
+    "description": "Индикатор перегрузки ядра исполнения",
+    "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+       ]
+  },
+  {
+    "name": "task_scheduler_backpressure",
+    "type": "gauge",
+    "description": "Backpressure планировщика",
+    "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+       ]
+  }
+],
+"gc_vacuum": [
+  {
+    "name": "gc_cycles_total",
+    "type": "counter",
+    "description": "Количество циклов сборки мусора",
+    "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+       ]
+  },
+  {
+    "name": "vacuum_lag_bytes",
+    "type": "gauge",
+    "description": "Объём необработанных удалённых данных",
+    "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+       ]
+  }
+],
+"session_activity": [
+  {
+    "name": "session_query_count",
+    "type": "counter",
+    "description": "Количество выполненных запросов в сессии",
+    "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+       ]
+  },
+  {
+    "name": "session_idle_time_ms",
+    "type": "gauge",
+    "description": "Время простоя сессии",
+    "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+       ]
+  }
+]
+
 }
