@@ -21,7 +21,10 @@
       ],
       "unit": "ms",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "severity_level": "critical",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "db_latency_p95_ms",
@@ -44,7 +47,10 @@
       ],
       "unit": "ms",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "severity_level": "critical",
+      "aggregation": "p95",
+      "component": "core"
     },
     {
       "name": "db_latency_p99_ms",
@@ -67,7 +73,10 @@
       ],
       "unit": "ms",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "severity_level": "critical",
+      "aggregation": "p99",
+      "component": "core"
     },
     {
       "name": "db_latency_critical_ns",
@@ -90,7 +99,10 @@
       ],
       "unit": "ns",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "severity_level": "critical",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "query_latency_bucket",
@@ -114,7 +126,20 @@
       ],
       "unit": "ns",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "severity_level": "critical",
+      "aggregation": "avg",
+      "component": "core",
+      "buckets": [
+        1,
+        5,
+        10,
+        50,
+        100,
+        250,
+        500,
+        1000
+      ]
     }
   ],
   "throughput": [
@@ -139,7 +164,9 @@
       ],
       "unit": "ops/s",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "query_rps",
@@ -162,7 +189,9 @@
       ],
       "unit": "ops/s",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "ingest_rps",
@@ -185,7 +214,9 @@
       ],
       "unit": "ops/s",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "ingest_throughput_bytes",
@@ -208,7 +239,9 @@
       ],
       "unit": "bytes",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "egress_throughput_bytes",
@@ -231,7 +264,9 @@
       ],
       "unit": "bytes",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "row_processing_rate",
@@ -254,7 +289,9 @@
       ],
       "unit": "ops/s",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "execution_pipeline": [
@@ -279,7 +316,9 @@
       ],
       "unit": "ns",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "executor_join_time_ns",
@@ -302,7 +341,9 @@
       ],
       "unit": "ns",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "executor"
     },
     {
       "name": "executor_aggregate_time_ns",
@@ -325,7 +366,9 @@
       ],
       "unit": "ns",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "executor"
     },
     {
       "name": "executor_output_time_ns",
@@ -348,7 +391,9 @@
       ],
       "unit": "ns",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "executor_pipeline_depth",
@@ -371,7 +416,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "executor_vector_batch_size",
@@ -394,7 +441,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "executor_parallel_tasks",
@@ -417,7 +466,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "optimizer_jit": [
@@ -442,7 +493,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "planner"
     },
     {
       "name": "selectivity_feedback_count",
@@ -465,7 +518,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "jit_compile_time_ms",
@@ -488,7 +543,9 @@
       ],
       "unit": "ms",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "planner"
     },
     {
       "name": "jit_plan_reuse_ratio",
@@ -511,7 +568,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "planner"
     },
     {
       "name": "adaptive_join_switch_count",
@@ -534,7 +593,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "executor"
     }
   ],
   "concurrency_scheduling": [
@@ -559,7 +620,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "blocked_sessions_total",
@@ -582,7 +645,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "parallel_workers_active",
@@ -605,7 +670,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "task_queue_depth",
@@ -628,7 +695,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "query_concurrent_limit_reached",
@@ -651,7 +720,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "snapshot_wal": [
@@ -676,7 +747,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "storage"
     },
     {
       "name": "snapshot_size_bytes",
@@ -699,7 +772,9 @@
       ],
       "unit": "bytes",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "storage"
     },
     {
       "name": "wal_flush_rate_bytes",
@@ -722,7 +797,9 @@
       ],
       "unit": "bytes",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "storage"
     },
     {
       "name": "wal_compaction_ratio",
@@ -745,7 +822,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "storage"
     },
     {
       "name": "recovery_duration_ms",
@@ -768,7 +847,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "recovery_state",
@@ -791,7 +872,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "memory_numa": [
@@ -816,7 +899,9 @@
       ],
       "unit": "bytes",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "memory_numa_usage_bytes",
@@ -840,7 +925,9 @@
       ],
       "unit": "bytes",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "memory_pressure_score",
@@ -863,7 +950,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "numa_gc_rebalance_events",
@@ -886,7 +975,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "slab_allocator_fragmentation",
@@ -909,7 +1000,10 @@
       ],
       "unit": "count",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "severity_level": "critical",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "idle_memory_evictions_total",
@@ -932,7 +1026,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "replication_ha": [
@@ -958,7 +1054,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "replication"
     },
     {
       "name": "quorum_consensus_latency_ms",
@@ -981,7 +1079,10 @@
       ],
       "unit": "ms",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "severity_level": "critical",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "failover_event_total",
@@ -1004,7 +1105,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "split_brain_detected_total",
@@ -1027,7 +1130,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "raft_commit_index",
@@ -1050,7 +1155,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "replication"
     },
     {
       "name": "rpo_rto_violation_total",
@@ -1073,7 +1180,10 @@
       ],
       "unit": "count",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "severity_level": "critical",
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "cache_metrics": [
@@ -1098,7 +1208,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "page_cache_dirty_ratio",
@@ -1121,7 +1233,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "page_eviction_rate",
@@ -1144,7 +1258,9 @@
       ],
       "unit": "ops/s",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "cache_prefetch_success_rate",
@@ -1167,7 +1283,9 @@
       ],
       "unit": "ops/s",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "arc_lru_pressure_score",
@@ -1190,7 +1308,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "qos_guarantees": [
@@ -1215,7 +1335,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "query_throttling_events",
@@ -1238,7 +1360,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "priority_queue_wait_time_ms",
@@ -1261,7 +1385,9 @@
       ],
       "unit": "ms",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "query_flamegraph": [
@@ -1287,7 +1413,9 @@
       ],
       "unit": "ns",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "query_flamegraph_stage_count",
@@ -1311,7 +1439,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "diagnostics_anomalies": [
@@ -1337,7 +1467,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "debug_trace_event_total",
@@ -1360,7 +1492,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "query_retry_attempts_total",
@@ -1383,7 +1517,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "storage_io": [
@@ -1408,7 +1544,10 @@
       ],
       "unit": "ms",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "severity_level": "critical",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "storage_io_queue_depth",
@@ -1431,7 +1570,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "storage_tier_access_ratio",
@@ -1454,7 +1595,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "hotspot_analysis": [
@@ -1479,7 +1622,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "skewed_key_ratio",
@@ -1502,7 +1647,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "auto_rebalance": [
@@ -1527,7 +1674,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "data_skew_factor",
@@ -1550,7 +1699,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "cold_data_tiering": [
@@ -1575,7 +1726,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "retention_expired_rows",
@@ -1598,7 +1751,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "materialized_views": [
@@ -1623,7 +1778,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "mview_outdated_count",
@@ -1646,7 +1803,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "ml_runtime": [
@@ -1671,7 +1830,9 @@
       ],
       "unit": "ms",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "onnx_ops_count",
@@ -1694,7 +1855,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "security_audit": [
@@ -1719,7 +1882,9 @@
       ],
       "unit": "bytes",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "policy_block_count",
@@ -1742,7 +1907,9 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "api_network": [
@@ -1766,7 +1933,11 @@
       ],
       "unit": "ms",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "P99 задержка gRPC",
+      "severity_level": "critical",
+      "aggregation": "p99",
+      "component": "core"
     },
     {
       "name": "api_error_rate",
@@ -1788,7 +1959,10 @@
       ],
       "unit": "ops/s",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Ошибки API/gRPC",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "error_faults": [
@@ -1812,7 +1986,10 @@
       ],
       "unit": "ops/s",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Доля ошибок выполнения",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "plan_compile_failures_total",
@@ -1834,7 +2011,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Ошибки компиляции планов",
+      "aggregation": "sum",
+      "component": "planner"
     },
     {
       "name": "snapshot_failure_total",
@@ -1856,7 +2036,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Ошибки создания снапшота",
+      "aggregation": "sum",
+      "component": "storage"
     }
   ],
   "sla_control": [
@@ -1880,7 +2063,11 @@
       ],
       "unit": "count",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Нарушения SLA",
+      "severity_level": "critical",
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "sla_latency_p99_violation_ratio",
@@ -1902,7 +2089,11 @@
       ],
       "unit": "ns",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "P99 latency SLA violation",
+      "severity_level": "critical",
+      "aggregation": "p99",
+      "component": "core"
     },
     {
       "name": "priority_class_latency_p95_ms",
@@ -1924,7 +2115,11 @@
       ],
       "unit": "ms",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "P95 latency per QoS class",
+      "severity_level": "critical",
+      "aggregation": "p95",
+      "component": "core"
     }
   ],
   "load_control": [
@@ -1948,7 +2143,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Индикатор перегрузки ядра исполнения",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "task_scheduler_backpressure",
@@ -1970,7 +2168,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Backpressure планировщика",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "gc_vacuum": [
@@ -1994,7 +2195,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Количество циклов сборки мусора",
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "vacuum_lag_bytes",
@@ -2016,7 +2220,10 @@
       ],
       "unit": "bytes",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Объём необработанных удалённых данных",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "session_activity": [
@@ -2040,7 +2247,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Количество выполненных запросов в сессии",
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "session_idle_time_ms",
@@ -2062,7 +2272,10 @@
       ],
       "unit": "ms",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Время простоя сессии",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "jit_executor": [
@@ -2080,7 +2293,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Флаг включённого векторного JIT",
+      "aggregation": "avg",
+      "component": "planner"
     },
     {
       "name": "jit_vector_op_count",
@@ -2096,7 +2312,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Количество векторных операций",
+      "aggregation": "sum",
+      "component": "planner"
     }
   ],
   "plan_cache": [
@@ -2113,7 +2332,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Доля попаданий в кеш планов",
+      "aggregation": "avg",
+      "component": "planner"
     },
     {
       "name": "plan_cache_evictions",
@@ -2127,7 +2349,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Удаления из кеша планов",
+      "aggregation": "avg",
+      "component": "planner"
     }
   ],
   "storage_access": [
@@ -2145,7 +2370,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Доля запросов к in-memory",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "nvme_access_latency_ms",
@@ -2159,7 +2387,11 @@
       ],
       "unit": "ms",
       "sla_critical": true,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Средняя задержка NVMe доступа",
+      "severity_level": "critical",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "security": [
@@ -2177,7 +2409,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Обнаруженные попытки SQL-инъекций",
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "access_policy_violation_total",
@@ -2193,7 +2428,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Нарушения политик доступа ABAC/RBAC",
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "audit_trail_integrity_error",
@@ -2207,7 +2445,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Обнаруженные нарушения целостности журнала аудита",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "fuzz_testing": [
@@ -2225,7 +2466,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Количество сбоев во время fuzz-тестирования",
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "fuzzing_mutation_coverage",
@@ -2239,7 +2483,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Покрытие кода мутациями в fuzz-тестах",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "testability": [
@@ -2256,7 +2503,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Количество неуспешных unit-тестов",
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "integration_test_failures",
@@ -2271,7 +2521,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Количество сбоев в интеграционных тестах",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "logging": [
@@ -2288,7 +2541,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Текущая глубина очереди логирования",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "log_backpressure_score",
@@ -2302,7 +2558,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Индикатор перегрузки логгера",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "observability": [
@@ -2319,7 +2578,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Общее количество трассировок (spans)",
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "trace_span_duration_bucket",
@@ -2335,7 +2597,20 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Гистограмма продолжительности span (трассировок)",
+      "aggregation": "avg",
+      "component": "core",
+      "buckets": [
+        1,
+        5,
+        10,
+        50,
+        100,
+        250,
+        500,
+        1000
+      ]
     }
   ],
   "availability": [
@@ -2351,7 +2626,10 @@
       ],
       "unit": "ns",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Время непрерывной работы экземпляра (секунды)",
+      "aggregation": "sum",
+      "component": "core"
     },
     {
       "name": "crash_recovery_events_total",
@@ -2366,7 +2644,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Количество аварийных восстановлений",
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "query_costs": [
@@ -2383,7 +2664,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Оценка стоимости выполнения запроса",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "query_actual_cost",
@@ -2398,7 +2682,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Фактическая стоимость выполнения запроса",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "multi_tenant": [
@@ -2414,7 +2701,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Использование квоты памяти арендатором",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "tenant_cpu_limit_violation",
@@ -2428,7 +2718,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Превышение лимитов CPU арендатором",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "format_conversion": [
@@ -2446,7 +2739,10 @@
       ],
       "unit": "ns",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Время преобразования форматов (например, JSON → binary)",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "io_control": [
@@ -2465,7 +2761,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Количество событий ограничения I/O",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "io_bandwidth_limit_bytes",
@@ -2481,7 +2780,10 @@
       ],
       "unit": "bytes",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Лимит I/O пропускной способности на шард",
+      "aggregation": "avg",
+      "component": "core"
     }
   ],
   "multi_tenant_qos": [
@@ -2497,7 +2799,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Класс приоритета арендатора",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "tenant_isolation_violation_total",
@@ -2512,7 +2817,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Нарушения изоляции арендатора",
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "index_performance": [
@@ -2530,7 +2838,10 @@
       ],
       "unit": "ns",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Среднее время поиска по индексу",
+      "aggregation": "avg",
+      "component": "core"
     },
     {
       "name": "adaptive_index_switch_total",
@@ -2546,7 +2857,10 @@
       ],
       "unit": "count",
       "sla_critical": false,
-      "test_coverage": true
+      "test_coverage": true,
+      "description_en": "Количество переключений между индексами",
+      "aggregation": "sum",
+      "component": "core"
     }
   ],
   "__meta__": {
