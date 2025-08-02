@@ -381,10 +381,7 @@
       "REQ-0.3",
       "REQ-0.4"
     ]
-  }
-]
-
-[
+  },
   {
     "id": "REQ-1.1",
     "category": "1. Архитектура и Хранилище",
@@ -1183,9 +1180,7 @@
         "metrics collector"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-2.1",
     "category": "2. Транзакции и Надёжность",
@@ -2031,9 +2026,7 @@
         "crash recovery tool"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-3.1",
     "category": "3. SQL и Языки",
@@ -2993,9 +2986,7 @@
         "execution tracer"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-4.1",
     "category": "4. Интерфейсы и Интеграции",
@@ -3915,9 +3906,7 @@
         "stream sim tool"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-5.1",
     "category": "5. BI, ML и OLAP",
@@ -4877,9 +4866,7 @@
         "view tester"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-6.1",
     "category": "6. Безопасность",
@@ -5839,9 +5826,7 @@
         "security audit"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-7.1",
     "category": "7. Observability и DevOps",
@@ -6821,9 +6806,7 @@
         "mutation checker"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-8.1",
     "category": "8. Производительность",
@@ -7763,9 +7746,7 @@
         "pipeline heatmap"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-9.1",
     "category": "9. Расширяемость",
@@ -8705,9 +8686,7 @@
         "API validator"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-10.1",
     "category": "10. Тестируемость и структура проекта",
@@ -9687,9 +9666,7 @@
         "fuzz runner"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-11.1",
     "category": "11. Управление схемой",
@@ -10629,9 +10606,7 @@
         "migration tester"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-12.1",
     "category": "12. Форматы данных и локализация",
@@ -11571,9 +11546,7 @@
         "unicode validator"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-13.1",
     "category": "13. TTL, Eviction, Auto-tiering",
@@ -12513,9 +12486,7 @@
         "tier tester"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-14.1",
     "category": "14. Авто ребалансировка и распределение",
@@ -13455,9 +13426,7 @@
         "load monitor"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-15.1",
     "category": "15. Поддержка системной версии AS OF",
@@ -14397,9 +14366,7 @@
         "asof query runner"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-16.1",
     "category": "16. Поддержка большого объема памяти",
@@ -15339,9 +15306,7 @@
         "allocator stats"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-17.1",
     "category": "17. Ограничения по CPU/IOPS/Memory, multi-tenant",
@@ -16281,9 +16246,7 @@
         "qos benchmark"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-18.1",
     "category": "18. Поддержка PAX / Apache Arrow layout",
@@ -17223,9 +17186,7 @@
         "batch benchmark"
       ]
     }
-  }
-]
-[
+  },
   {
     "id": "REQ-19.1",
     "category": "19. Frame-of-Reference и векторное сжатие",
@@ -18163,6 +18124,946 @@
         "compression tester",
         "SIMD decoder",
         "FOR benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.1",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "JIT-компиляция выражений SQL",
+    "description": "JIT-компиляция выражений SQL необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "JIT-компиляция выражений SQL must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.1"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: JIT-компиляция выражений SQL",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.2",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "JIT для join- и агрегатных операторов",
+    "description": "JIT для join- и агрегатных операторов необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "JIT для join- и агрегатных операторов must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.2"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: JIT для join- и агрегатных операторов",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.3",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Реализация LLVM-поддержки (или аналог)",
+    "description": "Реализация LLVM-поддержки (или аналог) необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Реализация LLVM-поддержки (или аналог) must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.3"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Реализация LLVM-поддержки (или аналог)",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.4",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Генерация SIMD-инструкций в JIT-коде",
+    "description": "Генерация SIMD-инструкций в JIT-коде необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Генерация SIMD-инструкций в JIT-коде must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.4"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Генерация SIMD-инструкций в JIT-коде",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.5",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Поддержка AVX512 / NEON / SSE в runtime",
+    "description": "Поддержка AVX512 / NEON / SSE в runtime необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Поддержка AVX512 / NEON / SSE в runtime must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.5"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Поддержка AVX512 / NEON / SSE в runtime",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.6",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Автоматическое определение JIT-friendly путей",
+    "description": "Автоматическое определение JIT-friendly путей необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Автоматическое определение JIT-friendly путей must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.6"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Автоматическое определение JIT-friendly путей",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.7",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Предпочтение JIT для hot-кода и частых выражений",
+    "description": "Предпочтение JIT для hot-кода и частых выражений необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Предпочтение JIT для hot-кода и частых выражений must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.7"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Предпочтение JIT для hot-кода и частых выражений",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.8",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Векторная обработка фильтров и WHERE-условий",
+    "description": "Векторная обработка фильтров и WHERE-условий необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Векторная обработка фильтров и WHERE-условий must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.8"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Векторная обработка фильтров и WHERE-условий",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.9",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Batch-based execution с SIMD операциями",
+    "description": "Batch-based execution с SIMD операциями необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Batch-based execution с SIMD операциями must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.9"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Batch-based execution с SIMD операциями",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.10",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "JIT-aware cost-based optimizer",
+    "description": "JIT-aware cost-based optimizer необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "JIT-aware cost-based optimizer must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.10"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: JIT-aware cost-based optimizer",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.11",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Profiler для JIT-кода и runtime-инлайн функций",
+    "description": "Profiler для JIT-кода и runtime-инлайн функций необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Profiler для JIT-кода и runtime-инлайн функций must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.11"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Profiler для JIT-кода и runtime-инлайн функций",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.12",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Генерация векторных операторов на лету",
+    "description": "Генерация векторных операторов на лету необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Генерация векторных операторов на лету must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.12"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Генерация векторных операторов на лету",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.13",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Интеграция с компилятором WASM / Lua / C DSL",
+    "description": "Интеграция с компилятором WASM / Lua / C DSL необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Интеграция с компилятором WASM / Lua / C DSL must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.13"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Интеграция с компилятором WASM / Lua / C DSL",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.14",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Dynamic recompilation по наблюдаемой статистике",
+    "description": "Dynamic recompilation по наблюдаемой статистике необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Dynamic recompilation по наблюдаемой статистике must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.14"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Dynamic recompilation по наблюдаемой статистике",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.15",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Fallback режим при ошибках JIT-компиляции",
+    "description": "Fallback режим при ошибках JIT-компиляции необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Fallback режим при ошибках JIT-компиляции must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.15"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Fallback режим при ошибках JIT-компиляции",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.16",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Визуализация JIT-IR и векторных трасс",
+    "description": "Визуализация JIT-IR и векторных трасс необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Визуализация JIT-IR и векторных трасс must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.16"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Визуализация JIT-IR и векторных трасс",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.17",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Сравнение JIT vs non-JIT планов",
+    "description": "Сравнение JIT vs non-JIT планов необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Сравнение JIT vs non-JIT планов must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.17"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Сравнение JIT vs non-JIT планов",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.18",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Контроль времени компиляции и overheard",
+    "description": "Контроль времени компиляции и overheard необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Контроль времени компиляции и overheard must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.18"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Контроль времени компиляции и overheard",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.19",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "Режим предварительной компиляции UDF в bytecode",
+    "description": "Режим предварительной компиляции UDF в bytecode необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "Режим предварительной компиляции UDF в bytecode must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.19"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: Режим предварительной компиляции UDF в bytecode",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
+      ]
+    }
+  },
+  {
+    "id": "REQ-20.20",
+    "category": "20. JIT, SIMD и векторизация",
+    "title": "API расширения JIT-пайплайна внешними оптимизаторами",
+    "description": "API расширения JIT-пайплайна внешними оптимизаторами необходимо реализовать с максимальной эффективностью исполнения, возможностью векторизации и динамической адаптацией.",
+    "description_en": "API расширения JIT-пайплайна внешними оптимизаторами must be implemented for maximal runtime efficiency, vectorization and dynamic adaptability.",
+    "test_type": "jit_vector",
+    "test_coverage": "full",
+    "tracing_required": true,
+    "functions_to_implement": [],
+    "impl_hint": [],
+    "required_structures": [],
+    "log_events_to_emit": [],
+    "runtime_metrics_to_emit": [],
+    "config_keys_used": [],
+    "related_requirements": [],
+    "covered_by_blocks": [
+      "20.20"
+    ],
+    "code_module": "src/jit.c",
+    "responsible_roles": [
+      "jit_engineer",
+      "vector_optimizer"
+    ],
+    "perf_budget_ns": {
+      "init": 2000000,
+      "runtime": 800000
+    },
+    "test_spec": {
+      "goal": "Проверка JIT/Vector execution: API расширения JIT-пайплайна внешними оптимизаторами",
+      "input": [
+        "векторные запросы",
+        "JIT выражения",
+        "агрегации"
+      ],
+      "expected": [
+        "ускорение > x2",
+        "JIT активен",
+        "SIMD инструкции работают"
+      ],
+      "tools": [
+        "jit tracer",
+        "llvm profiler",
+        "vector benchmark"
       ]
     }
   }
