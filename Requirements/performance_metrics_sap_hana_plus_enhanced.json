@@ -1301,59 +1301,138 @@
       "description_en": "Количество заблокированных операций политиками доступа"
     }
   ],
-{
-    "api_network": [
-        {
-            "name": "grpc_latency_p99_ms",
-            "type": "gauge",
-            "description": "P99 задержка gRPC",
-            "labels": ["node_id", "tenant_id", "user"]
+  "api_network": [
+  {
+   "name": "grpc_latency_p99_ms",
+          "type": "gauge",
+          "description": "P99 задержка gRPC",
+          "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+          ]
         },
         {
-            "name": "api_error_rate",
-            "type": "gauge",
-            "description": "Ошибки API/gRPC",
-            "labels": ["endpoint", "tenant_id", "user"]
+          "name": "api_error_rate",
+          "type": "gauge",
+          "description": "Ошибки API/gRPC",
+          "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+          ]
         }
     ],
     "error_faults": [
         {
-            "name": "query_error_rate",
-            "type": "gauge",
-            "description": "Доля ошибок выполнения",
-            "labels": ["query_id", "tenant_id", "user"]
+          "name": "query_error_rate",
+          "type": "gauge",
+          "description": "Доля ошибок выполнения",
+          "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+          ]
         },
         {
-            "name": "plan_compile_failures_total",
-            "type": "counter",
-            "description": "Ошибки компиляции планов",
-            "labels": ["engine", "plan_id"]
+          "name": "plan_compile_failures_total",
+          "type": "counter",
+          "description": "Ошибки компиляции планов",
+          "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+          ]
         },
         {
-            "name": "snapshot_failure_total",
-            "type": "counter",
-            "description": "Ошибки создания снапшота",
-            "labels": ["node_id"]
+          "name": "snapshot_failure_total",
+          "type": "counter",
+          "description": "Ошибки создания снапшота",
+          "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+          ]
         }
     ],
     "sla_control": [
         {
-            "name": "sla_violation_total",
-            "type": "counter",
-            "description": "Нарушения SLA",
-            "labels": ["sla_class", "tenant_id"]
+          "name": "sla_violation_total",
+          "type": "counter",
+          "description": "Нарушения SLA",
+          "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+          ]
         },
         {
-            "name": "sla_latency_p99_violation_ratio",
-            "type": "gauge",
-            "description": "P99 latency SLA violation",
-            "labels": ["sla_class", "query_type"]
+          "name": "sla_latency_p99_violation_ratio",
+          "type": "gauge",
+          "description": "P99 latency SLA violation",
+          "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+          ]
         },
         {
-            "name": "priority_class_latency_p95_ms",
-            "type": "gauge",
-            "description": "P95 latency per QoS class",
-            "labels": ["class", "tenant_id"]
-        }
-    ]
+          "name": "priority_class_latency_p95_ms",
+          "type": "gauge",
+          "description": "P95 latency per QoS class",
+          "labels": [
+          "class",
+          "engine",
+          "node_id",
+          "plan_id",
+          "query_id",
+          "session_id",
+          "shard_id",
+          "tenant_id",
+          "user"
+       ]
+     }
+ ]
 }
