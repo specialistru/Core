@@ -2435,5 +2435,86 @@
       "trace_id": "trc_10203",
       "reason": "latency_breach"
     }
+  },
+  "jit_plan_reuse_ratio": {
+    "value": 0.85,
+    "type": "gauge",
+    "labels": {
+      "tenant_id": "tenant_A",
+      "shard_id": "shard_01",
+      "node_id": "node_3",
+      "class": "HTAP",
+      "engine": "vectorized"
+    },
+    "timestamp": 1754132152
+  },
+  "replication_lag_ms": {
+    "value": 3.12,
+    "type": "gauge",
+    "labels": {
+      "replica": "replica_1",
+      "tenant_id": "tenant_A",
+      "node_id": "node_3"
+    },
+    "timestamp": 1754132152
+  },
+  "raft_commit_index": {
+    "value": 4294967,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_3",
+      "tenant_id": "tenant_A"
+    },
+    "timestamp": 1754132152
+  },
+  "rpo_rto_violation_total": {
+    "value": 2,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_3",
+      "tenant_id": "tenant_A"
+    },
+    "timestamp": 1754132152
+  },
+  "slab_allocator_fragmentation": {
+    "value": 0.034,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_3"
+    },
+    "timestamp": 1754132152
+  },
+  "idle_memory_evictions_total": {
+    "value": 12,
+    "type": "counter",
+    "labels": {
+      "node_id": "node_3"
+    },
+    "timestamp": 1754132152
+  },
+  "task_queue_depth": {
+    "value": 4,
+    "type": "gauge",
+    "labels": {
+      "engine": "vectorized",
+      "node_id": "node_3"
+    },
+    "timestamp": 1754132152
+  },
+  "snapshot_size_bytes": {
+    "value": 81284933,
+    "type": "gauge",
+    "labels": {
+      "node_id": "node_3"
+    },
+    "timestamp": 1754132152
+  },
+  "memory_numa_usage_bytes": {
+    "value": 1876541234,
+    "type": "gauge",
+    "labels": {
+      "node": "numa_node_0"
+    },
+    "timestamp": 1754132152
   }
 }
