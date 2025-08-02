@@ -602,107 +602,107 @@
       "internal_id": "redo_replay_engine"
     },
     {
-      "block_number": "2.32",
+      "block_number": "2.29",
       "block_name": "Движок анализа видимости и конфликтов MVCC",
       "internal_id": "mvcc_visibility_detector"
     },
     {
-      "block_number": "2.33",
+      "block_number": "2.30",
       "block_name": "Сжатие undo-цепочек для откатов",
       "internal_id": "undo_chain_compression"
     },
     {
-      "block_number": "2.34",
+      "block_number": "2.31",
       "block_name": "Проверка сериализуемости транзакций",
       "internal_id": "serializable_txn_verifier"
     },
     {
-      "block_number": "2.35",
+      "block_number": "2.32",
       "block_name": "Центральный менеджер транзакций",
       "internal_id": "transaction_manager_core"
     },
     {
-      "block_number": "2.36",
+      "block_number": "2.33",
       "block_name": "Граф зависимостей транзакций и deadlock detector",
       "internal_id": "txn_dependency_graph"
     },
     {
-      "block_number": "2.37",
+      "block_number": "2.34",
       "block_name": "Координатор двухфазного коммита (2PC)",
       "internal_id": "two_phase_commit_coordinator"
     },
     {
-      "block_number": "2.38",
+      "block_number": "2.35",
       "block_name": "Контроллер синхронизации и переключения DR-сайтов",
       "internal_id": "dr_failover_controller"
     },
     {
-      "block_number": "2.39",
+      "block_number": "2.36",
       "block_name": "Планировщик репликаций между зонами и датацентрами",
       "internal_id": "cross_zone_replication"
     },
     {
-      "block_number": "2.40",
+      "block_number": "2.37",
       "block_name": "Мониторинг SLA по RPO/RTO и нарушениям восстановления",
       "internal_id": "rpo_rto_sla_monitor"
     },
     {
-      "block_number": "2.41",
+      "block_number": "2.38",
       "block_name": "Монитор кворума и разрешение split-brain сценариев",
       "internal_id": "quorum_health_monitor"
     },
     {
-      "block_number": "2.42",
+      "block_number": "2.39",
       "block_name": "Оркестратор восстановления после сбоев",
       "internal_id": "recovery_orchestrator"
     },
     {
-      "block_number": "2.43",
+      "block_number": "2.40",
       "block_name": "Контроль задержек георепликации и адаптивная защита",
       "internal_id": "geo_replication_latency_guard"
     },
     {
-      "block_number": "2.44",
+      "block_number": "2.41",
       "block_name": "Обнаружение конфликтов MVCC и граф ожиданий",
       "internal_id": "mvcc_conflict_detector"
     },
     {
-      "block_number": "2.45",
+      "block_number": "2.42",
       "block_name": "Трекер окна удержания версий транзакций",
       "internal_id": "transaction_retention_window"
     },
     {
-      "block_number": "2.46",
+      "block_number": "2.43",
       "block_name": "Координатор разрешения многотранзакционных конфликтов",
       "internal_id": "multi_txn_conflict_coordinator"
     },
     {
-      "block_number": "2.47",
+      "block_number": "2.44",
       "block_name": "Координатор журналов фиксации транзакций",
       "internal_id": "commit_log_coordinator"
     },
     {
-      "block_number": "2.48",
+      "block_number": "2.45",
       "block_name": "Обработчик отката и движок отмены транзакций",
       "internal_id": "txn_abort_handler"
     },
     {
-      "block_number": "2.49",
+      "block_number": "2.46",
       "block_name": "Слой двухфазной фиксации (2PC) для распределённых транзакций",
       "internal_id": "two_phase_commit_layer"
     },
     {
-      "block_number": "2.50",
+      "block_number": "2.47",
       "block_name": "Движок предиктивного принятия решений по failover",
       "internal_id": "predictive_failover_engine"
     },
     {
-      "block_number": "2.51",
+      "block_number": "2.48",
       "block_name": "Слой компенсации задержек репликации",
       "internal_id": "replication_lag_compensation"
     },
     {
-      "block_number": "2.52",
+      "block_number": "2.49",
       "block_name": "Оркестратор плейбуков Disaster Recovery",
       "internal_id": "dr_playbook_orchestrator"
     }
