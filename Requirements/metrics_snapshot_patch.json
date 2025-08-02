@@ -1442,5 +1442,86 @@
     "labels": {
       "node_id": "node-01"
     }
+  },
+"query_stage_io_bytes": {
+    "type": "gauge",
+    "value": 1273400,
+    "labels": {
+      "stage": "aggregate",
+      "query_id": "q123",
+      "node_id": "node_3"
+    }
+  },
+  "query_stage_latency_ms": {
+    "type": "gauge",
+    "value": 13.4,
+    "labels": {
+      "stage": "join",
+      "query_id": "q123"
+    }
+  },
+    "pipeline_utilization_ratio": {
+    "type": "gauge",
+    "value": 0.91,
+    "labels": {
+      "pipeline_id": "pipe_44",
+      "plan_id": "plan789"
+    }
+  },
+  "udf_exec_time_ns": {
+    "type": "gauge",
+    "value": 445,
+    "labels": {
+      "udf": "my_udf_calc",
+      "query_id": "q204"
+    }
+  },
+  "network_transfer_bytes": {
+    "type": "counter",
+    "value": 20894348,
+    "labels": {
+      "source_node": "node_1",
+      "target_node": "node_3",
+      "stream_id": "stream_99"
+    }
+  },
+  "rpc_call_latency_ms": {
+    "type": "gauge",
+    "value": 1.47,
+    "labels": {
+      "rpc": "stream_fetch",
+      "from": "node_2",
+      "to": "node_3"
+    }
+  },
+  "jit_code_cache_miss_rate": {
+    "type": "gauge",
+    "value": 0.023,
+    "labels": {
+      "node_id": "node_3"
+    }
+  },
+  "vector_register_pressure_ratio": {
+    "type": "gauge",
+    "value": 0.78,
+    "labels": {
+      "engine": "vectorized"
+    }
+  },
+  "anomaly_detection_triggered": {
+    "type": "counter",
+    "value": 9,
+    "labels": {
+      "detector": "drift_detector",
+      "query_id": "q222"
+    }
+  },
+  "execution_deviation_score": {
+    "type": "gauge",
+    "value": 0.83,
+    "labels": {
+      "query_id": "q123",
+      "node_id": "node_3"
+    }
   }
 }
