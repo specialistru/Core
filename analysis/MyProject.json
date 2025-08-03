@@ -1,0 +1,84 @@
+{
+  "project_name": "MyProject",
+  "version": "1.2.3",
+  "git_branch": "feature/refactor-utils",
+  "files": [
+    {
+      "file_id": "123e4567-e89b-12d3-a456-426614174000",
+      "filename": "utils.c",
+      "path": "src/",
+      "type": "source",
+      "category": "utility",
+      "lines": 42,
+      "lines_of_code": 38,
+      "comment_ratio": 0.10,
+      "functions_count": 1,
+      "dependencies": {
+        "includes": ["stdio.h", "utils.h"],
+        "used_by": ["main.c"]
+      },
+      "functions": [
+        {
+          "name": "log_message",
+          "return_type": "void",
+          "params": ["const char* msg"],
+          "defined": true,
+          "version": "1.0.0"
+        }
+      ],
+      "last_modified": "2025-07-21T15:03:22+00:00",
+      "hash": "c3ab8ff13720e8ad9047dd39466b3c89d5b1c1a7ef4b4e6a8f59c22e5f3a5a5a7",
+      "warnings": 3,
+      "errors": 0,
+      "cyclomatic_complexity": 5,
+      "test_coverage": 0.85,
+      "has_unit_tests": true,
+      "size_bytes": 2048,
+      "encoding": "UTF-8",
+      "static_analysis": {
+        "security_issues": 0,
+        "style_violations": 2
+      },
+      "content": "#include <stdio.h>\n#include \"utils.h\"\n\nvoid log_message(const char* msg) {\n    printf(\"%s\\n\", msg);\n}"
+    },
+    {
+      "file_id": "223e4567-e89b-12d3-a456-426614174001",
+      "filename": "main.c",
+      "path": "src/",
+      "type": "source",
+      "category": "core",
+      "lines": 85,
+      "lines_of_code": 80,
+      "comment_ratio": 0.12,
+      "functions_count": 1,
+      "dependencies": {
+        "includes": ["stdio.h", "utils.h"],
+        "used_by": []
+      },
+      "functions": [
+        {
+          "name": "main",
+          "return_type": "int",
+          "params": [],
+          "defined": true,
+          "version": "1.0.0"
+        }
+      ],
+      "last_modified": "2025-07-20T10:15:00+00:00",
+      "hash": "d4e5f6789abc1234def567890abcdef1234567890abcdef1234567890abcd1234",
+      "warnings": 1,
+      "errors": 0,
+      "cyclomatic_complexity": 3,
+      "test_coverage": 0.9,
+      "has_unit_tests": false,
+      "size_bytes": 4096,
+      "encoding": "UTF-8",
+      "static_analysis": {
+        "security_issues": 0,
+        "style_violations": 1
+      },
+      "content": "#include <stdio.h>\n#include \"utils.h\"\n\nint main() {\n    log_message(\"Starting...\");\n    return 0;\n}"
+    }
+    /* другие файлы */
+  ]
+}
