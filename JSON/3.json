@@ -1,0 +1,159 @@
+{
+  "model": "gpt-4o",
+  "purpose": "autonomous_code_generation",
+  "language": "C",
+  "project_type": "general_purpose_operating_system",
+  "autonomy_level": "maximum",
+  "execution_mode": "headless",
+  "threads": 128,
+  "auto_mode": true,
+  "tool_choice": "auto",
+  "parallel_tool_calls": true,
+  "modular_output": true,
+  "generate_documentation": true,
+  "generate_makefile": true,
+  "generate_readme": true,
+  "generate_file_names": true,
+  "generate_function_names": "semantic",
+  "testing_mode": "full_stack_tests",
+  "code_style": "ANSI_C",
+  
+  "audit_mode": {
+    "continuous_deep_audit": true,
+    "audit_frequency_sec": 600,
+    "expert_review": true,
+    "automated_linting": true,
+    "compliance_check": "POSIX.1-2023 + Custom Kernel Guidelines",
+    "security_audit": true,
+    "performance_audit": true,
+    "usability_audit": true
+  },
+
+  "intermediate_results": {
+    "store_snapshots": true,
+    "format": "json",
+    "snapshot_interval": "per_module_and_component"
+  },
+
+  "expert_involvement": {
+    "dynamic_assignment": true,
+    "minimum_experts": 8,
+    "maximum_experts": "unlimited",
+    "expert_domains": [
+      "kernel_development",
+      "device_drivers",
+      "gui_architecture",
+      "security",
+      "file_systems",
+      "networking",
+      "scheduler_design",
+      "memory_management",
+      "multimedia",
+      "usability"
+    ]
+  },
+
+  "quality_targets": {
+    "code_maturity_level": 5,
+    "maturity_score": 100,
+    "functionality_score": 100,
+    "expert_rating": 100,
+    "usability_score": 100,
+    "security_score": 100,
+    "stability_score": 100
+  },
+
+  "license_level": "Custom Deployment / OS Distribution",
+
+  "system_message": "Ты — автономная система разработки операционной системы уровня Windows 11 с графическим пользовательским интерфейсом, поддержкой многозадачности, мультимедиа, драйверов, безопасностью, модульностью и масштабируемостью. Используй язык C, стандарт POSIX.1-2023, современные подходы к разработке ядра и интерфейса. Создай архитектуру, модульный код, драйверы, GUI, API, документацию, тестирование, системы обновлений, журналирования и восстановления. Работай автономно до полного завершения. Максимизируй показатели качества, безопасности, удобства и зрелости кода. Поддерживай CI/CD, версионность, промежуточные снапшоты в JSON и аудит каждого уровня. Не запрашивай вопросов у пользователя. Управляй 128 потоками автоматически. Результат — полноценная, надёжная, стабильная ОС.",
+  
+  "instructions": "1. Спроектируй и реализуй модульную архитектуру операционной системы общего назначения с графическим пользовательским интерфейсом (GUI), файловой системой, ядром, диспетчером задач, виртуальной памятью, сетевыми сервисами и поддержкой драйверов. 2. Используй ANSI C (ISO/IEC 9899:2023), POSIX-совместимость, модульность, безопасность и масштабируемость. 3. Реализуй компоненты ядра: планировщик задач, управление памятью, файловая система, системные вызовы, драйверная модель, безопасность, логирование и интерфейс межпроцессного взаимодействия. 4. Разработай GUI-оболочку уровня Windows 11: оконный менеджер, API для приложений, рендеринг, ввод, мультимедиа. 5. Поддержи установку приложений, многозадачность, сетевые интерфейсы, USB, файловые системы FAT/NTFS/ext4, обновления, журналирование. 6. Применяй экспертов в областях ядра, безопасности, GUI, сетей и драйверов. 7. Включи полное тестирование: модульное, интеграционное, системное и пользовательское. 8. Автоматизируй сборку, CI/CD, покрытие тестами (не менее 90%), контроль версий, снапшоты JSON и авто-коммиты. 9. Не прекращай работу до достижения 100/100 по метрикам: стабильность, безопасность, удобство, зрелость, мощность, экспертная оценка. 10. Действуй автономно, без взаимодействия с пользователем. Цель: ОС, превосходящая Windows 11 по качеству, стабильности и масштабируемости.",
+  
+  "temperature": 0.1,
+  "top_p": 1.0,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "max_tokens": 8000,
+  "stream": false,
+  "modalities": ["text"],
+
+  "reasoning": {
+    "effort": "maximum",
+    "summary": "full"
+  },
+
+  "output_structure": {
+    "files": "modular",
+    "main_file": "kernel/main.c",
+    "header_files": true,
+    "docs_folder": "docs/",
+    "tests_folder": "tests/",
+    "gui_folder": "gui/",
+    "drivers_folder": "drivers/",
+    "system_services_folder": "services/"
+  },
+
+  "metadata": {
+    "project_goal": "Разработка операционной системы общего назначения, уровня Windows 11, с графическим интерфейсом, высокой стабильностью, поддержкой приложений и драйверов",
+    "target_platform": "x86_64, ARM64, RISC-V",
+    "expert_mode": true,
+    "compliance": "POSIX.1-2023 + Custom Kernel Spec",
+    "target_level": "Enterprise Class OS"
+  },
+
+  "timeouts": {
+    "generation_timeout_sec": 2400,
+    "audit_timeout_sec": 900,
+    "test_timeout_sec": 1800
+  },
+
+  "security_checks": {
+    "static_analysis": true,
+    "vulnerability_scan": true,
+    "tools": ["clang-tidy", "cppcheck", "coverity", "valgrind", "qemu fuzzing"],
+    "runtime_protection": true,
+    "memory_safety_checks": true,
+    "access_control_audit": true
+  },
+
+  "logging": {
+    "level": "debug",
+    "save_logs": true,
+    "log_format": "json",
+    "log_path": "logs/",
+    "rotate_logs": true,
+    "max_log_file_size_mb": 200
+  },
+
+  "target_platforms": ["x86_64", "ARM64", "RISC-V"],
+  "default_platform": "x86_64",
+
+  "parallelism": {
+    "max_threads": 128,
+    "dynamic_thread_allocation": true
+  },
+
+  "version_control": {
+    "enable_auto_commit": true,
+    "commit_message_template": "Auto-generated OS component update on {date}",
+    "rollback_on_failure": true,
+    "branching_strategy": "gitflow"
+  },
+
+  "ci_cd": {
+    "integration_enabled": true,
+    "pipeline_config": "os_build_test_deploy.yml",
+    "test_coverage_threshold": 90,
+    "performance_benchmarking": true,
+    "security_scan_on_commit": true,
+    "build_variants": ["debug", "release", "profiling"]
+  },
+
+  "resilience_features": {
+    "crash_handling": true,
+    "kernel_panic_recovery": true,
+    "auto_update_and_rollback": true,
+    "user_session_isolation": true,
+    "watchdog_monitoring": true
+  }
+}
