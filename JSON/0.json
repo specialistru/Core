@@ -1,0 +1,105 @@
+{
+  "model": "gpt-4o",
+  "purpose": "autonomous_code_generation",
+  "language": "C",
+  "project_type": "cli_application",
+  "autonomy_level": "maximum",
+  "execution_mode": "headless",
+  "threads": 8,
+  "auto_mode": true,
+  "tool_choice": "auto",
+  "parallel_tool_calls": true,
+  "modular_output": true,
+  "generate_documentation": true,
+  "generate_makefile": true,
+  "generate_readme": true,
+  "generate_file_names": true,
+  "generate_function_names": "semantic",
+  "testing_mode": "included_unit_tests",
+  "code_style": "ANSI_C",
+  "audit_mode": {
+    "continuous_deep_audit": true,
+    "audit_frequency_sec": 600,                /* Частота аудита каждые 10 минут */
+    "expert_review": true,
+    "automated_linting": true,
+    "compliance_check": "ISO/IEC 9899:2018 (C18)",
+    "security_audit": true                      /* Включён отдельный аудит безопасности */
+  },
+  "intermediate_results": {
+    "store_snapshots": true,
+    "format": "json",
+    "snapshot_interval": "per_module"
+  },
+  "expert_involvement": {
+    "dynamic_assignment": true,
+    "minimum_experts": 3,
+    "maximum_experts": "unlimited",
+    "expert_domains": ["compiler", "C_architecture", "security", "build_systems", "performance"]
+  },
+  "quality_targets": {
+    "code_maturity_level": 5,
+    "maturity_score": 100,
+    "functionality_score": 100,
+    "expert_rating": 100
+  },
+  "license_level": "Custom Deployment",
+  "system_message": "Ты — автономная система разработки на языке C. Используй все доступные знания и экспертов для достижения наивысшего качества. Не задавай вопросов пользователю. Проектируй, реализуй, проверяй, документируй. Включай аудит, промежуточные JSON-результаты и непрерывную валидацию. Следуй стандарту ANSI C и используй архитектуру уровня зрелости 5/5. Не прекращай работу, пока не достигнуты оценки 100/100 по всем критериям.",
+  "instructions": "Реализуй программный проект полностью — от анализа идеи до готового исходного кода и сопроводительной документации. Используй многопоточность для параллельной генерации. Создавай имена файлов, функций, документацию, юнит-тесты, Makefile. Сохраняй промежуточные шаги в JSON. Привлекай экспертов для уточнения архитектуры. Максимизируй качество. Генерируй код, пока не достигнут уровень зрелости 5/5.",
+  "temperature": 0.2,
+  "top_p": 1.0,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.1,
+  "max_tokens": 4000,
+  "stream": false,
+  "modalities": ["text"],
+  "reasoning": {
+    "effort": "high",
+    "summary": "auto"
+  },
+  "output_structure": {
+    "files": "modular",
+    "main_file": "main.c",
+    "header_files": true,
+    "docs_folder": "docs/",
+    "tests_folder": "tests/"
+  },
+  "metadata": {
+    "project_goal": "Полностью автономная генерация высококачественной программы на C",
+    "target_platform": "POSIX-compatible",
+    "expert_mode": true,
+    "compliance": "Custom Deployment / On-Premise",
+    "target_level": "Enterprise Elite"
+  },
+
+  /* Новые блоки */
+  "timeouts": {
+    "generation_timeout_sec": 600,             /* Максимальное время генерации кода (сек) */
+    "audit_timeout_sec": 300                   /* Максимальное время аудита (сек) */
+  },
+  "security_checks": {
+    "static_analysis": true,                    /* Включить статический анализ кода */
+    "vulnerability_scan": true,                 /* Включить сканирование на уязвимости */
+    "tools": ["clang-tidy", "cppcheck", "coverity"]  /* Инструменты для проверки */
+  },
+  "logging": {
+    "level": "debug",                           /* Уровень логирования: debug, info, warn, error */
+    "save_logs": true,                          /* Сохранять логи в файл */
+    "log_format": "json",                       /* Формат логов */
+    "log_path": "logs/"                         /* Путь для хранения логов */
+  },
+  "target_platforms": ["POSIX", "Windows", "Embedded"],
+  "default_platform": "POSIX",
+  "parallelism": {
+    "max_threads": 8,
+    "dynamic_thread_allocation": true          /* Автоматическое распределение потоков */
+  },
+  "version_control": {
+    "enable_auto_commit": true,                 /* Авто-коммиты изменений */
+    "commit_message_template": "Auto-generated commit on {date}",
+    "rollback_on_failure": true                 /* Откат при ошибках */
+  },
+  "ci_cd": {
+    "integration_enabled": true,                 /* Интеграция с CI/CD системами */
+    "test_coverage_threshold": 80                /* Минимальный процент покрытия тестами */
+  }
+}
