@@ -1,1 +1,79 @@
-
+{
+  "project_id": "saphana_grade_final",
+  "mode": "production_sap_hana_plus",
+  "blocks_generated": 305,
+  "total_blocks": 374,
+  "functions_registry": "linked",
+  "zip_archive_status": "in_progress",
+  "last_block_completed": "20.11",
+  "save_generated_code_to_filesystem": true,
+  "force_write_generated_code_to_filesystem": true,
+  "code_output_mode": "filesystem",
+  "archiving_enabled": true,
+  "validate_filesystem_before_zip": true,
+  "status_report_include_file_counts": true,
+  "archive_segment_size": 100,
+  "zip_after_block": 25,
+  "zip_max_duration_seconds": 55,
+  "max_code_lines_threshold": 500000,
+  "pause_threshold_code_lines": 495000,
+  "auto_resume_on_confirmation": true,
+  "audit_enabled": true,
+  "expert_review_count": 36,
+  "expert_target_score": 100,
+  "expert_target_maturity": 5,
+  "block_execution_mode": "parallel_32_threads",
+  "status_reporting": {
+    "auto_progress_reports": true,
+    "report_frequency_blocks": 25,
+    "report_final_packaging": true
+  },
+  "dsl_language_enabled": true,
+  "documentation_export": [
+    "signatures_md",
+    "signatures_json",
+    "signatures_csv",
+    "dsl_doc_md",
+    "dsl_doc_pdf",
+    "user_guide",
+    "sdk_reference"
+  ],
+  "client_components_planned": true,
+  "client_components": {
+    "cli_enabled": true,
+    "rest_api": true,
+    "websocket": true,
+    "grpc": true,
+    "graphql": true,
+    "web_ui_admin": true,
+    "dsl_ui_studio": true,
+    "bi_integration": [
+      "odbc",
+      "jdbc",
+      "powerbi",
+      "tableau"
+    ]
+  },
+  "export_ready_after_all_blocks": true,
+  "final_packaging": {
+    "enabled": true,
+    "include_checksum": true,
+    "include_metadata": true,
+    "include_full_structure": true
+  },
+  "blocks": [
+    {
+      "block_number": "0.1",
+      "name": "main",
+      "status": "done",
+      "code_status": "complete",
+      "expert_reviews": [
+        { "score": 100, "maturity": 5 }
+      ],
+      "maturity": 5,
+      "last_update": "2025-08-05T00:00:00Z"
+    },
+    ...
+    // До block_number: "20.11", с актуальными статусами
+  ]
+}
