@@ -1,0 +1,171 @@
+{
+  "model": "gpt-4o",
+  "purpose": "autonomous_code_generation",
+  "language": "C",
+  "project_type": "high_performance_enterprise_database",
+  "autonomy_level": "maximum",
+  "execution_mode": "headless",
+  "threads": 64,
+  "auto_mode": true,
+  "tool_choice": "auto",
+  "parallel_tool_calls": true,
+  "modular_output": true,
+  "generate_documentation": true,
+  "generate_makefile": true,
+  "generate_readme": true,
+  "generate_file_names": true,
+  "generate_function_names": "semantic",
+  "testing_mode": "included_unit_integration_system_tests",
+  "code_style": "ANSI_C",
+  
+  "audit_mode": {
+    "continuous_deep_audit": true,
+    "audit_frequency_sec": 300,
+    "expert_review": true,
+    "automated_linting": true,
+    "compliance_check": "ISO/IEC 9899:2023 (C23)",
+    "security_audit": true,
+    "performance_audit": true,
+    "fault_tolerance_audit": true,
+    "scalability_audit": true
+  },
+
+  "intermediate_results": {
+    "store_snapshots": true,
+    "format": "json",
+    "snapshot_interval": "per_module_and_feature"
+  },
+
+  "expert_involvement": {
+    "dynamic_assignment": true,
+    "minimum_experts": 5,
+    "maximum_experts": "unlimited",
+    "expert_domains": [
+      "compiler",
+      "C_architecture",
+      "security",
+      "build_systems",
+      "performance",
+      "distributed_systems",
+      "database_internals",
+      "transaction_processing",
+      "high_availability",
+      "networking"
+    ]
+  },
+
+  "quality_targets": {
+    "code_maturity_level": 5,
+    "maturity_score": 100,
+    "functionality_score": 100,
+    "expert_rating": 100,
+    "performance_score": 100,
+    "scalability_score": 100,
+    "fault_tolerance_score": 100,
+    "security_score": 100
+  },
+
+  "license_level": "Custom Deployment / On-Premise / Enterprise",
+
+  "system_message": "Ты — полностью автономная и промышленная система разработки высокопроизводительной, масштабируемой, отказоустойчивой in-memory реляционной СУБД на языке C, способной обрабатывать 2 триллиона операций в год для 500 филиалов. Используй стандарты ANSI C и ISO/IEC 9899:2023 (C23), включая лучшие практики, последние инновации и знания всех экспертов из указанных доменов. Проектируй с максимальной модульностью, масштабируемостью и отказоустойчивостью, включая механизмы распределённости, консистентности, репликации, восстановления после сбоев и безопасности. Не задавай вопросов пользователю. Выполняй полный цикл разработки: архитектура, реализация, аудит, тестирование (юнит, интеграционные, нагрузочные), документация, Makefile, CI/CD интеграция. Обеспечь 100/100 по всем ключевым метрикам качества, безопасности, производительности и масштабируемости. Автоматически управляй потоками (до 64), логированием, промежуточными результатами JSON, версионным контролем с автоматическими коммитами и откатами при ошибках. Поддерживай интеграцию с корпоративными стандартами и лицензией Custom Deployment / On-Premise / Enterprise. Не останавливайся, пока не будет достигнута максимальная зрелость и качество.",
+  
+  "instructions": "1. Проведи детальный анализ и спецификацию требований для промышленной in-memory реляционной СУБД с поддержкой 500 филиалов и нагрузкой 2 триллиона операций в год. 2. Спроектируй архитектуру с высокой масштабируемостью, отказоустойчивостью и производительностью, учитывая распределённость, репликацию, согласованность данных, транзакции ACID и механизмы восстановления после сбоев. 3. Раздели проект на модули: сеть, обработка запросов, транзакционный менеджмент, кэширование, планировщик запросов, хранение данных, логи, мониторинг и др. 4. Используй ANSI C (ISO/IEC 9899:2023) с поддержкой оптимизаций и современных паттернов проектирования. 5. Реализуй эффективный многопоточный движок с динамическим распределением 64 потоков. 6. Включи автоматический глубокий аудит безопасности, производительности, отказоустойчивости и масштабируемости. 7. Создавай юнит, интеграционные и нагрузочные тесты с покрытием не менее 90%. 8. Применяй статический и динамический анализ кода с помощью clang-tidy, cppcheck, coverity и специализированных инструментов анализа производительности и безопасности. 9. Сохраняй промежуточные результаты, логи и снапшоты в формате JSON с возможностью полного аудита и отката. 10. Интегрируй CI/CD с автоматическим тестированием, анализом покрытия, авто-коммитами и откатами. 11. Не запрашивай подтверждений и действуй автономно до полного завершения всех этапов. 12. Обеспечь документацию высокого качества: README, API, диаграммы архитектуры, примеры использования. 13. Следи за соответствием корпоративным стандартам и лицензиям Custom Deployment / On-Premise / Enterprise. 14. Максимизируй показатели зрелости, функциональности, производительности, безопасности и масштабируемости, стремясь к мировым рекордам.",
+  
+  "temperature": 0.1,
+  "top_p": 1.0,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.0,
+  "max_tokens": 6000,
+  "stream": false,
+  "modalities": [
+    "text"
+  ],
+
+  "reasoning": {
+    "effort": "maximum",
+    "summary": "detailed"
+  },
+
+  "output_structure": {
+    "files": "modular",
+    "main_file": "main.c",
+    "header_files": true,
+    "docs_folder": "docs/",
+    "tests_folder": "tests/",
+    "ci_cd_folder": "ci_cd/"
+  },
+
+  "metadata": {
+    "project_goal": "Разработка промышленной in-memory реляционной СУБД для 500 филиалов с 2 триллионами операций в год, мировой лидер по производительности и отказоустойчивости",
+    "target_platform": "POSIX-compatible",
+    "expert_mode": true,
+    "compliance": "Custom Deployment / On-Premise / Enterprise",
+    "target_level": "World Class / Enterprise Elite"
+  },
+
+  "timeouts": {
+    "generation_timeout_sec": 1800,
+    "audit_timeout_sec": 900,
+    "test_timeout_sec": 1200
+  },
+
+  "security_checks": {
+    "static_analysis": true,
+    "vulnerability_scan": true,
+    "tools": [
+      "clang-tidy",
+      "cppcheck",
+      "coverity",
+      "valgrind",
+      "oss-fuzz"
+    ],
+    "runtime_protection": true,
+    "memory_safety_checks": true
+  },
+
+  "logging": {
+    "level": "debug",
+    "save_logs": true,
+    "log_format": "json",
+    "log_path": "logs/",
+    "rotate_logs": true,
+    "max_log_file_size_mb": 100
+  },
+
+  "target_platforms": [
+    "POSIX",
+    "Windows",
+    "Embedded"
+  ],
+  
+  "default_platform": "POSIX",
+
+  "parallelism": {
+    "max_threads": 64,
+    "dynamic_thread_allocation": true
+  },
+
+  "version_control": {
+    "enable_auto_commit": true,
+    "commit_message_template": "Auto-generated commit on {date}",
+    "rollback_on_failure": true,
+    "branching_strategy": "gitflow"
+  },
+
+  "ci_cd": {
+    "integration_enabled": true,
+    "pipeline_config": "full_build_test_deploy.yml",
+    "test_coverage_threshold": 90,
+    "performance_benchmarking": true,
+    "security_scan_on_commit": true
+  },
+
+  "resilience_features": {
+    "automatic_failover": true,
+    "data_replication": "multi-region_sync_async",
+    "checkpointing": true,
+    "transaction_logging": true,
+    "recovery_mechanisms": ["crash_recovery", "point_in_time_recovery"],
+    "self_healing": true
+  }
+}
