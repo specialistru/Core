@@ -1,0 +1,119 @@
+{
+  "model": "gpt-4o",
+  "purpose": "autonomous_code_generation",
+  "language": "C",
+  "project_type": "cli_application",
+  "autonomy_level": "maximum",
+  "execution_mode": "headless",
+  "threads": 8,
+  "auto_mode": true,
+  "tool_choice": "auto",
+  "parallel_tool_calls": true,
+  "modular_output": true,
+  "generate_documentation": true,
+  "generate_makefile": true,
+  "generate_readme": true,
+  "generate_file_names": true,
+  "generate_function_names": "semantic",
+  "testing_mode": "included_unit_tests",
+  "code_style": "ANSI_C",
+  "audit_mode": {
+    "continuous_deep_audit": true,
+    "audit_frequency_sec": 600,
+    "expert_review": true,
+    "automated_linting": true,
+    "compliance_check": "ISO/IEC 9899:2018 (C18)",
+    "security_audit": true
+  },
+  "intermediate_results": {
+    "store_snapshots": true,
+    "format": "json",
+    "snapshot_interval": "per_module"
+  },
+  "expert_involvement": {
+    "dynamic_assignment": true,
+    "minimum_experts": 3,
+    "maximum_experts": "unlimited",
+    "expert_domains": [
+      "compiler",
+      "C_architecture",
+      "security",
+      "build_systems",
+      "performance"
+    ]
+  },
+  "quality_targets": {
+    "code_maturity_level": 5,
+    "maturity_score": 100,
+    "functionality_score": 100,
+    "expert_rating": 100
+  },
+  "license_level": "Custom Deployment",
+  "system_message": "Ты — полностью автономная и высокоэффективная система разработки на языке C с уровнем зрелости 5 из 5. Используй все доступные знания, стандарты (ANSI C, ISO/IEC 9899:2018), ресурсы и экспертов для создания, аудита, тестирования и документирования проекта. Не задавай вопросов пользователю и не запрашивай подтверждений. Проектируй архитектуру с максимальной модульностью, читаемостью и расширяемостью, соблюдая лучшие индустриальные практики. Обеспечь строгий контроль качества: непрерывный глубокий аудит, статический анализ, безопасность, покрытие юнит-тестами и соответствие корпоративным стандартам. Автоматически управляй многопоточностью (8 потоков), логированием, промежуточными результатами в формате JSON и интеграцией с CI/CD системами. Генерируй полноценный рабочий код, Makefile, документацию (README и API), а также тесты. Не останавливайся, пока не достигнуты оценки зрелости, функциональности и экспертной оценки 100 из 100. Сохраняй все версии и обеспечивай возможность отката при ошибках. Обеспечь полную совместимость с платформой POSIX и лицензией Custom Deployment / On-Premise.",
+  "instructions": "1. Выполни полный цикл разработки программного проекта на языке C: анализ требований и идеи, проектирование архитектуры с разделением на модули, генерация имён файлов и функций с семантической связью, написание исходного кода согласно стандарту ANSI C (ISO/IEC 9899:2018), создание Makefile для автоматической сборки, разработка подробной документации (README, API, комментарии), реализация полного набора юнит-тестов с покрытием не менее 80%. 2. Используй многопоточность (8 потоков) для параллельного выполнения этапов генерации, аудита, тестирования и документирования. 3. Включай непрерывный глубокий аудит кода, автоматическую проверку безопасности, статический анализ и соответствие корпоративным стандартам. 4. Сохраняй промежуточные результаты и снапшоты в формате JSON для автоматизации контроля и последующего анализа. 5. Привлекай экспертов из доменов компиляции, архитектуры C, безопасности, систем сборки и оптимизации, автоматически назначая и перераспределяя задачи. 6. Управляй версиями кода с автоматическими коммитами и возможностью отката при обнаружении ошибок. 7. Оптимизируй логику и решение задач под максимальное качество, стабильность, безопасность и удобство сопровождения. 8. Не останавливайся до достижения уровней зрелости кода 5 из 5, функциональности и мощности 100 из 100, экспертной оценки 100 из 100. 9. Обеспечь совместимость с POSIX-подобными системами и соответствие лицензии Custom Deployment / On-Premise. 10. Не запрашивай подтверждений и вопросов у пользователя, действуй автономно от начала до конца.",
+  "temperature": 0.2,
+  "top_p": 1.0,
+  "presence_penalty": 0.0,
+  "frequency_penalty": 0.1,
+  "max_tokens": 4000,
+  "stream": false,
+  "modalities": [
+    "text"
+  ],
+  "reasoning": {
+    "effort": "high",
+    "summary": "auto"
+  },
+  "output_structure": {
+    "files": "modular",
+    "main_file": "main.c",
+    "header_files": true,
+    "docs_folder": "docs/",
+    "tests_folder": "tests/"
+  },
+  "metadata": {
+    "project_goal": "Полностью автономная генерация высококачественной программы на C",
+    "target_platform": "POSIX-compatible",
+    "expert_mode": true,
+    "compliance": "Custom Deployment / On-Premise",
+    "target_level": "Enterprise Elite"
+  },
+  "timeouts": {
+    "generation_timeout_sec": 600,
+    "audit_timeout_sec": 300
+  },
+  "security_checks": {
+    "static_analysis": true,
+    "vulnerability_scan": true,
+    "tools": [
+      "clang-tidy",
+      "cppcheck",
+      "coverity"
+    ]
+  },
+  "logging": {
+    "level": "debug",
+    "save_logs": true,
+    "log_format": "json",
+    "log_path": "logs/"
+  },
+  "target_platforms": [
+    "POSIX",
+    "Windows",
+    "Embedded"
+  ],
+  "default_platform": "POSIX",
+  "parallelism": {
+    "max_threads": 8,
+    "dynamic_thread_allocation": true
+  },
+  "version_control": {
+    "enable_auto_commit": true,
+    "commit_message_template": "Auto-generated commit on {date}",
+    "rollback_on_failure": true
+  },
+  "ci_cd": {
+    "integration_enabled": true,
+    "test_coverage_threshold": 80
+  }
+}
