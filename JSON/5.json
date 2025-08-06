@@ -1,0 +1,316 @@
+  {
+    "file": "architect.c",
+    "header": "architect.h",
+    "functions": [
+      {
+        "name": "init_system_architecture",
+        "description": "Инициализация архитектурных слоёв, NUMA-aware memory management, запуск модульных API.",
+        "inputs": [
+          {"name": "config", "type": "ArchitectureConfig*", "description": "Конфигурация архитектуры и NUMA"}
+        ],
+        "outputs": [
+          {"type": "int", "description": "0 — успех, иначе код ошибки"}
+        ],
+        "preconditions": "Конфиг валиден, память доступна",
+        "postconditions": "Слои и NUMA memory инициализированы",
+        "error_handling": "Логирование, возврат ошибки",
+        "examples": ["init_system_architecture(&config)"]
+      },
+      {
+        "name": "monitor_cluster_state",
+        "description": "Мониторинг состояния кластера, сбор метрик, проверка fault tolerance.",
+        "inputs": [
+          {"name": "cluster", "type": "Cluster*", "description": "Структура кластера"}
+        ],
+        "outputs": [
+          {"type": "ClusterState", "description": "Текущее состояние кластера"}
+        ],
+        "preconditions": "Кластер инициализирован",
+        "postconditions": "Собраны метрики, обновлено состояние",
+        "error_handling": "Логирование ошибок, возврат дефолтного состояния",
+        "examples": ["monitor_cluster_state(cluster)"]
+      }
+    }
+    {
+    "file": "storage_designer.c",
+    "header": "storage_designer.h",
+    "functions": [
+      {
+        "name": "init_storage_layout",
+        "description": "Инициализация columnar/row storage, выбор компрессии, настройка индексов.",
+        "inputs": [
+          {"name": "storage_config", "type": "StorageConfig*", "description": "Конфигурация хранилища"}
+        ],
+        "outputs": [
+          {"type": "int", "description": "0 — успех, иначе ошибка"}
+        ],
+        "preconditions": "Конфиг валиден",
+        "postconditions": "Хранилище и индексы инициализированы",
+        "error_handling": "Логирование ошибок",
+        "examples": ["init_storage_layout(&storage_config)"]
+      },
+      {
+        "name": "compress_data_block",
+        "description": "Компрессия блока данных с использованием LZ4/ZSTD.",
+        "inputs": [
+          {"name": "block", "type": "void*", "description": "Блок данных"},
+          {"name": "size", "type": "size_t", "description": "Размер блока"},
+          {"name": "algorithm", "type": "char*", "description": "lz4 или zstd"}
+        ],
+        "outputs": [
+          {"type": "void*", "description": "Сжатый блок"},
+          {"type": "size_t", "description": "Размер сжатого блока"}
+        ],
+        "preconditions": "Блок валиден, выбран алгоритм",
+        "postconditions": "Данные сжаты",
+        "error_handling": "Возврат NULL, логирование",
+        "examples": ["compress_data_block(block, 4096, 'lz4')"]
+      }
+    ]
+  },
+  {
+    "file": "planner_engineer.c",
+    "header": "planner_engineer.h",
+    "functions": [
+      {
+        "name": "build_ast",
+        "description": "Построение AST для SQL запроса.",
+        "inputs": [
+          {"name": "sql", "type": "char*", "description": "SQL строка"}
+        ],
+        "outputs": [
+          {"type": "ASTNode*", "description": "Корень AST"}
+        ],
+        "preconditions": "SQL валиден",
+        "postconditions": "AST построен",
+        "error_handling": "Возврат NULL, логирование",
+        "examples": ["build_ast('SELECT * FROM t')"]
+      },
+      {
+        "name": "plan_parallel_query",
+        "description": "Планирование параллельного запроса с учётом cost-based оптимизации.",
+        "inputs": [
+          {"name": "query", "type": "Query*", "description": "Запрос для планирования"}
+        ],
+        "outputs": [
+          {"type": "Plan*", "description": "Сгенерированный план выполнения"}
+        ],
+        "preconditions": "Запрос валиден, статистика доступна",
+        "postconditions": "План готов для параллельного выполнения",
+        "error_handling": "Логирование ошибок, возврат NULL",
+        "examples": ["plan_parallel_query(query)"]
+      }
+    ]
+  },
+  {
+    "file": "optimizer_expert.c",
+    "header": "optimizer_expert.h",
+    "functions": [
+      {
+        "name": "collect_statistics",
+        "description": "Сбор статистики, построение histogram, NDV estimation.",
+        "inputs": [
+          {"name": "table", "type": "Table*", "description": "Таблица для анализа"}
+        ],
+        "outputs": [
+          {"type": "Statistics*", "description": "Собранная статистика"}
+        ],
+        "preconditions": "Таблица валидна",
+        "postconditions": "Статистика собрана",
+        "error_handling": "Логирование ошибок, возврат NULL",
+        "examples": ["collect_statistics(table)"]
+      },
+      {
+        "name": "choose_join_strategy",
+        "description": "Выбор оптимальной стратегии join на основе статистики и cost.",
+        "inputs": [
+          {"name": "left", "type": "Table*", "description": "Левая таблица"},
+          {"name": "right", "type": "Table*", "description": "Правая таблица"},
+          {"name": "stats", "type": "Statistics*", "description": "Статистика"}
+        ],
+        "outputs": [
+          {"type": "JoinPlan*", "description": "План join"}
+        ],
+        "preconditions": "Таблицы и статистика валидны",
+        "postconditions": "План join построен",
+        "error_handling": "Логирование ошибок, возврат NULL",
+        "examples": ["choose_join_strategy(left, right, stats)"]
+      }
+    ]
+  },
+  {
+    "file": "storage_designer.c",
+    "header": "storage_designer.h",
+    "functions": [
+      {
+        "name": "init_storage_layout",
+        "description": "Инициализация columnar/row storage, выбор компрессии, настройка индексов.",
+        "inputs": [
+          {"name": "storage_config", "type": "StorageConfig*", "description": "Конфигурация хранилища"}
+        ],
+        "outputs": [
+          {"type": "int", "description": "0 — успех, иначе ошибка"}
+        ],
+        "preconditions": "Конфиг валиден",
+        "postconditions": "Хранилище и индексы инициализированы",
+        "error_handling": "Логирование ошибок",
+        "examples": ["init_storage_layout(&storage_config)"]
+      },
+      {
+        "name": "compress_data_block",
+        "description": "Компрессия блока данных с использованием LZ4/ZSTD.",
+        "inputs": [
+          {"name": "block", "type": "void*", "description": "Блок данных"},
+          {"name": "size", "type": "size_t", "description": "Размер блока"},
+          {"name": "algorithm", "type": "char*", "description": "lz4 или zstd"}
+        ],
+        "outputs": [
+          {"type": "void*", "description": "Сжатый блок"},
+          {"type": "size_t", "description": "Размер сжатого блока"}
+        ],
+        "preconditions": "Блок валиден, выбран алгоритм",
+        "postconditions": "Данные сжаты",
+        "error_handling": "Возврат NULL, логирование",
+        "examples": ["compress_data_block(block, 4096, 'lz4')"]
+      }
+    ]
+  },
+  {
+    "file": "planner_engineer.c",
+    "header": "planner_engineer.h",
+    "functions": [
+      {
+        "name": "build_ast",
+        "description": "Построение AST для SQL запроса.",
+        "inputs": [
+          {"name": "sql", "type": "char*", "description": "SQL строка"}
+        ],
+        "outputs": [
+          {"type": "ASTNode*", "description": "Корень AST"}
+        ],
+        "preconditions": "SQL валиден",
+        "postconditions": "AST построен",
+        "error_handling": "Возврат NULL, логирование",
+        "examples": ["build_ast('SELECT * FROM t')"]
+      },
+      {
+        "name": "plan_parallel_query",
+        "description": "Планирование параллельного запроса с учётом cost-based оптимизации.",
+        "inputs": [
+          {"name": "query", "type": "Query*", "description": "Запрос для планирования"}
+        ],
+        "outputs": [
+          {"type": "Plan*", "description": "Сгенерированный план выполнения"}
+        ],
+        "preconditions": "Запрос валиден, статистика доступна",
+        "postconditions": "План готов для параллельного выполнения",
+        "error_handling": "Логирование ошибок, возврат NULL",
+        "examples": ["plan_parallel_query(query)"]
+      }
+    ]
+  },
+  {
+    "file": "optimizer_expert.c",
+    "header": "optimizer_expert.h",
+    "functions": [
+      {
+        "name": "collect_statistics",
+        "description": "Сбор статистики, построение histogram, NDV estimation.",
+        "inputs": [
+          {"name": "table", "type": "Table*", "description": "Таблица для анализа"}
+        ],
+        "outputs": [
+          {"type": "Statistics*", "description": "Собранная статистика"}
+        ],
+        "preconditions": "Таблица валидна",
+        "postconditions": "Статистика собрана",
+        "error_handling": "Логирование ошибок, возврат NULL",
+        "examples": ["collect_statistics(table)"]
+      },
+      {
+        "name": "choose_join_strategy",
+        "description": "Выбор оптимальной стратегии join на основе статистики и cost.",
+        "inputs": [
+          {"name": "left", "type": "Table*", "description": "Левая таблица"},
+          {"name": "right", "type": "Table*", "description": "Правая таблица"},
+          {"name": "stats", "type": "Statistics*", "description": "Статистика"}
+        ],
+        "outputs": [
+          {"type": "JoinPlan*", "description": "План join"}
+        ],
+        "preconditions": "Таблицы и статистика валидны",
+        "postconditions": "План join построен",
+        "error_handling": "Логирование ошибок, возврат NULL",
+        "examples": ["choose_join_strategy(left, right, stats)"]
+      }
+    ]
+  },
+  {
+    "file": "in_memory_engineer.c",
+    "header": "in_memory_engineer.h",
+    "functions": [
+      {
+        "name": "allocate_numa_page",
+        "description": "Аллокация страницы памяти с учётом NUMA и huge pages.",
+        "inputs": [
+          {"name": "size", "type": "size_t", "description": "Размер страницы"},
+          {"name": "node_id", "type": "int", "description": "NUMA node id"}
+        ],
+        "outputs": [
+          {"type": "void*", "description": "Указатель на выделенную память"}
+        ],
+        "preconditions": "NUMA node инициализирован, достаточно памяти",
+        "postconditions": "Память выделена и готова к использованию",
+        "error_handling": "Возврат NULL, логирование ошибки",
+        "examples": ["allocate_numa_page(4096, 0)"]
+      },
+      {
+        "name": "monitor_memory_usage",
+        "description": "Мониторинг использования памяти, сбор статистики по NUMA и huge pages.",
+        "inputs": [
+          {"name": "mem_stats", "type": "MemoryStats*", "description": "Структура для сбора статистики"}
+        ],
+        "outputs": [
+          {"type": "int", "description": "0 — успех, иначе ошибка"}
+        ],
+        "preconditions": "Структура stats валидна",
+        "postconditions": "Статистика обновлена",
+        "error_handling": "Логирование ошибок",
+        "examples": ["monitor_memory_usage(&mem_stats)"]
+      }
+    ]
+  },
+  {
+    "file": "mvcc_specialist.c",
+    "header": "mvcc_specialist.h",
+    "functions": [
+      {
+        "name": "mvcc_commit_transaction",
+        "description": "Коммит транзакции с поддержкой MVCC и snapshot isolation.",
+        "inputs": [
+          {"name": "txn", "type": "Transaction*", "description": "Транзакция"}
+        ],
+        "outputs": [
+          {"type": "int", "description": "0 — успех, иначе ошибка"}
+        ],
+        "preconditions": "Транзакция валидна, все изменения готовы к коммиту",
+        "postconditions": "Данные зафиксированы, MVCC версии обновлены",
+        "error_handling": "Откат при ошибке, логирование",
+        "examples": ["mvcc_commit_transaction(txn)"]
+      },
+      {
+        "name": "mvcc_garbage_collect",
+        "description": "Очистка устаревших версий данных в MVCC.",
+        "inputs": [
+          {"name": "db", "type": "Database*", "description": "База данных"}
+        ],
+        "outputs": [
+          {"type": "int", "description": "Количество удалённых версий"}
+        ],
+        "preconditions": "База данных валидна",
+        "postconditions": "Устаревшие версии удалены",
+        "error_handling": "Логирование ошибок",
+        "examples": ["mvcc_garbage_collect(db)"]
+      }
+    ]
+  }
